@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+@font-face {
+    font-family: cripson;
+    src: url(/clothing/fonts/CrimsonPro-Italic-VariableFont_wght.ttf);
+  }
+#head{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    border-bottom:2px solid rgb(132, 135, 132);
+}
+#head-img{
+  
+    width: 30%;
+    height: 100%;
+}
+#head-img img{
+    height: 100%;width: 100%;
+}
+#head-body{
+    padding-top: 2vh;
+    padding-left: 5vh;
+    padding-right: 2vh;
+    width: 100%;
+    height: auto;
+}
+#head-body h1{
+    font-size: 4vh;
+    margin-bottom: 2vh;
+
+}
+#head-body h2{
+    font-size: 2.5vh;
+    margin-bottom: 1vh;
+
+}
+#head-body p{
+   
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+#head-body ul li{
+    font-size: 2vh;
+    margin-bottom:0.5vh ;
+    margin-left: 3vh;
+}
+#head-body ol li{
+    font-size: 2vh;
+    margin-bottom:1vh ;
+    margin-left: 3vh;
+}
+@media screen  and (max-width:600px){
+    #head{
+        display: flex;
+        justify-content: center;
+        height: 6vh;
+        width: 100%;
+        border-bottom:2px solid rgb(132, 135, 132);
+    }
+    #head-img{
+      
+        width: 80%;
+        height: 100%;
+    }
+    #head-img img{
+        height: 100%;width: 100%;
+    }
+    #head-body{
+        padding-top: 2vh;
+        padding-left: 2vh;
+        padding-right: 2vh;
+        width: 100%;
+        height: auto;
+    }
+    #head-body h1{
+        font-size: 3vh;
+        margin-bottom: 2vh;
+    
+    }
+    #head-body h2{
+        font-size: 2.2vh;
+        margin-bottom: 1vh;
+    
+    }
+    #head-body p{
+       
+        font-size: 1.7vh;
+        margin-bottom: 2vh;
+    }
+}
