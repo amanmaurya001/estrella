@@ -1460,7 +1460,7 @@ justify-content: center;
     }
     .navlogin-option{
       
-        height: 90%;
+        height: 100%;
         width: 33%;
      
     }
@@ -1481,7 +1481,7 @@ justify-content: center;
       
       margin-right: 0.2vh;
        display: block;
-        height: 65%;
+        height: 100%;
         width: 4vh;
        
     }
