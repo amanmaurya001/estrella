@@ -1545,7 +1545,7 @@ justify-content: center;
         border: rgb(13, 255, 0) solid 1px;
       }
       .mobile-navbar-column-item a{
-        font-size: 2vh;
+        font-size: 1.5vh;
        text-decoration: none;
        color: #0b0a0a;
       }
