@@ -1191,7 +1191,7 @@ justify-content: center;
          display: flex;
          justify-content: space-between;
          align-items: end;
-         height: 6vh;
+         height: 4vh;
          width: 100%;
        
          
@@ -1202,7 +1202,7 @@ justify-content: center;
         border: red 2px solid;
       
         
-         height: 50%;
+         height: 100%;
          width: 15vh;
         
      }
