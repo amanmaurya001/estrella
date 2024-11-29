@@ -1199,7 +1199,7 @@ justify-content: center;
      #navlogo{
         margin-left: 0vh;
        
-        
+        border: red 2px solid;
       
         
          height: 50%;
