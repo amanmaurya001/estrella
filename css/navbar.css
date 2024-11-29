@@ -1505,7 +1505,7 @@ justify-content: center;
       
       /* Class to show content */
       .toggle-content4.show {
-        margin-left: -42.8vh;
+        margin-left: -44vh;
        
         height:auto; /* Adjust this value based on your content */
        width: 360px;
