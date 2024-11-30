@@ -1863,7 +1863,7 @@ justify-content: center;
     height: 100%;
     width: 100%;
     color: rgb(0, 0, 0);
-    font-size:1.5vh;
+    font-size:2.5vh;
     
 }
 .filter-section img{
@@ -1884,7 +1884,7 @@ justify-content: center;
     margin-left: 2vh;
 }
 .label h3{
-    font-size: 3;
+    font-size: 1.5;
 
 }
 
