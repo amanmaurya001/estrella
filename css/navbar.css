@@ -1741,7 +1741,7 @@ justify-content: center;
 .toggle-content11 {
     position: absolute; /* Positioned relative to container */
     z-index: 333;
- 
+ border-top: 2px solid blue;
     height: 0; /* Hidden by default */
     width: 50.5vh;
     overflow: hidden;
