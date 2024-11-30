@@ -386,7 +386,7 @@ font-weight: 555;
    }
    .product-item {
      
-  
+  border: 2px solid red;
   
        height: 40vh;
        width: 22.2vh;
