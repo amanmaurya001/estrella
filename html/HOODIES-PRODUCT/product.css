@@ -612,9 +612,7 @@ height: 5vh;
 /* ////////////////////////////////////////////////// */
 @media screen  and (max-width:360px){
 
-   body{
-    border: red solid 3px;
-   }
+
 /* /////////////////block main///////////////////////// */
 
     #block-main{ 
@@ -690,7 +688,7 @@ height: 5vh;
     }
     #block-right1 h2{
         padding-left: 2vh;
-       font-size: 3vh;
+       font-size: 2.6vh;
      }
      #block-right2{
       
@@ -701,7 +699,7 @@ height: 5vh;
         
      }
      #block-right2 h4{
-       
+         font-size: 1.5vh;
         padding-left: 2vh;
        color: #888888ca;
      }
@@ -717,12 +715,12 @@ height: 5vh;
      #block-right3 h1{
        
       padding-left: 2vh;
-    font-size: 3.5vh;
+    font-size: 2.5vh;
    }
      #block-right3 h2{
        
        
-      font-size: 3.5vh;
+      font-size: 2.5vh;
      }
      #block-right4{
        
@@ -734,7 +732,7 @@ height: 5vh;
      }
      #block-right4 h3{
        
-        padding-left: 2vh;
+        padding-left: 1.7vh;
       
      }
      #block-right5{
@@ -767,7 +765,7 @@ height: 5vh;
         
      }
      #block-right6 h3{
-       
+         font-size: 1.5vh;
         padding-left: 2vh;
       
      }
@@ -808,7 +806,7 @@ height: 5vh;
        
        height: 3%;
        width: 100%;
-       margin-left: 3vh;
+       margin-left: 2vh;
        color: #181414;
       }
       #block-size-guide a{
@@ -852,7 +850,7 @@ height: 5vh;
         
      }
      #block-right8 h2{
-       
+         font-size: 2.5vh;
         padding-left: 2vh;
       
      }
@@ -860,7 +858,7 @@ height: 5vh;
         color: #888;
        margin-top: 2vh;
         padding-left: 2vh;
-      
+        font-size: 1.5vh;
      }
      #block-right9{
         margin-top: 0vh;
