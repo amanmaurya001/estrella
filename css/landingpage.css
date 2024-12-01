@@ -7,11 +7,11 @@
 }
 @font-face {
   font-family: cripson;
-  src: url(fonts/CrimsonPro-Italic-VariableFont_wght.ttf);
+  src: url(../fonts/CrimsonPro-Italic-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: bradhi;
-  src: url(fonts/BRADHI.ttf);
+  src: url(../fonts/BRADHI.ttf);
 }
 #block1{
     overflow: hidden;
