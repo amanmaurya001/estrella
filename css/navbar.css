@@ -1747,7 +1747,7 @@ justify-content: center;
     overflow: hidden;
     transition: height 0.5s ease-in-out; /* Smooth transition */
     background-color: #f9f9f9;
-    margin-left: -2vh;
+    margin-left: -1vh;
     display: block;
     align-items: center;
 }
@@ -2139,7 +2139,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
     overflow: hidden;
     transition: height 0.5s ease-in-out; /* Smooth transition */
     background-color: #f9f9f9;
-  margin-left: -28.8vh;
+  margin-left: -28vh;
     display: flex;
     align-items: center;
 }
