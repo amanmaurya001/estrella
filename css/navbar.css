@@ -1183,7 +1183,7 @@ justify-content: center;
     
 
     #navbar {
-      border: red solid 3px;
+    
         position:fixed;
         border-bottom: 2px  rgb(95, 91, 91) solid;
         z-index: 9999;
@@ -1199,7 +1199,7 @@ justify-content: center;
      #navlogo{
         margin-left: 0vh;
        
-        border: red 2px solid;
+      
       
         
          height: 100%;
