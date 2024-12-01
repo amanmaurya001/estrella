@@ -1741,9 +1741,9 @@ justify-content: center;
 .toggle-content11 {
     position: absolute; /* Positioned relative to container */
     z-index: 333;
- border-top: 2px solid blue;
+
     height: 0; /* Hidden by default */
-    width: 50vh;
+    width: 48vh;
     overflow: hidden;
     transition: height 0.5s ease-in-out; /* Smooth transition */
     background-color: #f9f9f9;
