@@ -2135,7 +2135,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
     z-index: 333;
     
     height: 0; /* Hidden by default */
-    width: 50.6vh;
+    width: 49.5vh;
     overflow: hidden;
     transition: height 0.5s ease-in-out; /* Smooth transition */
     background-color: #f9f9f9;
