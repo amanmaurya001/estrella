@@ -2331,7 +2331,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
   /*sjhfsdgfsdfhhsjdkjksdfhsdj*//*sjhfsdgfsdfhhsjdkjksdfhsdj*/
  /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
   /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-  @media screen  and (max-width:390px){
+@media screen and (min-width: 361px) and (max-width: 390px){
 
 
     #home{
