@@ -385,9 +385,9 @@ font-weight: 555;
    .product-item {
      
   
-  
+   border: red 1px solid;
        height: 40vh;
-       width: 24.4vh;
+       width: 24.6vh;
       
        
    }
@@ -416,7 +416,7 @@ font-weight: 555;
    .processor_body_right_rows_product_pic .img1{
     height: 33.6vh;
     width: 24.4vh;
-   border-top: 1px solid blue;
+ 
    }
    
    .processor_body_right_rows_product_name{
