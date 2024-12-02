@@ -1747,7 +1747,7 @@ justify-content: center;
     overflow: hidden;
     transition: height 0.5s ease-in-out; /* Smooth transition */
     background-color: #f9f9f9;
-    margin-left: -2vh;
+    margin-left: -2.3vh;
     display: block;
     align-items: center;
 }
