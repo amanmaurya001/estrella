@@ -2668,10 +2668,10 @@ grid-template-columns: 20% 20% 20% 20% 20%;
       
       /* Class to show content */
       .toggle-content4.show {
-        margin-left: -40.8vh;
+        margin-left: -55.8vh;
        
         height:auto; /* Adjust this value based on your content */
-       width: 360px;
+       width: 390px;
       }
 
       .toggle-content5 {
