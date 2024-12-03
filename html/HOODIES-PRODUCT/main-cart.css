@@ -594,7 +594,7 @@
       
       #cart1{
     position: fixed;
-       margin-top: 70vh;
+       margin-top: 65vh;
         margin-left: 0vh;
          width: 100%;
          height:19vh;
@@ -659,7 +659,7 @@
       
         #checkout{
           margin-left: 5vh;
-         margin-top: 87vh;
+         margin-top: 77vh;
           z-index: 11111;
          position: fixed;
          
@@ -677,7 +677,7 @@
             z-index: 11111;
          position: fixed;
             margin-left: 27vh;
-            margin-top: 87vh;
+            margin-top: 77vh;
           border: 2px solid rgb(172, 159, 159);
           border-radius: 50px;
           height: 4vh;
