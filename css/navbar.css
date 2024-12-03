@@ -2354,7 +2354,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
          display: flex;
          justify-content: space-between;
          align-items: end;
-         height: 4vh;
+         height: 5vh;
          width: 100%;
        
          
@@ -2365,7 +2365,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
         
       
         
-         height: 50%;
+         height: 100%;
          width: 15vh;
         
      }
@@ -2623,7 +2623,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
     }
     .navlogin-option{
       
-        height: 90%;
+        height: 100%;
         width: 33%;
      
     }
@@ -2634,7 +2634,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
      
     }
     .navlogin-option img{
-        margin-top: 0.5vh;
+        margin-top: 0vh;
         height: 100%;
         width: 100%;
       
@@ -2642,10 +2642,10 @@ grid-template-columns: 20% 20% 20% 20% 20%;
     
      #hamburger{
       
-      margin-right: 0.2vh;
+      margin-right: 0.6vh;
        display: block;
         height: 65%;
-        width: 4vh;
+        width: 3.6vh;
        
     }
     #mobile-navbar-img{
