@@ -723,10 +723,15 @@
               height: 4vh;
               margin-top: 10vh;
             }
-           
+         #placeorder h1{
+             
+              
+              font-size: 3.5vh;
+            
+            }
             
             .details{
-              height: 6vh;
+              height: 3.5vh;
              
             }
             
@@ -736,6 +741,7 @@
             }
             
             label {
+                font-size: 2.5vh;
               font-weight: bold;
               color: #333;
               margin-bottom: 8px;
@@ -766,12 +772,12 @@
               margin-left: 2vh;
               background-color: #ff4081;
               color: white;
-              padding: 12px;
+              padding: 8px;
               border: none;
               border-radius: 10px;
               cursor: pointer;
               width: 90%;
-              font-size: 18px;
+              font-size: 12px;
              margin-top: 2vh;
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             }
