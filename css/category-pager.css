@@ -410,12 +410,12 @@ font-weight: 555;
    .processor_body_right_rows_product_pic img{
     
        height:100%;
-       width: 100%;
+         min-width: 100%;
     
    }
    .processor_body_right_rows_product_pic .img1{
     height: 33.6vh;
-    width: 24.4vh;
+    min-width: 24.4vh;
  
    }
    
