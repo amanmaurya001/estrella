@@ -732,7 +732,7 @@
             
             .details{
               height: 4vh;
-             
+              border:green 2px solid;
             }
             
             
