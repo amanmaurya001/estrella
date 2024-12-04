@@ -710,9 +710,9 @@
               width: 80%;
             }
             #checkoutForm{
-              
-              height: 92vh;
-              width: 50vh;
+               margin-left: 5px;
+              height: 68vh;
+              width: 350px;
             }
             #placeorder{
              
@@ -720,13 +720,13 @@
               align-items: center;
               justify-content: center;
               border-bottom: #a1acb0 2px solid;
-              height: 4vh;
+              height: 6vh;
               margin-top: 10vh;
             }
          #placeorder h1{
              
               
-              font-size: 2.5vh;
+              font-size: 2vh;
             
             }
             
