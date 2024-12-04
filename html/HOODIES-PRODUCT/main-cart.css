@@ -704,7 +704,7 @@
               margin-left: 5vh;
               display: flex;
               align-items: center;
-              height: 72vh;
+              height: 68vh;
               justify-content: center;
               border: #818580 2px solid;
               width: 80%;
@@ -753,6 +753,7 @@
             input[type="number"],
             input[type="email"],
             textarea {
+                 font-size: 1vh;
               width: 100%;
               height: 1vh;
               padding: 6px;
