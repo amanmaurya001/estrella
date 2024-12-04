@@ -731,7 +731,7 @@
             }
             
             .details{
-              height: 4vh;
+              height: 5vh;
               border:green 2px solid;
             }
             
@@ -744,7 +744,7 @@
                 font-size: 1.2vh;
               font-weight: bold;
               color: #333;
-              margin-bottom: 6px;
+              margin-bottom: 12px;
               margin-left: 1vh;
             }
             
@@ -753,8 +753,8 @@
             input[type="email"],
             textarea {
               width: 100%;
-              height: 1.5vh;
-              padding: 12px;
+              height: 1vh;
+              padding: 6px;
               border: 2px solid #ff4081;
               border-radius: 10px;
               box-sizing: border-box;
