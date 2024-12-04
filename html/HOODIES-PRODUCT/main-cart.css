@@ -759,11 +759,11 @@
              {
                    margin-left: 3vh;
                  margin-top: -3px;
-                 font-size: 1vh;
+                 font-size: 1.2vh;
               width: 80%;
               height: 1vh;
-              padding: 7px;
-              border: 2px solid #ff4081;
+              padding: 9px;
+              border: 1px solid #a1acb0;
               border-radius: 10px;
               box-sizing: border-box;
               transition: border-color 0.3s, background-color 0.3s;
