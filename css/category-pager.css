@@ -387,7 +387,7 @@ font-weight: 555;
   
    border: red 1px solid;
      height: 40vh;
-       width: 24.6vh;
+        min-width: 24.6vh;
       
        
    }
