@@ -701,13 +701,13 @@
       
             #checkoutbox{
               margin-top: 1vh;
-              margin-left: 5vh;
+            
               display: flex;
               align-items: center;
               height: 68vh;
               justify-content: center;
               border: #818580 2px solid;
-              width: 80%;
+              width: 100%;
             }
             #checkoutForm{
                margin-left: 5px;
