@@ -373,7 +373,7 @@ font-weight: 555;
   /* /////////////////MAIN BLOCK///////////////////////// */
    #main-block-right{
    
-       height: 100%;
+       height: auto;
        width: 100%;
        border: blue solid 3px;
        display: grid;
