@@ -375,7 +375,7 @@ font-weight: 555;
    
        height: 100%;
        width: 100%;
-     
+       border: blue solid 3px;
        display: grid;
        column-gap: 0px;
        row-gap: 7px;
