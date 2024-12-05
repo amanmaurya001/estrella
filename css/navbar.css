@@ -2205,7 +2205,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
  /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
   /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
    /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-      #footer{
+      #footer{ padding-bottom: 60px;
         display: block;
             background-color: black;
             margin-top: 3vh;
