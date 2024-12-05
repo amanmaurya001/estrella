@@ -374,7 +374,7 @@ font-weight: 555;
    #main-block-right{
    
        height: 100%;
-       width: 100%;
+       width: 360px;
      
        display: grid;
        column-gap: 0px;
