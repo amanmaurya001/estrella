@@ -377,7 +377,7 @@ font-weight: 555;
        width: 100%;
        border: blue solid 3px;
        display: grid;
-       column-gap: 2px;
+       column-gap: 0px;
        row-gap: 7px;
       grid-template-columns: 1fr 1fr; ;
       
@@ -387,7 +387,7 @@ font-weight: 555;
   
    border: red 1px solid;
      height: 40vh;
-       max-width: 24.4vh;
+       max-width: 24.6vh;
       
        
    }
