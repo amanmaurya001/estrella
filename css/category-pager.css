@@ -378,15 +378,15 @@ font-weight: 555;
        border: blue solid 3px;
        display: grid;
        column-gap: 0px;
-       row-gap: 7px;
-      grid-template-columns: 1fr 1fr; ;
+       row-gap: 2px;
+      grid-template-columns: 1fr 1fr; 
       
    }
    .product-item {
      
   
    border: red 1px solid;
-     height: 40vh;
+     max-height: 40vh;
        max-width: 24.6vh;
       
        
