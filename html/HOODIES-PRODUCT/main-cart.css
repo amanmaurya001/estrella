@@ -719,7 +719,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              border: red 2px solid;
+              border-bottom: black 1px solid;
               height: 4vh;
               
             }
@@ -732,11 +732,11 @@
             
             .details{
               height: 6.5vh;
-              border:green 2px solid;
+              
             }
-         .details1{
-              height: 10vh;
-              border:red 2px solid;
+         .details1{ 
+              height: 11vh; 
+              
             }
             
             
@@ -746,7 +746,7 @@
             
             label {
                  border:green 2px solid;
-                font-size: 1.2vh;
+               font-size: 1.2vh;
               font-weight: bold;
               color: #333;
               margin-bottom: 14px;
@@ -759,7 +759,7 @@
              {
                    margin-left: 3vh;
                  margin-top: -3px;
-                 font-size: 1.2vh;
+                 font-size: 1.5vh;
               width: 80%;
               height: 1vh;
               padding: 9px;
