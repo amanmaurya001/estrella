@@ -1204,13 +1204,12 @@ height: 5vh;
 
       
       #customAlert {
-          height: 8vh;
-         width: 20vh;
-        margin-left: 9vh;
+        
+        margin-left: 0vh;
         margin-top: -6vh;
         border-radius: 5px;
         font-family: Arial, sans-serif;
-        font-size: 16px;
+        font-size: 10px;
         color: #333;
         text-align: center;
         transition: opacity 0.3s;
