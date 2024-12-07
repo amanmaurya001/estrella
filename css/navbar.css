@@ -1532,8 +1532,8 @@ justify-content: center;
       .mobile-navbar-column{
         height: 100%;
         width: 33%;
-        margin-left: 1vh;
-        border: rgb(0, 30, 255) solid 3px;
+      
+     
         
       }
       .mobile-navbar-column-item{
@@ -1542,7 +1542,7 @@ justify-content: center;
         justify-content: center;
         height: 17%;
         width: 100%;
-        border: rgb(13, 255, 0) solid 1px;
+      
       }
       .mobile-navbar-column-item a{
         font-size: 1.5vh;
