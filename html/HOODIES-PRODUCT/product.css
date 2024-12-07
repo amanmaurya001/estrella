@@ -1201,22 +1201,11 @@ height: 5vh;
     
     
 
-      #customAlert {
-       
- 
-       
-        border-radius: 5px;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        color: #333;
-        text-align: center;
-        transition: opacity 0.3s;
 
-
-        
-      }
       
       #customAlert {
+          height: 8vh;
+         width: 20vh;
         margin-left: 9vh;
         margin-top: -6vh;
         border-radius: 5px;
