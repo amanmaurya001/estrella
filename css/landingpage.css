@@ -759,11 +759,20 @@ margin-left: 6px;
   max-width: 400px;
 }
 .modal-content h2{
+  padding-left:1vh ;
+  padding-right:1vh ;
   font-size: 2.5vh;
 
 }
 .modal-content p{
-  font-size: 1.8vh
+  font-size: 1.8vh;
+  padding-left:1vh ;
+  padding-right:1vh ;
+}
+.modal-content label{
+  padding-left:1vh ;
+  padding-right:1vh ;
+  
 
 }
 
