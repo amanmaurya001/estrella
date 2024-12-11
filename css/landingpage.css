@@ -759,6 +759,7 @@ margin-left: 6px;
   max-width: 400px;
 }
 .modal-content h2{
+    padding-top:2vh ;
   padding-left:1vh ;
   padding-right:1vh ;
   font-size: 2.5vh;
@@ -778,6 +779,7 @@ margin-left: 6px;
 
 /* Close button */
 .close-btn { 
+  margin-right: 1vh;
   color: #aaa;
   float: right;
   font-size: 28px;
