@@ -753,7 +753,7 @@ margin-left: 6px;
   background-color: #fff;
   margin: 15% auto;
   margin-top: 120% ;
- 
+   height: 20vh;
   border: 1px solid red;
   width: 100%;
   max-width: 400px;
@@ -777,7 +777,7 @@ margin-left: 6px;
 }
 
 /* Close button */
-.close-btn {  border: red 2px solid;
+.close-btn { 
   color: #aaa;
   float: right;
   font-size: 28px;
