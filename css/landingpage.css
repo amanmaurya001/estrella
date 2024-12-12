@@ -511,7 +511,7 @@ body{
         overflow: hidden;
         height: 30vh;
         width: 100%;
-       
+         border:  2px solid blue;
       
     }
 
@@ -689,7 +689,7 @@ margin-left: 6px;
 
 #block4-mobile{
     display: block;
-
+  border:  2px solid red;
     height: 35vh;
     width: 100%;
    overflow: hidden;
