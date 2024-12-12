@@ -545,7 +545,7 @@ body{
 
 #block2{
     
-  
+  margin-top: 0vh;
         height: 6vh;
         width: 100%;
        
@@ -738,7 +738,7 @@ margin-left: 6px;
 /* ////////////////////////////////////////////////// */
 #block5{
     overflow: hidden;
- 
+ margin-top: 0vh;
   
     height: 27vh;
     width: 100%;
