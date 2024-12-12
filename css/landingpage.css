@@ -748,21 +748,26 @@ margin-left: 6px;
 
 
 .swiper {
-    border:  2px solid blue;
+    
     width: 100%;
     height: 100%;
   }
 
   .swiper-slide {
-    position: relative;
+    
     
    
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    
+
+    
+      
+
+
+    
+
+    
+    
   }
 
   .blocck4-img{
