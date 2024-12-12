@@ -268,7 +268,7 @@ display: none;
    margin-top: 1vh;
     height: 80vh;
     width: 100%;
-    border: 2px rgb(0, 17, 255) solid;
+ 
 }
 .swiper1 {
     width: 100%;
@@ -324,7 +324,7 @@ display: none;
 
  #block7{
   
-     height: 70vh;
+     height: 30vh;
      width: 100%;
      border: 2px rgb(255, 81, 0) solid;
  }
@@ -545,7 +545,7 @@ body{
 
 #block2{
     
-    margin-top: 1vh;
+  
         height: 6vh;
         width: 100%;
        
@@ -568,7 +568,7 @@ body{
     height: 38vh;
     width: 100%;
   
-    margin-top: 8px;
+ 
    overflow: hidden;
 }
 .swiper3 {
@@ -738,7 +738,7 @@ margin-left: 6px;
 /* ////////////////////////////////////////////////// */
 #block5{
     overflow: hidden;
-   margin-top: 1vh;
+ 
   
     height: 27vh;
     width: 100%;
