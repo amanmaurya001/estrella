@@ -511,7 +511,7 @@ body{
         overflow: hidden;
         height: 30vh;
         width: 100%;
-         border:  2px solid blue;
+         
       
     }
 
@@ -689,7 +689,7 @@ margin-left: 6px;
 
 #block4-mobile{
     display: block;
-  border:  2px solid red;
+  
     height: 35vh;
     width: 100%;
    overflow: hidden;
@@ -770,7 +770,7 @@ margin-left: 6px;
   justify-content: space-between;
   display: flex;
   
-     height: 45vh;
+     height: 40vh;
      width: 100%;
    
  }
@@ -799,7 +799,7 @@ margin-left: 6px;
     /* ////////////////////////////////////////////////// */
  #block7{
    
-     height: 35vh;
+     height: 27vh;
      width: 100%;
    
      border: 2px rgb(255, 81, 0) solid;
@@ -809,7 +809,7 @@ margin-left: 6px;
   justify-content: space-between;
   display: flex;
   
-     height: 55vh;
+     height: 50vh;
      width: 100%;
    
  }
@@ -859,7 +859,7 @@ margin-left: 6px;
   justify-content: space-between;
   display: flex;
   
-     height: 55vh;
+     height: 50vh;
      width: 100%;
    
  }
