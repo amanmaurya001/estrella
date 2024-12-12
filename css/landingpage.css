@@ -306,18 +306,30 @@ display: none;
   width: 50%;
  
  }
- #block6-left img{
+ #block6-left a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block6-left a img{
   height: 100%;
   width: 100%;
  }
+
  #block6-right{
 
   height: 100%;
   width: 50%;
   
  }
-
- #block6-right img{
+ #block6-right a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block6-right a img{
   height: 100%;
   width: 100%;
  }
@@ -328,7 +340,7 @@ display: none;
      width: 100%;
      border: 2px rgb(255, 81, 0) solid;
  }
-#block8{
+ #block8{
   justify-content: space-between;
   display: flex;
   
@@ -342,7 +354,14 @@ display: none;
   width: 55%;
  
  }
- #block8-left img{
+ #block8-left a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ 
+ #block8-left a img{
   height: 100%;
   width: 100%;
  }
@@ -359,7 +378,13 @@ display: none;
   width: 100%;
   
  }
- #block8-right-up img{
+ #block8-right-up a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block8-right-up a img{
  
   height: 100%;
   width: 100%;
@@ -371,7 +396,13 @@ display: none;
   width: 100%;
   
  }
- #block8-right-down img{
+ #block8-right-down a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block8-right-down a img{
  
   height: 100%;
   width: 100%;
@@ -398,7 +429,13 @@ display: none;
   width: 100%;
  
  }
- #block9-left-up img{
+ #block9-left-up a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block9-left-up a img{
   height: 100%;
   width: 100%;
  }
@@ -408,7 +445,13 @@ display: none;
   width: 100%;
  
  }
- #block9-left-down img{
+ #block9-right-down a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block9-left-down a img{
 
   height: 100%;
   width: 100%;
@@ -419,13 +462,13 @@ display: none;
   width: 55%;
   
  }
- #block9-left-down{
-
-  height: 50%;
+ #block9-right a{
+  display: block;
+  height: 100%;
   width: 100%;
  
  }
- #block9-right img{
+ #block9-right a img{
   height: 100%;
   width: 100%;
  }
@@ -770,7 +813,7 @@ margin-left: 6px;
   justify-content: space-between;
   display: flex;
   
-     height: 40vh;
+     height: 120vh;
      width: 100%;
    
  }
@@ -780,18 +823,30 @@ margin-left: 6px;
   width: 50%;
  
  }
- #block6-left img{
+ #block6-left a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block6-left a img{
   height: 100%;
   width: 100%;
  }
+
  #block6-right{
 
   height: 100%;
   width: 50%;
   
  }
-
- #block6-right img{
+ #block6-right a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block6-right a img{
   height: 100%;
   width: 100%;
  }
@@ -805,11 +860,11 @@ margin-left: 6px;
      border: 2px rgb(255, 81, 0) solid;
  }
     /* ////////////////////////////////////////////////// */
-    #block8{
+ #block8{
   justify-content: space-between;
   display: flex;
   
-     height: 50vh;
+     height: 150vh;
      width: 100%;
    
  }
@@ -819,7 +874,14 @@ margin-left: 6px;
   width: 55%;
  
  }
- #block8-left img{
+ #block8-left a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ 
+ #block8-left a img{
   height: 100%;
   width: 100%;
  }
@@ -836,7 +898,13 @@ margin-left: 6px;
   width: 100%;
   
  }
- #block8-right-up img{
+ #block8-right-up a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block8-right-up a img{
  
   height: 100%;
   width: 100%;
@@ -848,18 +916,24 @@ margin-left: 6px;
   width: 100%;
   
  }
- #block8-right-down img{
+ #block8-right-down a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block8-right-down a img{
  
   height: 100%;
   width: 100%;
   
  }
-/* ////////////////////////////////////////////////// */
+
  #block9{
   justify-content: space-between;
   display: flex;
   
-     height: 50vh;
+     height: 150vh;
      width: 100%;
    
  }
@@ -875,7 +949,13 @@ margin-left: 6px;
   width: 100%;
  
  }
- #block9-left-up img{
+ #block9-left-up a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block9-left-up a img{
   height: 100%;
   width: 100%;
  }
@@ -885,7 +965,13 @@ margin-left: 6px;
   width: 100%;
  
  }
- #block9-left-down img{
+ #block9-right-down a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+ }
+ #block9-left-down a img{
 
   height: 100%;
   width: 100%;
@@ -896,13 +982,13 @@ margin-left: 6px;
   width: 55%;
   
  }
- #block9-left-down{
-
-  height: 50%;
+ #block9-right a{
+  display: block;
+  height: 100%;
   width: 100%;
  
  }
- #block9-right img{
+ #block9-right a img{
   height: 100%;
   width: 100%;
  }
