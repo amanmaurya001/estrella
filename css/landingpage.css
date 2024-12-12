@@ -732,7 +732,7 @@ margin-left: 6px;
 
 #block4-mobile{
     display: block;
-  
+   border:  2px solid red;
     height: 35vh;
     width: 100%;
    overflow: hidden;
@@ -748,14 +748,14 @@ margin-left: 6px;
 
 
 .swiper {
-   
+    border:  2px solid blue;
     width: 100%;
     height: 100%;
   }
 
   .swiper-slide {
     position: relative;
-   
+    border:  2px solid green;
    
     text-align: center;
     font-size: 18px;
