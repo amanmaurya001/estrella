@@ -1144,8 +1144,8 @@ font-weight: 700;
 }
  #about{
     display: flex;
-    align-items: center;
-    margin-top: 3vh;
+    align-items: center; 
+    margin-top: 20vh;
      height: 15vh;
      width: 100%;
     
