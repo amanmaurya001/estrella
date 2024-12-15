@@ -476,7 +476,7 @@ display: none;
   margin-top: 5vh;
   height: 76vh;
   width: 100%;
-  border: 2px rgb(255, 0, 0) solid;
+  
  
 }
 #block10-up{
@@ -496,7 +496,7 @@ display: none;
   margin-top: 6vh;
   height: 62vh;
   width: 100%;
-  border: 2px rgb(25, 0, 255) solid;
+  
   display: flex;
 
  
@@ -1071,7 +1071,7 @@ margin-left: 6px;
   margin-top: 2vh;
   height: 78vh;
   width: 100%;
-  border: 5px rgb(255, 0, 0) solid;
+  
  
 }
 #block10-up{
