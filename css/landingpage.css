@@ -210,12 +210,12 @@ display: none;
     
 }
 #block4{
-  
+  overflow: hidden;
     height: 75vh;
     width: 100%;
    display: flex;
    align-items: center;
-    
+   
 }
 
 
@@ -227,7 +227,7 @@ display: none;
 
   .swiper-slide {
     position: relative;
-   
+  
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -244,8 +244,63 @@ display: none;
   .blocck-4-price{
     height: 10%;
     width: 100%;
-    border: 2px rgb(0, 255, 13) solid;
+   
   }
+#blocck-4-price-name{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+  width: 100%;
+ 
+}
+#blocck-4-price-name h3{
+  padding-left: 3vh;
+  font-weight: 300;
+
+}
+#blocck-4-price-price{
+  display: flex;
+  align-items: center;
+ 
+  height: 50%;
+  width: 100%;
+ 
+}
+.blocck-4-price-price-left{
+  height: 100%;
+  width: 60%;
+
+  display: flex;
+ 
+}
+.blocck-4-price-price-left h4{
+  padding-left: 3vh;
+
+
+}
+#blocck-4-price-colour{
+  display: flex;
+ 
+  height: 100%;
+  width: 40%;
+ 
+}
+.blocck-4-price-colour-choice{
+  border: 1px rgb(0, 0, 0) solid;
+  border-radius: 70%;
+  height: 50%;
+  width: 10%;
+ 
+}
+.blocck-4-price-colour-choice:first-child {
+  margin-left: 5vh;
+ 
+}
+.blocck-4-price-colour-choice:not(:first-child) {
+  margin-left: 5px;
+ 
+}
 
 
 
@@ -850,6 +905,61 @@ margin-left: 6px;
     width: 100%;
     border:  2px solid rgb(255, 94, 0);
   }
+#blocck-4-price-name{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 50%;
+  width: 100%;
+ 
+}
+#blocck-4-price-name h3{
+  padding-left: 3vh;
+  font-weight: 300;
+
+}
+#blocck-4-price-price{
+  display: flex;
+  align-items: center;
+ 
+  height: 50%;
+  width: 100%;
+ 
+}
+.blocck-4-price-price-left{
+  height: 100%;
+  width: 60%;
+
+  display: flex;
+ 
+}
+.blocck-4-price-price-left h4{
+  padding-left: 3vh;
+
+
+}
+#blocck-4-price-colour{
+  display: flex;
+ 
+  height: 100%;
+  width: 40%;
+ 
+}
+.blocck-4-price-colour-choice{
+  border: 1px rgb(0, 0, 0) solid;
+  border-radius: 70%;
+  height: 50%;
+  width: 10%;
+ 
+}
+.blocck-4-price-colour-choice:first-child {
+  margin-left: 5vh;
+ 
+}
+.blocck-4-price-colour-choice:not(:first-child) {
+  margin-left: 5px;
+ 
+}
 
 
 
