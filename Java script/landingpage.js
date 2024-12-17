@@ -164,7 +164,38 @@ gsap.fromTo("#block10-mid-product-img img",
     }
   }
 );
-
+gsap.fromTo("#block6-left a img", 
+  {
+    scale: 1.1, // Initial zoomed-in state (slightly zoomed in)
+  }, 
+  {
+    scale: 1, // Final state (original size)
+    duration: 2, // Animation duration (time in seconds, adjust as needed)
+    scrollTrigger: {
+      trigger: "#block4", // Element that triggers the animation
+      scroller: "body", // The scroll container (body)
+      start: "top 30%", // Trigger when the top of the element reaches 20% of the viewport height
+      markers: true, // Show markers for debugging
+      once: true, // Ensure the animation happens once when the trigger point is passed
+    }
+  }
+);
+gsap.fromTo("#block6-right a img", 
+  {
+    scale: 1.1, // Initial zoomed-in state (slightly zoomed in)
+  }, 
+  {
+    scale: 1, // Final state (original size)
+    duration: 2, // Animation duration (time in seconds, adjust as needed)
+    scrollTrigger: {
+      trigger: "#block4", // Element that triggers the animation
+      scroller: "body", // The scroll container (body)
+      start: "top 30%", // Trigger when the top of the element reaches 20% of the viewport height
+      markers: true, // Show markers for debugging
+      once: true, // Ensure the animation happens once when the trigger point is passed
+    }
+  }
+);
 gsap.fromTo("#block10-up h3", 
   {
     opacity: 0, // Start as invisible
@@ -181,6 +212,17 @@ gsap.fromTo("#block10-up h3",
       markers: true, // Show markers for debugging
       once: true, // Ensure the animation happens once when the trigger point is passed
     }
+  }
+);
+gsap.fromTo(
+  "#block1-slider-box .swiper2 .swiper-slide:nth-child(1) img", 
+  {
+    scale: 1.1, // Initial zoomed-in state
+  },
+  {
+    scale: 1, // Final state (original size)
+    duration: 1.5, // Duration of the animation (1 second)
+    ease: "power2.out", // Ease for a smooth transition
   }
 );
 
