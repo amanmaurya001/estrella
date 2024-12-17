@@ -122,32 +122,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-// Get elements
-const termsModal = document.getElementById('termsModal');
-const closeModal = document.getElementById('closeModal');
-const proceedBtn = document.getElementById('proceedBtn');
-const agreeCheckbox = document.getElementById('agreeCheckbox');
 
-// Show the modal when the page loads
-window.onload = function() {
-    termsModal.style.display = "block";
-};
-
-// Close the modal when the user clicks the close button
-closeModal.onclick = function() {
-    window.location.href = "about:blank"; // Redirect to a blank page or go back
-};
-
-// Enable the "Proceed" button when the checkbox is checked
-agreeCheckbox.addEventListener('change', function() {
-    proceedBtn.disabled = !this.checked;
-});
-
-// Handle the "Proceed" button click
-proceedBtn.onclick = function() {
-    termsModal.style.display = "none";
-   
-};
 gsap.fromTo("#block10-mid-product-img img", 
   {
     scale: 1.1, // Initial zoomed-in state (slightly zoomed in)
