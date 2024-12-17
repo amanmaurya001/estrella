@@ -232,13 +232,13 @@ if (window.matchMedia("(max-width: 360px)").matches) {
       scale: 1.1, // Initial zoomed-in state (slightly zoomed in)
     }, 
     {
-      scale: 1, // Final state (original size)
+      scale: 1.2, // Final state (original size)
       duration: 2, // Animation duration (time in seconds, adjust as needed)
       scrollTrigger: {
         trigger: "#block4", // Element that triggers the animation
         scroller: "body", // The scroll container (body)
         start: "top 30%", // Trigger when the top of the element reaches 20% of the viewport height
-        markers: true, // Show markers for debugging
+        
         once: true, // Ensure the animation happens once when the trigger point is passed
       }
     }
@@ -247,7 +247,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
   // Animation for #block6-right a img
   gsap.fromTo("#block6-right a img", 
     {
-      scale: 1.1, // Initial zoomed-in state (slightly zoomed in)
+      scale: 1.2, //  Initial zoomed-in state (slightly zoomed in)
     }, 
     {
       scale: 1, // Final state (original size)
@@ -256,7 +256,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
         trigger: "#block4", // Element that triggers the animation
         scroller: "body", // The scroll container (body)
         start: "top 60%", // Trigger when the top of the element reaches 20% of the viewport height
-        markers: true, // Show markers for debugging
+        
         once: true, // Ensure the animation happens once when the trigger point is passed
       }
     }
@@ -271,12 +271,12 @@ if (window.matchMedia("(max-width: 360px)").matches) {
     {
       opacity: 1, // Fade in to full opacity
       y: 0, // Move to its original position (0px offset)
-      duration: 1, // Animation duration (time in seconds, adjust as needed)
+      duration: 1.5, // Animation duration (time in seconds, adjust as needed)
       scrollTrigger: {
         trigger: "#block10-up", // Element that triggers the animation
         scroller: "body", // The scroll container (body)
         start: "top 95%", // Trigger when the top of the element reaches 95% of the viewport height
-        markers: true, // Show markers for debugging
+        
         once: true, // Ensure the animation happens once when the trigger point is passed
       }
     }
@@ -290,7 +290,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
     },
     {
       scale: 1, // Final state (original size)
-      duration: 1.5, // Duration of the animation (1.5 seconds)
+      duration: 2.4, // Duration of the animation (1.5 seconds)
       ease: "power2.out", // Ease for a smooth transition
     }
   );
