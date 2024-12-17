@@ -220,7 +220,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
         trigger: "#block10-up", // Element that triggers the animation
         scroller: "body", // The scroll container (body)
         start: "top 85%", // Trigger when the top of the element reaches 20% of the viewport height
-        markers: true, // Show markers for debugging
+    
         once: true, // Ensure the animation happens once when the trigger point is passed
       }
     }
@@ -229,7 +229,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
   // Animation for #block6-left a img
   gsap.fromTo("#block6-left a img", 
     {
-      scale: 1.2, // Initial zoomed-in state (slightly zoomed in)
+      scale: 1.2, // Initial zoomed-in state (slightly zoomed in)"
     }, 
     {
       scale: 1, // Final state (original size)
