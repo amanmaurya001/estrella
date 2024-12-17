@@ -200,20 +200,26 @@ gsap.fromTo(
     ease: "power2.out", // Ease for a smooth transition
   }
 );
+
+
+
+
+
+
 // Check if the screen width is 360px or smaller
 if (window.matchMedia("(max-width: 360px)").matches) {
   // Animation for #block10-mid-product-img img
   gsap.fromTo("#block10-mid-product-img img", 
     {
-      scale: 1.1, // Initial zoomed-in state (slightly zoomed in)
+      scale: 1, // Initial zoomed-in state (slightly zoomed in)
     }, 
     {
-      scale: 1, // Final state (original size)
+      scale: 0.9, // Final state (original size)
       duration: 2, // Animation duration (time in seconds, adjust as needed)
       scrollTrigger: {
         trigger: "#block10-up", // Element that triggers the animation
         scroller: "body", // The scroll container (body)
-        start: "top 70%", // Trigger when the top of the element reaches 20% of the viewport height
+        start: "top 85%", // Trigger when the top of the element reaches 20% of the viewport height
         markers: true, // Show markers for debugging
         once: true, // Ensure the animation happens once when the trigger point is passed
       }
@@ -249,7 +255,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
       scrollTrigger: {
         trigger: "#block4", // Element that triggers the animation
         scroller: "body", // The scroll container (body)
-        start: "top 30%", // Trigger when the top of the element reaches 20% of the viewport height
+        start: "top 60%", // Trigger when the top of the element reaches 20% of the viewport height
         markers: true, // Show markers for debugging
         once: true, // Ensure the animation happens once when the trigger point is passed
       }
