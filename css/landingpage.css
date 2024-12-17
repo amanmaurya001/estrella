@@ -295,7 +295,7 @@ display: none;
 #block6{
   justify-content: space-between;
   display: flex;
-  
+   overflow: hidden;
      height: 120vh;
      width: 100%;
    
