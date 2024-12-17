@@ -15,7 +15,7 @@ var swiper = new Swiper(".mySwiper", {
   var swiper = new Swiper(".mySwiper1", {
     slidesPerView: 3,
    
-    
+        spaceBetween: 4,
     grabCursor: true,
     autoplay: {
       delay: 6500,
