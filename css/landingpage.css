@@ -929,7 +929,7 @@ margin-left: 6px;
   .blocck-4-price-price-left{
     height: 100%;
     width: 60%;
-  border: #45a049 2px solid;
+  
     display: flex;
    
   }
@@ -942,10 +942,10 @@ margin-left: 6px;
     border: #45a049 2px solid;
     height: 100%;
     width: 40%;
-   
+   align-items: center;
   }
   .blocck-4-price-colour-choice{
-    border: 1px rgb(0, 0, 0) solid;
+
     border-radius: 70%;
     height: 50%;
     width: 20%;
