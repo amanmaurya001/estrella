@@ -286,7 +286,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
   gsap.fromTo(
     "#block1-slider-box .swiper2 .swiper-slide:nth-child(1) img", 
     {
-      scale: 1.1, // Initial zoomed-in state
+      scale: 1.2, // Initial zoomed-in state
     },
     {
       scale: 1, // Final state (original size)
