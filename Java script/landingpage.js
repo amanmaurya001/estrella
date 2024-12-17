@@ -148,3 +148,39 @@ proceedBtn.onclick = function() {
     termsModal.style.display = "none";
    
 };
+gsap.fromTo("#block10-mid-product-img img", 
+  {
+    scale: 1.1, // Initial zoomed-in state (slightly zoomed in)
+  }, 
+  {
+    scale: 1, // Final state (original size)
+    duration: 2, // Animation duration (time in seconds, adjust as needed)
+    scrollTrigger: {
+      trigger: "#block10-up", // Element that triggers the animation
+      scroller: "body", // The scroll container (body)
+      start: "top 70%", // Trigger when the top of the element reaches 20% of the viewport height
+      markers: true, // Show markers for debugging
+      once: true, // Ensure the animation happens once when the trigger point is passed
+    }
+  }
+);
+
+gsap.fromTo("#block10-up h3", 
+  {
+    opacity: 0, // Start as invisible
+    y: 50, // Start 50px below its original position
+  }, 
+  {
+    opacity: 1, // Fade in to full opacity
+    y: 0, // Move to its original position (0px offset)
+    duration: 1, // Animation duration (time in seconds, adjust as needed)
+    scrollTrigger: {
+      trigger: "#block10-up", // Element that triggers the animation
+      scroller: "body", // The scroll container (body)
+      start: "top 95%", // Trigger when the top of the element reaches 95% of the viewport height
+      markers: true, // Show markers for debugging
+      once: true, // Ensure the animation happens once when the trigger point is passed
+    }
+  }
+);
+
