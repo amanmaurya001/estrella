@@ -747,7 +747,7 @@ height: 5vh;
         padding-left: 1.7vh;
       
      }
-   #block-right5{
+ #block-right5{
        
         margin-top: 1vh;
         display: flex;
@@ -780,6 +780,7 @@ height: 5vh;
   #block-right5 .product-related-pics:nth-child(n+2) {
     margin-left: 1vh;
   }
+  
     #block-right6{
     
         margin-top: 2vh;
