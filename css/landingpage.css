@@ -65,7 +65,7 @@
 
 #block2{
     
-margin-top: 2vh;
+
     height: 25vh;
     width: 100%;
    
@@ -84,7 +84,7 @@ margin-top: 2vh;
 
 
 #block3{
-    margin-top: 2vh;
+  
     height: 130vh;
     width: 100%;
    
@@ -353,6 +353,7 @@ display: none;
    overflow: hidden;
      height: 120vh;
      width: 100%;
+       border: green 2px solid;
    
  }
  #block6-left{
@@ -390,7 +391,7 @@ display: none;
  }
 
  #block7{
-  
+     border: #c93a3a 2px solid;
      height: 30vh;
      width: 100%;
      border: 2px rgb(255, 81, 0) solid;
