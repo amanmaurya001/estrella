@@ -609,25 +609,37 @@
        
       
         <div class="scrollable" id="scrollableDiv">
-         <div class="product-pics"><img src="/clothing/PHotos/women-shirts/shirt-1/1.png" alt=""></div>
-         <div class="product-pics"><img src="/clothing/PHotos/women-shirts/shirt-1/2.png" alt=""></div>
-         <div class="product-pics"><img src="/clothing/PHotos/women-shirts/shirt-1/3.png" alt=""></div>
-         <div class="product-pics"><img src="/clothing/PHotos/women-shirts/shirt-1/4.png" alt=""></div>
-         <div class="product-pics"><img src="/clothing/PHotos/women-shirts/shirt-1/5.png" alt=""></div>
+         <div class="product-pics"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/1.webp" alt=""></div>
+         <div class="product-pics"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/2.webp" alt=""></div>
+         <div class="product-pics"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/3.webp" alt=""></div>
+         <div class="product-pics"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/4.webp" alt=""></div>
+         <div class="product-pics"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt=""></div>
          <div class="product-pics"></div>
           
         </div>
 
         </div>
         <div id="block-left-1">
-            <img src="/clothing/PHotos/women-hoodies/product/hoodies-product-1.1.png" alt="">
+            <div class="swiper3 mySwiper3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/1.webp" alt=""></div>
+                  <div class="swiper-slide"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/2.webp" alt=""></div>
+                  <div class="swiper-slide"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/3.webp" alt=""></div>
+                  <div class="swiper-slide"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/4.webp" alt=""></div>
+                  <div class="swiper-slide"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt=""></div>
+                 
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+               
+              </div>
         </div>
         <div id="block-right">
-            <div id="block-right1">   <h2>Printed T-Shirt</h2></div>
+            <div id="block-right1"> <h2>Patchwork Half Placket</h2></div>
             <div id="block-right2"><h4>MRP inclusive of all taxes</h4></div>
-            <div id="block-right3"><h2>Rs.599.00</h2></div>
-            <div id="block-right4"><h3>Red/Satin-Denis</h3></div>
-          <div id="block-right5">
+            <div id="block-right3"><h1>Rs.</h1><h2>1499.00</h2></div>
+            <div id="block-right4"><h3>Black & white /polyster</h3></div>
+            <div id="block-right5">
                 <div class="product-related-pics" style="background-color: red;"><a href=""></a></div>
                 <div class="product-related-pics" style="background-color: blue;"><a href=""></a></div>
                 <div class="product-related-pics" style="background-color: rgb(85, 89, 136);"><a href=""></a></div>
@@ -644,16 +656,25 @@
                     <button class="size-button" onclick="updateSize(this, 'XL')"><h1>XL</h1></button>
                 </div>
             </div>
-            <div id="block-right7"><div id="add" onclick="addToCart('Red T-Shirt', selectedSize, 'http://127.0.0.-me', 599,'RT123')"><h2>Add</h2></div></div>
-            <div id="block-right8"><h2>Delivery & Payment Options</h2><h4>cash on delivery available</h4>
-            <h4>Delivery Time  2-7 days</h4></div>
+            <div id="block-size-guide"><a href="">size guide</a></div>
+            <div id="block-right7">
+                <div id="add" onclick="addToCart(document.querySelector('#block-right1 h2').textContent, selectedSize, 'http://127.0.0.-me', parseFloat(document.querySelector('#block-right3 h2').textContent.trim()),document.querySelector('#about2-product h5').textContent)">
+                    <h2>Add</h2>
+                </div>
+            </div>
+            <div id="block-right8">
+              <h2>Delivery & Payment Options</h2>
+              <h4>cash on delivery available</h4>
+              <h4>Delivery Time  2-7 days</h4>
+            </div>
             <div id="block-right9">
                  <div class="star-rating">
         <span class="star filled">&#9733;</span>
         <span class="star filled">&#9733;</span>
         <span class="star filled ">&#9733;</span>
-        <span class="star ">&#9733;</span>
-        <span class="star ">&#9733;</span>
+        <span class="star filled ">&#9733;</span>
+        <span class="star filled">&#9733;</span>
+        
     </div>
             </div>
        
@@ -667,7 +688,18 @@
       
     </div>
     <div class="toggle-content" id="toggleContent">
-    
+       <div id="about1-product"><h5>Loose-fit polo shirt in a soft, fine knit with a collar and button placket. Dropped shoulders, long sleeves and ribbing at the cuffs and hem.</h5></div>
+       <div id="about2-product"><h4>Article no:</h4><h5>T-S-1</h5></div>
+       <p><strong>Material:</strong> Cotton, Elastane</p>
+        <p><strong>Stretchability:</strong> Moderately Stretchable</p>
+        <p><strong>Fit:</strong> Slim Fit</p>
+        <p><strong>Quantity:</strong> 1 Piece</p>
+        <p><strong>Chest Pad:</strong> No</p>
+        <p><strong>Neckline:</strong> Shirt collar</p>
+        <p><strong>Sleeve Type:</strong> Regular Sleeve</p>
+        <p><strong>Sleeve Length:</strong> Long Sleeve</p>
+        <p><strong>Length:</strong> Regular</p>
+        <p><strong>Silhouette:</strong> S-line</p>
     
     </div>
    
@@ -676,9 +708,25 @@
         <h2>〱</h2>
     </div>
     <div class="toggle-content1" id="toggleContent1">
-       
-       
-       </div>
+       <div class="toggle-content1-heading">Compostion</div>
+       <p>Polyester 50%, Acrylic 31%, Polyamide 14%, Spandex 5%</p>
+       <div class="toggle-content1-heading">Additional material information</div>
+       <p>We exclude the weight of minor components such as, but not exclusively: threads, buttons, zippers, embellishments and prints.</p>
+       <p>The total weight of the product is calculated by adding the weight of all layers and main components together. Based on that, we calculate how much of that weight is made out by each material. For sets and multipacks, all pieces are counted together as one product in calculations.</p>
+       <div class="toggle-content1-heading">Materials in this product explained</div>
+        <pre>
+           <strong>Acrylic</strong> 
+            Acrylic is a synthetic fiber made from oil (a fossil resource).
+           <strong>Polyamide</strong> 
+            Polyamide, also called nylon, is a synthetic fiber made from oil (a fossil resource).
+            <strong>Polyester</strong> 
+            Polyester is a synthetic fiber made from crude oil (a fossil resource).
+           <strong>Recycled polyester</strong> 
+            Recycled polyester is polyester made from PET bottles or end-of-life textile waste. The PET bottles or textile waste is mechanically recycled and processed into new yarn.
+           <strong> Spandex</strong> 
+            Elastane is an elastic synthetic fiber made from oil (a fossil resource).</pre>
+    </div>
+
     <div class="block-discription-options"  onclick="toggleContent2()">
         <h3>Care</h3>
         <h2>〱</h2>
@@ -691,12 +739,12 @@
 
 </div>
 <div id="block-img-set">
-    <h2>Check out these dresses!</h2>
+    <h2> Recomended Outfit!</h2>
     <div id="block-img-set-container">
-        <div class="img-set"><img src="/clothing/PHotos/women-shirts/shirt-1/1.png" alt=""></div>
-        <div class="img-set"><img src="/clothing/PHotos/women-shirts/shirt-1/2.png" alt=""></div>
-        <div class="img-set"><img src="/clothing/PHotos/women-shirts/shirt-1/3.png" alt=""></div>
-        <div class="img-set"><img src="/clothing/PHotos/women-shirts/shirt-1/4.png" alt=""></div>
+        <div class="img-set"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/1.webp" alt=""></div>
+        <div class="img-set"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/2.webp" alt=""></div>
+        <div class="img-set"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/3.webp" alt=""></div>
+        <div class="img-set"><img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt=""></div>
     </div>
 </div>
 <div id="block-suggestion">
@@ -715,6 +763,42 @@
         </div>
        
       </div>
+</div>
+<div id="block-suggestion-mobile">
+    <h2>You May Also Like!!!</h2>
+    <div id="block-img-set-container1">
+        <!-- product 1 -->
+        <div class="img-set1">
+            <img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt="">
+            <a href=""> <div id="img-set1-name"><h2>Patchwork Half Placket</h2><h3>Rs 1299.00</h3></div></a>
+        </div>
+       <!-- product 2 -->
+       <div class="img-set1">
+        <img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt="">
+        <a href=""> <div id="img-set1-name"><h2>Patchwork Half Placket</h2><h3>Rs 1299.00</h3></div></a>
+    </div>
+     <!-- product 3 -->
+     <div class="img-set1">
+        <img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt="">
+        <a href=""> <div id="img-set1-name"><h2>Patchwork Half Placket</h2><h3>Rs 1299.00</h3></div></a>
+    </div>
+     <!-- product 4 -->
+     <div class="img-set1">
+        <img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt="">
+        <a href=""> <div id="img-set1-name"><h2>Patchwork Half Placket</h2><h3>Rs 1299.00</h3></div></a>
+    </div>
+     <!-- product 5 -->
+     <div class="img-set1">
+        <img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt="">
+        <a href=""> <div id="img-set1-name"><h2>Patchwork Half Placket</h2><h3>Rs 1299.00</h3></div></a>
+    </div>
+     <!-- product 6 -->
+     <div class="img-set1">
+        <img src="/clothing/PHotos/women/women-t-tshirt/t shirt (3)/5.webp" alt="">
+        <a href=""> <div id="img-set1-name"><h2>Patchwork Half Placket</h2><h3>Rs 1299.00</h3></div></a>
+    </div>
+       
+    </div>
 </div>
    
        
