@@ -237,7 +237,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
       scrollTrigger: {
         trigger: "#block4", // Element that triggers the animation
         scroller: "body", // The scroll container (body)
-        start: "top 30%", // Trigger when the top of the element reaches 20% of the viewport height
+        start: "top 60%", // Trigger when the top of the element reaches 20% of the viewport height
         
         once: true, // Ensure the animation happens once when the trigger point is passed
       }
