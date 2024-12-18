@@ -320,7 +320,7 @@ display: none;
 
 #block5{
     overflow: hidden;
-   margin-top: 1vh;
+ 
     height: 80vh;
     width: 100%;
  
@@ -353,7 +353,7 @@ display: none;
    overflow: hidden;
      height: 120vh;
      width: 100%;
-       border: green 2px solid;
+     
    
  }
  #block6-left{
@@ -391,7 +391,7 @@ display: none;
  }
 
  #block7{
-     border: #c93a3a 2px solid;
+  
      height: 30vh;
      width: 100%;
      border: 2px rgb(255, 81, 0) solid;
