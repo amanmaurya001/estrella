@@ -916,7 +916,7 @@ margin-left: 6px;
   #blocck-4-price-name h3{
     padding-left: 1vh;
     font-weight: 300;
-  font-size: 1.7vh;
+  font-size: 1.3vh;
   }
   #blocck-4-price-price{
     display: flex;
@@ -935,7 +935,7 @@ margin-left: 6px;
   }
   .blocck-4-price-price-left h4{
     padding-left: 1vh;
-    font-size: 1.4vh;
+    font-size: 1.1vh;
   }
   #blocck-4-price-colour{
     display: flex;
