@@ -1093,7 +1093,7 @@ height: 5vh;
     
     #block-img-set{
         border-top: #888 2px solid;
-        border: red solid 3px;
+        
         height: 77vh;
         width: 100%;
         overflow: hidden;
@@ -1110,7 +1110,7 @@ height: 5vh;
         column-gap: 1px;
         row-gap: 1px;
         grid-template-columns:50% 50%  ;
-        border: rgb(4, 255, 0) solid 3px;
+        
        
         width: 100%;
         height: 69vh;
