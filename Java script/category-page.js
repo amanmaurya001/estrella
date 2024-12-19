@@ -1,12 +1,7 @@
 // Function to load the navbar content from t-shirts-women.html
 function insertNavbar() {
-  fetch('html/t-shirts-women.html') // Fetch the content of t-shirts-women.html (adjusted path)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.text();
-    })
+  fetch('t-shirts-women.html') // Fetch the content of t-shirts-women.html
+    .then(response => response.text()) // Get the response as text
     .then(data => {
       // Create a temporary container to hold the HTML content
       const tempDiv = document.createElement('div');
@@ -15,11 +10,9 @@ function insertNavbar() {
       // Find the navbar by ID in the loaded content
       const navbar = tempDiv.querySelector('#navbar');
       
-      // If the navbar exists, prepend it to the body of shirts-women.html
+      // If the navbar exists, prepend it to the body of the current page
       if (navbar) {
         document.body.prepend(navbar);
-      } else {
-        console.warn('Navbar not found in t-shirts-women.html');
       }
     })
     .catch(error => {
