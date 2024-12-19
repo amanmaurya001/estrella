@@ -1,6 +1,6 @@
 // Function to load the navbar content from t-shirts-women.html
 function insertNavbar() {
-  fetch('t-shirts-women.html') // Fetch the content of t-shirts-women.html
+  fetch('html/t-shirts-women.html') // Fetch the content from 'html/t-shirts-women.html'
     .then(response => response.text()) // Get the response as text
     .then(data => {
       // Create a temporary container to hold the HTML content
@@ -16,12 +16,13 @@ function insertNavbar() {
       }
     })
     .catch(error => {
-      console.error('Error fetching navbar:', error);
+      console.error('Error fetching navbar:', error); // Log any errors
     });
 }
 
 // Insert navbar when the page loads
 window.onload = insertNavbar;
+
 
 
 
