@@ -908,7 +908,7 @@ margin-left: 6px;
   .blocck-4-price{
     height: 15%;
     width: 100%;
-    border:  2px solid rgb(255, 94, 0);
+    
   }
 #blocck-4-price-name{
     display: flex;
@@ -919,9 +919,9 @@ margin-left: 6px;
    
   }
   #blocck-4-price-name h3{
-    padding-left: 1vh;
+    padding-left: 0.5vh;
     font-weight: 300;
-  font-size: 1.3vh;
+  font-size: 1.1vh;
   }
   #blocck-4-price-price{
     display: flex;
@@ -939,12 +939,12 @@ margin-left: 6px;
      align-items: center;
   }
   .blocck-4-price-price-left h4{
-    padding-left: 1vh;
+    padding-left: 0.5vh;
     font-size: 1.1vh;
   }
   #blocck-4-price-colour{
     display: flex;
-    border: #45a049 2px solid;
+   
     height: 100%;
     width: 40%;
    align-items: center;
