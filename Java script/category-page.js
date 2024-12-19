@@ -1,4 +1,27 @@
+// Function to load the navbar content from t-shirts-women.html
+    function insertNavbar() {
+      fetch('t-shirts-women.html') // Fetch the content of t-shirts-women.html
+        .then(response => response.text()) // Get the response as text
+        .then(data => {
+          // Create a temporary container to hold the HTML content
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = data; // Insert the fetched HTML into the temporary div
 
+          // Find the navbar by ID in the loaded content
+          const navbar = tempDiv.querySelector('#navbar');
+          
+          // If the navbar exists, prepend it to the body of test.html
+          if (navbar) {
+            document.body.prepend(navbar);
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching navbar:', error);
+        });
+    }
+
+    // Insert navbar when the page loads
+    window.onload = insertNavbar;
 
 
 
