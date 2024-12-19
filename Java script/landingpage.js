@@ -211,7 +211,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
   // Animation for #block10-mid-product-img img
   gsap.fromTo("#block10-mid-product-img img", 
     {
-      scale: 1.05, // Initial zoomed-in state (slightly zoomed in)
+      scale: 1.08, // Initial zoomed-in state (slightly zoomed in)
     }, 
     {
       scale: 1, // Final state (original size)
