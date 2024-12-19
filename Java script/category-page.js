@@ -1,6 +1,6 @@
 // Function to load the navbar content from t-shirts-women.html
     function insertNavbar() {
-      fetch('t-shirts-women.html') // Fetch the content of t-shirts-women.html
+      fetch('../../t-shirts-women.html') // Fetch the content of t-shirts-women.html
         .then(response => response.text()) // Get the response as text
         .then(data => {
           // Create a temporary container to hold the HTML content
