@@ -1,7 +1,6 @@
 // Function to load the navbar content from t-shirts-women.html
 function insertNavbar() {
-  // Fetch the navbar from 'html/women-html/t-shirts-women.html'
-  fetch('html/women-html/t-shirts-women.html') // Correct path based on folder structure
+  fetch('t-shirts-women.html') // Fetch the navbar content from t-shirts-women.html
     .then(response => response.text()) // Get the response as text
     .then(data => {
       // Create a temporary container to hold the HTML content
@@ -23,7 +22,6 @@ function insertNavbar() {
 
 // Insert navbar when the page loads
 window.onload = insertNavbar;
-
 
 
 
