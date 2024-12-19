@@ -1,5 +1,5 @@
 function insertNavbar() {
-    fetch('/clothing/index.html.html') // Fetch the content of index.html
+    fetch('index.html') // Fetch the content of index.html
       .then(response => response.text()) // Get the response as text
       .then(data => {
         // Create a temporary container to hold the HTML content
