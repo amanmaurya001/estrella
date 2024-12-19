@@ -211,10 +211,10 @@ if (window.matchMedia("(max-width: 360px)").matches) {
   // Animation for #block10-mid-product-img img
   gsap.fromTo("#block10-mid-product-img img", 
     {
-      scale: 1, // Initial zoomed-in state (slightly zoomed in)
+      scale: 1.05, // Initial zoomed-in state (slightly zoomed in)
     }, 
     {
-      scale: 0.9, // Final state (original size)
+      scale: 1, // Final state (original size)
       duration: 2, // Animation duration (time in seconds, adjust as needed)
       scrollTrigger: {
         trigger: "#block10-up", // Element that triggers the animation
