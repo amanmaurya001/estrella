@@ -462,7 +462,8 @@ display: none;
  
  }
  #block8-right-down a img{
-
+border-bottom: #aaa 1px solid;
+    
  
   border-right: #aaa 1px solid;
   height: 100%;
@@ -535,7 +536,11 @@ display: none;
  
  }
  #block9-right a img{
-      border: #aaa 1px solid;
+     border-right: #aaa 1px solid;
+    
+     border-bottom: #aaa 1px solid;
+    border-left: #aaa 1px solid;
+      
   height: 100%;
   width: 100%;
  }
