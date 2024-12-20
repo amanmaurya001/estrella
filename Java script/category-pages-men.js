@@ -1,28 +1,28 @@
 // Function to load the navbar content from t-shirts-women.html inside women-html folder
 function insertNavbar() {
-    fetch('women-html/t-shirts-women.html') // Adjust the path to fetch from women-html folder
-      .then(response => response.text()) // Get the response as text
-      .then(data => {
-        // Create a temporary container to hold the HTML content
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = data; // Insert the fetched HTML into the temporary div
-  
-        // Find the navbar by ID in the loaded content
-        const navbar = tempDiv.querySelector('#navbar');
-        
-        // If the navbar exists, prepend it to the body of the current page
-        if (navbar) {
-          document.body.prepend(navbar);
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching navbar:', error); // Log any errors
-      });
-  }
-  
-  // Insert navbar when the page loads
-  window.onload = insertNavbar;
-  
+  fetch('../women-html/t-shirts-women.html') // Use relative path to go up one level and then into women-html folder
+    .then(response => response.text()) // Get the response as text
+    .then(data => {
+      // Create a temporary container to hold the HTML content
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data; // Insert the fetched HTML into the temporary div
+
+      // Find the navbar by ID in the loaded content
+      const navbar = tempDiv.querySelector('#navbar');
+      
+      // If the navbar exists, prepend it to the body of the current page
+      if (navbar) {
+        document.body.prepend(navbar);
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching navbar:', error); // Log any errors
+    });
+}
+
+// Insert navbar when the page loads
+window.onload = insertNavbar;
+
 
 
 // filter for size 
