@@ -727,12 +727,12 @@ height: 5vh;
      #block-right3 h1{
        
       padding-left: 2vh;
-    font-size: 2.5vh;
+    font-size: 1.9vh;
    }
      #block-right3 h2{
        
        
-      font-size: 2.5vh;
+      font-size: 1.9vh;
      }
      #block-right4{
        
@@ -743,7 +743,7 @@ height: 5vh;
         
      }
      #block-right4 h3{
-       
+          font-size: 1.7vh;
         padding-left: 1.7vh;
       
      }
@@ -863,6 +863,7 @@ height: 5vh;
        background-color: #000000;
      }
      #add h2{
+          font-size: 2.5vh;
         color: white;
      }
   
