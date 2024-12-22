@@ -29,6 +29,31 @@ function renderCart() {
     // Create a total price div
     const totalDiv = document.createElement('div');
     totalDiv.className = 'total-price';
+    
+    let discount = 0;
+    let discountText = 'Discount'; // Default text is 'Discount'
+    let deliveryFee = 70; // Default delivery fee is Rs 70
+    let deliveryFeeText = 'Rs 70'; // Default delivery fee text
+    
+    // Apply discount based on total price
+    if (totalPrice >= 2599 && totalPrice <= 4999) {
+        discount = 300; // Flat 300 discount
+        discountText = 'Flat Rs 300 Discount'; // Change text to "Flat Rs 300 Discount"
+    } else if (totalPrice > 4999) {
+        discount = totalPrice * 0.1; // 10% discount
+        discount = Math.floor(discount); // Ensure discount is a whole number (rounded down)
+        discountText = 'Discount 10%'; // Change text to "Discount 10%"
+    }
+
+    // If the total price is over Rs 1699, delivery is free
+    if (totalPrice > 1699) {
+        deliveryFee = 0; // Set delivery fee to Rs 0
+        deliveryFeeText = '<h2>Free</h2>'; // Text for free delivery
+    }
+
+    // Final total after applying discount and delivery fee
+    const finalPrice = totalPrice - discount + deliveryFee;
+
     totalDiv.innerHTML = `
         <div id="Order-Summery"> 
             <h2>Order Summary</h2>
@@ -37,18 +62,29 @@ function renderCart() {
             <div id="order-price1"><h2>Sub-Total</h2></div>
             <div id="order-price2"><h2>: Rs${totalPrice}</h2></div>
         </div>
-        <div id="order-price-discount">  </div>
-        <div id="order-price-discount">  </div>
-        <div id="order-price-discount">  </div>
-        <div id="order-price-discount">  </div>
-        <div id="order-price-discount">  </div>
-        <div id="order-price"> 
-            <div id="order-price1"><h2>Total</h2></div>
-            <div id="order-price2"><h2>: Rs${totalPrice}</h2></div>
+        <div id="order-price-discount"> 
+            <div id="order-price-discount-left"><h2>${discountText}</h2></div>
+            <div id="order-price-discount-right"><h2>: Rs${discount}</h2></div>
+        </div>
+        <!-- Delivery fee showing 70 with a crossed sign when delivery is free -->
+        <div id="order-price-delivery">  
+            <div id="order-price-delivery-left"><h2>Delivery</h2></div>
+            <div id="order-price-delivery-right">
+                ${deliveryFee === 0 ? `<h2 style="text-decoration: line-through;">Rs 70</h2>` : `<h2>:Rs 70</h2>`} 
+           
+            </div>
+        </div>
+            <div id="order-price-discount1">  </div>
+            <div id="order-price-discount1">  </div>
+            <div id="order-price-discount1">  </div>
+        <div id="final-order-price"> 
+            <div id="final-order-price1"><h2>Total</h2></div>
+            <div id="final-order-price2"><h2>: Rs${finalPrice}</h2></div>
         </div>
     `;
     cart1Div.appendChild(totalDiv); // Add total price to cart1Div
 }
+
 
 
 
