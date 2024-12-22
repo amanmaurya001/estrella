@@ -189,7 +189,7 @@
 
 }
 
-  #Order-Summery{
+#Order-Summery{
 
     display: flex;
     align-items: center;
@@ -203,34 +203,137 @@
     color: aliceblue;
   }
   #order-price{
+    
     height: 7vh;
     border-top: #ccc 1px solid;
     border-bottom: #ccc 1px solid;
     display: flex;
     justify-content: space-between;
   }
-  #order-price-discount{
-    height: 7vh;
-  }
+ 
 
   #order-price1{
+   
     display: flex;
     align-items: center;
-   margin-left: 5vh;
-  
+   
+     width: 50%;
   }
   #order-price1 h2{
+    margin-left: 5vh;
     color: aliceblue;
   }
 
   #order-price2{
+    width: 50%;
+   
     display: flex;
     align-items: center;
-   margin-right: 10vh;
+   
   }
   #order-price2 h2{
+    margin-left: 10vh;
     color: aliceblue;
   }
+
+
+  #order-price-discount{
+    height: 7vh;
+    border-bottom: #ccc 1px solid;
+    display: flex;
+  }
+
+  
+  #order-price-discount-left{
+  
+    display: flex;
+    align-items: center;
+   
+    width: 50%;
+  }
+  #order-price-discount-left h2{
+    margin-left: 5vh;
+    color: aliceblue;
+  }
+  #order-price-discount-right{
+   
+    display: flex;
+    align-items: center;
+   
+    width: 50%;
+  }
+  #order-price-discount-right h2{
+    margin-left: 10vh;
+    color: aliceblue;
+  }
+#order-price-delivery{
+    height: 7vh;
+    border-bottom: #ccc 1px solid;
+    display: flex;
+  }
+  #order-price-delivery-left{
+   
+    display: flex;
+    align-items: center;
+   
+    width: 50%;
+  }
+  #order-price-delivery-left h2{
+    margin-left: 5vh;
+    color: aliceblue;
+  }
+  #order-price-delivery-right{
+   
+    display: flex;
+    align-items: center;
+   
+    width: 50%;
+  }
+  #order-price-delivery-right h2{
+    margin-left: 10vh;
+    color: aliceblue;
+  }
+
+
+  #order-price-discount1{
+    height: 7vh;
+   
+  }
+
+  #final-order-price{
+   
+    height: 7vh;
+    border-top: #ccc 1px solid;
+    border-bottom: #ccc 1px solid;
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+
+  #final-order-price1{
+  
+    display: flex;
+    align-items: center;
+   
+     width: 50%;
+  }
+  #final-order-price1 h2{
+    margin-left: 5vh;
+    color: aliceblue;
+  }
+
+  #final-order-price2{
+    width: 50%;
+   
+    display: flex;
+    align-items: center;
+   
+  }
+  #final-order-price2 h2{
+    margin-left: 10vh;
+    color: aliceblue;
+  }
+
 
   #checkout{
     margin-left:144vh;
@@ -597,7 +700,7 @@
        margin-top: 69vh;
         margin-left: 0vh;
          width: 100%;
-         height:19vh;
+         height:30vh;
         
   
     }
@@ -631,7 +734,7 @@
           display: flex;
           justify-content: space-between;
         }
-        #order-price-discount{
+        #order-price-discount1{
           display: none;
           height: 7vh;
         }
@@ -639,24 +742,123 @@
         #order-price1{
           display: flex;
           align-items: center;
-         margin-left: 5vh;
-        
+       
+        width: 50%;
         }
         #order-price1 h2{
           font-size: 1.7vh;
           color: aliceblue;
+        margin-left: 5vh;
         }
       
         #order-price2{
           display: flex;
           align-items: center;
-         margin-right: 10vh;
+       width: 50%;
         }
         #order-price2 h2{
           font-size: 1.7vh;
           color: aliceblue;
+              margin-left: 10vh;
+        }
+       #order-price-discount{
+          height: 4vh;
+          border-bottom: #ccc 1px solid;
+          display: flex;
         }
       
+        
+        #order-price-discount-left{
+        
+          display: flex;
+          align-items: center;
+         
+          width: 50%;
+        }
+        #order-price-discount-left h2{
+          margin-left: 5vh;
+          color: aliceblue;
+          font-size: 1.7vh;
+        }
+        #order-price-discount-right{
+         
+          display: flex;
+          align-items: center;
+         
+          width: 50%;
+        }
+        #order-price-discount-right h2{
+          margin-left: 10vh;
+          color: aliceblue;
+          font-size: 1.7vh;
+        }
+      #order-price-delivery{
+          height: 4vh;
+          border-bottom: #ccc 1px solid;
+          display: flex;
+        }
+        #order-price-delivery-left{
+         
+          display: flex;
+          align-items: center;
+         
+          width: 50%;
+        }
+        #order-price-delivery-left h2{
+          margin-left: 5vh;
+          color: aliceblue;
+          font-size: 1.7vh;
+        }
+        #order-price-delivery-right{
+         
+          display: flex;
+          align-items: center;
+         
+          width: 50%;
+        }
+        #order-price-delivery-right h2{
+          margin-left: 10vh;
+          color: aliceblue;
+          font-size: 1.7vh;
+        }
+      #final-order-price{
+   
+          height: 4vh;
+          border-top: #ccc 1px solid;
+          border-bottom: #ccc 1px solid;
+          display: flex;
+          justify-content: space-between;
+        }
+       
+      
+        #final-order-price1{
+  
+          display: flex;
+          align-items: center;
+         
+           width: 50%;
+        }
+        #final-order-price1 h2{
+          margin-left: 5vh;
+          color: aliceblue;
+          font-size: 1.7vh;
+        }
+      
+        #final-order-price2{
+          width: 50%;
+         
+          display: flex;
+          align-items: center;
+         
+        }
+        #final-order-price2 h2{
+          margin-left: 10vh;
+          color: aliceblue;
+          font-size: 1.7vh;
+        }
+      
+      
+
         #checkout{
           margin-left: 5vh;
          margin-top: 82vh;
