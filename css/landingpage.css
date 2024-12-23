@@ -1462,8 +1462,8 @@ button:hover {
   
   
   #block2{
-      
-      margin-top: 1vh;
+       
+      margin-top: 0vh;
           height: 6vh;
           width: 100%;
          
@@ -1483,10 +1483,10 @@ button:hover {
   }
   #block3-mobile{
     display: block;
-      height: 38vh;
+      height: 41vh;
       width: 100%;
     
-      margin-top: 8px;
+      margin-top: 0px;
      overflow: hidden;
   }
   .swiper3 {
@@ -1499,7 +1499,7 @@ button:hover {
       width: 100%;
    display: flex;
    justify-content: space-between;
-   border: red solid 3px;
+
   }
   .category-mobile-split{
       height: 100%;
@@ -1607,7 +1607,7 @@ button:hover {
   
   #block4-mobile{
       display: block;
-    border: red 2px solid;
+   
       height: 35vh;
       width: 100%;
      overflow: hidden;
@@ -1689,7 +1689,7 @@ button:hover {
   justify-content: space-between;
   display: flex;
   
-     height: 42vh;
+     height: 48vh;
      width: 100%;
    
  }
@@ -1730,7 +1730,7 @@ button:hover {
     /* ////////////////////////////////////////////////// */
  #block7{
    
-     height: 27vh;
+     height: 30vh;
      width: 100%;
    
      border: 2px rgb(255, 81, 0) solid;
@@ -1740,7 +1740,7 @@ button:hover {
   justify-content: space-between;
   display: flex;
   
-     height: 42vh;
+     height: 48vh;
      width: 100%;
    
  }
@@ -1809,7 +1809,7 @@ button:hover {
   justify-content: space-between;
   display: flex;
   
-     height: 42vh;
+     height: 48vh;
      width: 100%;
    
  }
