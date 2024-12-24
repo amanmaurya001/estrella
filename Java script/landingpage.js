@@ -295,4 +295,11 @@ if (window.matchMedia("(max-width: 360px)").matches) {
     }
   );
 }
-
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', function() {
+        // Remove any potentially harmful characters like <, >, and script tags
+        this.value = this.value.replace(/<script.*?>.*?<\/script>/gi, '')
+                               .replace(/<\/?[^>]+>/gi, '')  // Remove HTML tags
+                               .replace(/javascript:/gi, '');  // Remove JavaScript protocol
+    });
+});
