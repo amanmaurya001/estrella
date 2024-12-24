@@ -1216,7 +1216,7 @@
     #description-box1 div {
       display: flex;
       align-items: center;
-   border: 1px solid blue;
+
       height: 2.5vh;
       margin-bottom: 4px;
     }
@@ -1416,7 +1416,7 @@
 
         #checkout{
           margin-left: 5vh;
-         margin-top: 87vh;
+         margin-top: 70vh;
           z-index: 11111;
          position: fixed;
          
