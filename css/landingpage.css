@@ -1647,9 +1647,9 @@ button:hover {
    
   }
   #blocck-4-price-name h3{
-    padding-left: 0.5vh;
+    padding-left: 0.8vh;
     font-weight: 300;
-  font-size: 1.1vh;
+  font-size: 1.4vh;
   }
   #blocck-4-price-price{
     display: flex;
@@ -1667,8 +1667,8 @@ button:hover {
     
   }
   .blocck-4-price-price-left h4{
-    padding-left: 0.5vh;
-    font-size: 1.1vh;
+    padding-left: 0.8vh;
+    font-size: 1.3vh;
   }
   #blocck-4-price-colour{
     display: flex;
@@ -1678,7 +1678,7 @@ button:hover {
   
   }
   .blocck-4-price-colour-choice{
-
+ 
     border-radius: 70%;
     height: 50%;
     width: 20%;
