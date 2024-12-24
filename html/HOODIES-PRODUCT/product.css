@@ -1390,18 +1390,29 @@ height: 5vh;
          width: 100%;
        
      }
-    .product-related-pics{
-        margin-left: 1vh;
-        height: 90%;
-        width: 17%;
-       
-    }
-    .product-related-pics img{
-       
-        height: 100%;
-        width: 100%;
-       
-    }
+  .product-related-pics{
+   
+      border-radius: 50%;
+      height: 90%;
+      width: 5%;
+     
+     
+  }
+  .product-related-pics a{
+  display: block;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  
+  }
+  #block-right5 .product-related-pics:first-child {
+   margin-left: 2vh;
+  }
+  
+  /* Style the other four children */
+  #block-right5 .product-related-pics:nth-child(n+2) {
+    margin-left: 1vh;
+  }
     #block-right6{
     
         margin-top: 2vh;
