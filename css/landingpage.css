@@ -898,19 +898,7 @@ margin-left: 6px;
   .swiper-slide {
     
     
-   
-    
-    
-
-    
-      
-
-
-    
-
-    
-    
-  }
+ }
 
   .blocck4-img{
     height: 85%;
@@ -1645,11 +1633,67 @@ button:hover {
       width: 100%;
       
     }
-    .blocck-4-price{
-      height: 15%;
-      width: 100%;
-      border:  2px solid rgb(255, 94, 0);
-    }
+     .blocck-4-price{
+    height: 15%;
+    width: 100%;
+    
+  }
+#blocck-4-price-name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50%;
+    width: 100%;
+   
+  }
+  #blocck-4-price-name h3{
+    padding-left: 0.5vh;
+    font-weight: 300;
+  font-size: 1.1vh;
+  }
+  #blocck-4-price-price{
+    display: flex;
+    align-items: center;
+   
+    height: 50%;
+    width: 100%;
+   
+  }
+  .blocck-4-price-price-left{
+    height: 100%;
+    width: 60%;
+  
+    display: flex;
+    
+  }
+  .blocck-4-price-price-left h4{
+    padding-left: 0.5vh;
+    font-size: 1.1vh;
+  }
+  #blocck-4-price-colour{
+    display: flex;
+   
+    height: 100%;
+    width: 40%;
+  
+  }
+  .blocck-4-price-colour-choice{
+
+    border-radius: 70%;
+    height: 50%;
+    width: 20%;
+   
+  }
+  .blocck-4-price-colour-choice:first-child {
+    margin-left: 0vh;
+   
+  }
+  .blocck-4-price-colour-choice:not(:first-child) {
+    margin-left: 3px;
+   
+  }
+  
+
   
   
   
