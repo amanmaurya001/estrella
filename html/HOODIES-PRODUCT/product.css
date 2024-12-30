@@ -638,7 +638,7 @@ height: 5vh;
        
     }
    #block-left{
-     
+       margin-top: 0vh;
       display: block;
       height: 75vh;
       width: 100%;
