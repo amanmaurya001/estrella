@@ -642,7 +642,7 @@ height: 5vh;
       display: block;
       height: 75vh;
       width: 100%;
-      border: green 6px solid;
+    
     }
     .scrollable {
     padding: 0;
@@ -1256,49 +1256,35 @@ height: 5vh;
         width: 100%;
        
     }
-    #block-left{
-        display: none;
-      
-    }
-   
-    
-    #block-left-1{
-   
-     
-       
-       padding-top: 4vh;
-        display: block;
-        height: 75vh;
-        width: 100%;
-        
-    }
-    .swiper3 {
-     
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
+     #block-left{
+       margin-top: 4vh;
       display: block;
+      height: 75vh;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+    
     }
-    #block-left-1 img{
+    .scrollable {
+    padding: 0;
+    display: block;
+      height: 100%;
+      width: 100%; /* Set height for scrollable effect */
+      overflow-y: scroll; /* Enable vertical scrolling */
+      
+      background-color: #fff;
+    
      
-     
+  }
+  /*  */
+  
+  .product-pics{
       height: 100%;
       width: 100%;
-    }
+      
+  }
+  .product-pics img{
+      height: 100%;
+      width: 100%;
+  }
     
     
     
