@@ -115,7 +115,7 @@ font-weight: 555;
 #block4{
     margin-top: 1vh;
     margin-bottom: 2vh;
-  
+  display: none;
     height: 42vh;
     width: 100%;
   
@@ -346,7 +346,7 @@ font-weight: 555;
    }
    #block4-mobile{
   
-       display: block;
+      display: none;
        margin-top: vh;
        margin-bottom: 1vh;
    
