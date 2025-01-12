@@ -1477,39 +1477,7 @@ justify-content: center;
       
     }
     
-     #hamburger{
-      
-      margin-right: 0.6vh;
-       display: block;
-        height: 100%;
-        width: 3.6vh;
-       
-    }
-    #mobile-navbar-img{
-        height: 100%;
-        width: 100%;
-    }
-    #mobile-navbar-img img{
-        height: 100%;
-        width: 100%;
-    }
-    .toggle-content4 {
-       
-        height: 0; /* Hidden by default */
-       overflow: hidden;
-        transition:  0.5s ease-in-out; /* Smooth transition */
-        background-color: #f9f9f9;
-      
-      }
     
-      
-      /* Class to show content */
-      .toggle-content4.show {
-        margin-left: -45.5vh;
-       
-        height:auto; /* Adjust this value based on your content */
-       width: 360px;
-      }
 
       .toggle-content5 {
        
@@ -2640,40 +2608,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
       
     }
     
-     #hamburger{
-      
-      margin-right: 0.6vh;
-       display: block;
-        height: 100%;
-        width: 3.6vh;
-       
-    }
-    #mobile-navbar-img{
-        height: 100%;
-        width: 100%;
-    }
-    #mobile-navbar-img img{
-        height: 100%;
-        width: 100%;
-    }
-    .toggle-content4 {
-       
-        height: 0; /* Hidden by default */
-       overflow: hidden;
-        transition:  0.5s ease-in-out; /* Smooth transition */
-        background-color: #f9f9f9;
-      
-      }
-    
-      
-      /* Class to show content */
-      .toggle-content4.show {
-        margin-left: -48.1vh;
-       
-        height:auto; /* Adjust this value based on your content */
-       width: 390px;
-      }
-
+   
       .toggle-content5 {
        
         height: 0; /* Hidden by default */
@@ -3471,5 +3406,50 @@ grid-template-columns: 20% 20% 20% 20% 20%;
       
        }
       
+}
+@media screen and (min-width: 300px) and (max-width: 660px) {
+
+    /* Show Hamburger on Mobile Devices */
+    #hamburger {
+        display: block;
+        margin-right: 0.2vh;
+        height: 65%;
+        width: 4vh;
+    }
+
+    #mobile-navbar-img {
+        height: 100%;
+        width: 100%;
+    }
+
+    #mobile-navbar-img img {
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Toggle Content (Menu) - Fit the screen width dynamically */
+    .toggle-content4 {
+        height: 0;
+        overflow: hidden;
+        transition: transform 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+        background-color: #f9f9f9;
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%); /* Initially off-screen */
+        margin-top: 4vh;
+        width: 100vw; /* Full width of the screen */
+    }
+
+    /* When the menu is visible */
+    .toggle-content4.show {
+        transform: translateX(0); /* Slide the menu in */
+        border: #1bbd23 2px solid;
+        height: 100vh; /* Full height of the viewport */
+        margin-top: 4vh;
+        width: 100vw; /* Always fits the screen width */
+        box-sizing: border-box;
+        height: auto;
+    }
 }
 
