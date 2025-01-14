@@ -328,26 +328,27 @@
 
 
     /* /////////////////Headings///////////////////////// */
-   #heading{
-  
+  #heading{
+   
        display: flex;
-       align-items: flex-end;
-       justify-content:space-around;
-       height: 11vh;
+       align-items: center;
+       justify-content: center;
+       height: 3vh;
        width: 100%;
-      
+      margin-top: 4vh;
    }
-   .heading_bars{
-       height: 35%;
-       width: 45%;
-      
-   }
-   #heading .heading_bars:nth-child(3){
-       display: none;
-   }
-   .heading_bars h1{
-       font-size: 1vh;
-           }
+  .text-container {
+    text-align: center;
+    font-size: 1.8vh;
+    color: black; /* Black font color */
+    color: white;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    animation: washEffect 12s infinite; /* Animation lasts 6 seconds and repeats */
+  }
+  
    
    #heading-1{
        margin-top: 2vh;
@@ -365,47 +366,7 @@
    font-weight: 999;
        font-size: 6vh;
    }
-/* /////////////////hot picks///////////////////////// */
 
-   #block4{
-       display: none;
-       
-     
-       
-   }
-   #block4-mobile{
-  
-      display: none;
-       margin-top: vh;
-       margin-bottom: 1vh;
-   
-       height: 20vh;
-       width: 100%;
-   }
-   #block4-mobile h1{
-       font-family: noto;
-       margin-left: 1vh;
-       font-weight: 500;
-       font-size: 2vh;
-   }
-   .swiper {    
-       width: 100%;
-       height: 75%;
-     }
-   
-    
-   
-     .swiper-slide img {
-     
-       width: 100%;
-       height: 100%;
-      
-     }
-     
-
-
-   
-   
 
   /* /////////////////MAIN BLOCK///////////////////////// */
    #main-block-right{
