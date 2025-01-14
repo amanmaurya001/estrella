@@ -1183,7 +1183,7 @@ justify-content: center;
     
 
     #navbar {
-    
+    margin-top: -4vh;
         position:fixed;
         border-bottom: 2px  rgb(95, 91, 91) solid;
         z-index: 9999;
