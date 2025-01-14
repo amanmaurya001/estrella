@@ -3094,7 +3094,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
     /* Show Hamburger on Mobile Devices */
     #hamburger {
         display: block;
-        margin-right: 3vh;
+        margin-right: 0.2vh;
         height: 90%;
         width: 4vh;
     }
