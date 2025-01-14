@@ -89,6 +89,7 @@
     margin-left: 12px; /* Adjust the value as needed */
 }
 #block3-2{
+     margin-top: 12px;
     display: flex;
     height: 50%;
     width: 100%;
