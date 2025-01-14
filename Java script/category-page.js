@@ -354,7 +354,56 @@ var swiper = new Swiper(".mySwiper", {
     // Toggle the "show" class
     content.classList.toggle('show');
   }
-  setInterval(() => {
+function toggleContent21() {
+  var content = document.getElementById("toggleContent21");
+  var arrow = content.previousElementSibling.querySelector(".arrow");
+  var parent = content.parentElement;
+  parent.classList.toggle("show");
+}
+
+function toggleContent22() {
+  var content = document.getElementById("toggleContent22");
+  var arrow = content.previousElementSibling.querySelector(".arrow");
+  var parent = content.parentElement;
+  parent.classList.toggle("show");
+}
+
+function toggleContent23() {
+  var content = document.getElementById("toggleContent23");
+  var arrow = content.previousElementSibling.querySelector(".arrow");
+  var parent = content.parentElement;
+  parent.classList.toggle("show");
+}
+
+function toggleContent24() {
+  var content = document.getElementById("toggleContent24");
+  var arrow = content.previousElementSibling.querySelector(".arrow");
+  var parent = content.parentElement;
+  parent.classList.toggle("show");
+}
+
+function toggleContent25() {
+  var content = document.getElementById("toggleContent25");
+  var arrow = content.previousElementSibling.querySelector(".arrow");
+  var parent = content.parentElement;
+  parent.classList.toggle("show");
+}
+function toggleContent26() {
+  var content = document.getElementById("toggleContent26");
+  var arrow = content.previousElementSibling.querySelector(".arrow");
+  var parent = content.parentElement;
+  parent.classList.toggle("show");
+}
+const messages = [
+  "Free delivery over 1599",
+  "Flat 300 discount over 2599",
+  "10% discount over 4999"
+];
+
+let currentIndex = 0;
+const messageElement = document.getElementById("message");
+
+setInterval(() => {
   currentIndex = (currentIndex + 1) % messages.length;
   messageElement.textContent = messages[currentIndex];
 }, 12000); // Change text every 4 seconds
