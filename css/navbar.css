@@ -3444,7 +3444,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
     /* When the menu is visible */
     .toggle-content4.show {
         transform: translateX(0); /* Slide the menu in */
-        border: #1bbd23 2px solid;
+      
         height: 100vh; /* Full height of the viewport */
         margin-top: 4vh;
         width: 100vw; /* Always fits the screen width */
