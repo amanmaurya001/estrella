@@ -354,4 +354,7 @@ var swiper = new Swiper(".mySwiper", {
     // Toggle the "show" class
     content.classList.toggle('show');
   }
-  
+  setInterval(() => {
+  currentIndex = (currentIndex + 1) % messages.length;
+  messageElement.textContent = messages[currentIndex];
+}, 12000); // Change text every 4 seconds
