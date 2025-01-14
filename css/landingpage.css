@@ -557,6 +557,7 @@ body{
   
 }
     #block1{
+          margin-top: 4vh;
         overflow: hidden;
         height: 30vh;
         width: 100%;
@@ -568,7 +569,7 @@ body{
 
     #block1-slider{ 
      
-      margin-top: 2.6vh;
+    
         height: 100%;
         width: 100%;
      display: flex;
@@ -578,7 +579,7 @@ body{
     }
     #block1-slider-box{
     
-        height: 95.5%;
+        height: 100%;
         width: 100%;
        
       
