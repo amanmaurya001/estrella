@@ -3291,7 +3291,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
     #hamburger {
         display: block;
         margin-right: 0.2vh;
-        height: 65%;
+        height: 90%;
         width: 4vh;
     }
 
