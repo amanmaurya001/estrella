@@ -476,12 +476,14 @@ font-size: 2vh;
 font-weight: 500;
 }
  #about{
-    display: flex;
+  display: flex;
     align-items: center;
     margin-top: 3vh;
+    margin-left: 3vh;
+   border-radius: 5vh;
      height: 15vh;
-     width: 100%;
-     
+     width: 97%;
+     border: 2px rgb(200, 209, 200) solid;
  }
  #about h3{
     padding-left: 5vh;
