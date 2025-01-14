@@ -363,7 +363,7 @@ color: initial; /* Set initial color */
     border-bottom:  black 2px solid;
     height: 8vh;
     width: 100%;
-    margin-top: 3vh;
+    margin-top: 0vh;
     margin-bottom: 2vh;
     
 }
@@ -1686,7 +1686,7 @@ justify-content: center;
     border-bottom:  rgb(181, 176, 176) 2px solid;
     height: 6vh;
     width: 100%;
-    margin-top: 1vh;
+    margin-top: 0vh;
     margin-bottom: 2vh;
     
 }
