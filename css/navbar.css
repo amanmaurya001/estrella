@@ -355,647 +355,521 @@ color: initial; /* Set initial color */
 
 
 #main-block-left{
-   
+     
+      display: none;
+    
+  }
+  #main-block-left-1{
+     
     display: flex;
   align-items: center;
+  justify-content: space-between;
     border-top:  black 2px solid;
     font-family: cripson;
     border-bottom:  black 2px solid;
     height: 8vh;
     width: 100%;
-    margin-top: 0vh;
-    margin-bottom: 2vh;
+       margin-bottom: 2vh;
     
 }
-
-
-.filter-box-container {
-   
-    margin-left: 45vh;
-    height: 6vh; /* Let it adjust based on content */
-    border:  #888 2px solid;
-  width: 30vh;
-    position: relative; /* For positioning toggle content */
-}
-.filter-box-container1 {
-   
-    margin-left: 45vh;
-    height: 6vh; /* Let it adjust based on content */
-    border:  #888 2px solid;
-  width: 30vh;
-    position: relative; /* For positioning toggle content */
-}
-
-.filter-box {
-    display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    height: 100%; /* Set a fixed height for the clickable area */
-    width: 100%;
-    cursor: pointer; /* Change cursor for the entire box */
-}
-
-
-#filter-box-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 70%;
-    border-right: #888 2px solid;
-}
-
-#filter-box-text h2 {
-    font-weight: 400;
-    font-size: 3.5vh;
-    
-   
-}
-
-#filter-box-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 30%;
-   
-}
-
-#filter-box-icon img {
-    height: 80%;
-    width: 80%;
-}
-
-.toggle-content11 {
-    position: absolute; /* Positioned relative to container */
-    z-index: 333;
-   
-    height: 0; /* Hidden by default */
-    width: 115vh;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out; /* Smooth transition */
-    background-color: #f9f9f9;
-    margin-left: -45.5vh;
-    display: flex;
-    align-items: center;
-}
-
-/* Class to show content */
-.toggle-content11.show {
-    border-top: #888 2px solid;
-    height: 31vh; /* Adjust this value based on your content */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* universal*/
-#filter-i {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    width: 12vh;
-   margin-left: 2vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .filter-section {
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-    
-    width: 100%;
-    height: 4vh;
-  }
-  
-  /* Styles for the filter section header */
-  .filter-section h2 {
-    font-size: 1.5rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-   
-  }
-  
-  .filter-section img {
-    margin-left: 1vh;
-    width: 20px;
-    height: 20px;
-   
-  }
-  
-  /* Rotate the arrow on hover */
-  
-  
-  /* Styles for the filter options */
-  .filter-options {
-    margin-top: 15px;
-  }
-  
-  /* Styles for each label */
-  .label {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-  }
-  
-  .label:hover {
-    background-color: #e0f7fa; /* Light cyan background on hover */
-  }
-  
-  /* Hide the default checkbox */
-  .filter-checkbox {
-    display: none;
-  }
-  
-  /* Custom checkbox styling */
-  .label h3 {
-    margin: 0 0 0 10px;
-    color: #555;
-  }
-  
-  /* Add styles for checked checkboxes */
-  .filter-checkbox:checked + h3 {
-    color: #00796b; /* Darker cyan when checked */
-    font-weight: bold;
-  }
-  
-  /* Optional: Style for the checked state */
-  .filter-checkbox:checked + h3::before {
-    content: '✓';
-    color: #00796b;
-    margin-right: 5px;
-    font-weight: bold;
-  }
-  
-  
-  /* filter  pattern*/
-  
-  #filter-Pattern {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 15vh;
-    margin-left: 2vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .filter-section1 {
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-   
-    width: 100%;
-    height: 4vh;
-  }
-  
-  /* Styles for the filter section header */
-  .filter-section1 h2 {
-    font-size: 1.5rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .filter-section1 img {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.2s;
-  }
-  
-  /* Rotate the arrow on hover */
-  
-  
-  /* Styles for the filter options */
-  .filter-options {
-    margin-top: 15px;
-  }
-  
-  /* Styles for each label */
-  .label {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-  }
-  
-  .label:hover {
-    background-color: #e0f7fa; /* Light cyan background on hover */
-  }
-  
-  /* Hide the default checkbox */
-  .filter-checkbox1 {
-    display: none;
-  }
-  
-  /* Custom checkbox styling */
-  .label h3 {
-    margin: 0 0 0 10px;
-    color: #555;
-  }
-  
-  /* Add styles for checked checkboxes */
-  .filter-checkbox1:checked + h3 {
-    color: #00796b; /* Darker cyan when checked */
-    font-weight: bold;
-  }
-  
-  /* Optional: Style for the checked state */
-  .filter-checkbox1:checked + h3::before {
-    content: '✓';
-    color: #00796b;
-    margin-right: 5px;
-    font-weight: bold;
-  }
-  /* filter  sleeve length*/
-  
-  /* General styles for the filter section */
-  #filter-sleeve {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 25vh;
-    margin-left: 2vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .filter-section2 {
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-    
-    width: 100%;
-    height: 4vh;
-  }
-  
-  /* Styles for the filter section header */
-  .filter-section2 h2 {
-    font-size: 1.5rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-  
-  }
-  
-  .filter-section2 img {
-    margin-left: 1vh;
-    width: 20px;
-    height: 20px;
-   
-  }
-  
-  /* Rotate the arrow on hover */
-  
-  
-  /* Styles for the filter options */
-  .filter-options1 {
-    margin-top: 15px;
-  }
-  
-  /* Styles for each label */
-  .label {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-  }
-  
-  .label:hover {
-    background-color: #e0f7fa; /* Light cyan background on hover */
-  }
-  
-  /* Hide the default checkbox */
-  .filter-checkbox2 {
-    display: none;
-  }
-  
-  /* Custom checkbox styling */
-  .label h3 {
-    margin: 0 0 0 10px;
-    color: #555;
-  }
-  
-  /* Add styles for checked checkboxes */
-  .filter-checkbox2:checked + h3 {
-    color: #00796b; /* Darker cyan when checked */
-    font-weight: bold;
-  }
-  
-  /* Optional: Style for the checked state */
-  .filter-checkbox2:checked + h3::before {
-    content: '✓';
-    color: #00796b;
-    margin-right: 5px;
-    font-weight: bold;
-  }
-  
-  
-  /* filter  material*/
-  
-  
-  #filter-material {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 18vh;
-    margin-left: 2vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Styles for the filter section header */
-  .filter-section3 {
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-   
-    width: 100%;
-    height: 4vh;
-  }
-  .filter-section3 h2 {
-    font-size: 1.5rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-   
-  }
-  
-  .filter-section3 img {
-    margin-left: 1vh;
-    width: 20px;
-    height: 20px;
-   
-  }
-  
-  /* Rotate the arrow on hover */
-  
-  
-  /* Styles for the filter options */
-  .filter-options {
-    margin-top: 15px;
-  }
-  
-  /* Styles for each label */
-  .label {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-  }
-  
-  .label:hover {
-    background-color: #e0f7fa; /* Light cyan background on hover */
-  }
-  
-  /* Hide the default checkbox */
-  .filter-checkbox3 {
-    display: none;
-  }
-  
-  /* Custom checkbox styling */
-  .label h3 {
-    margin: 0 0 0 10px;
-    color: #555;
-  }
-  
-  /* Add styles for checked checkboxes */
-  .filter-checkbox3:checked + h3 {
-    color: #00796b; /* Darker cyan when checked */
-    font-weight: bold;
-  }
-  
-  /* Optional: Style for the checked state */
-  .filter-checkbox3:checked + h3::before {
-    content: '✓';
-    color: #00796b;
-    margin-right: 5px;
-    font-weight: bold;
-  }
-  
-  
-  
-  
-  
-  
-  /* filter  colour*/
-  
-  /* General styles for the filter section */
-  #filter-colour {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 32vh;
-    margin-left: 2vh;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Styles for the filter section header */
-  .filter-section4 {
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-   
-    width: 100%;
-    height: 4vh;
-  }
-  .filter-section4 h2 {
-    font-size: 1.5rem;
-    color: #333;
-    display: flex;
-    align-items: center;
-   
-  }
-  
-  .filter-section4 img {
-    margin-left: 1vh;
-    width: 20px;
-    height: 20px;
-   
-  }
-  
-  /* Rotate the arrow on hover */
-  
-  
-  /* Styles for the filter options */
-  
-  /* Styles for each label */
-  .label1 {
-  
-    display: flex;
-    align-items: center;
-    padding: 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-    width: 5vh;
-  }
-  
-  .label1:hover {
-    background-color: #e0f7fa; /* Light cyan background on hover */
-  }
-  
-  /* Hide the default checkbox */
-  .filter-checkbox4 {
-    display: none;
-  }
-  
-  #filter-section4-colour{
-    width: 100%;
-    height: 24vh;
-  
-    display: grid;
-    column-gap: 2px;
-    row-gap: 15px;
-    grid-template-columns: 32% 32% 32%;
-    }
-  /* Styles for the color boxes */
-  .filter-colour-box {
-    width: 20px; /* Adjust width as needed */
-    height: 20px; /* Adjust height as needed */
-    margin-left: 10px;
-    border-radius: 3px; /* Rounded corners for color boxes */
-    border: 1px solid #ddd; /* Optional border */
-    display: inline-block; /* Ensure the boxes are inline */
-  }
-  
-  /* Example color for the boxes */
-  .filter-colour-box {
-    background-color: black; /* Set appropriate colors for your labels */
-  }
-  
-  /* Highlighting the selected color box */
-  .filter-checkbox4:checked + .filter-colour-box {
-    
-    border: 5px solid #00796b; /* Highlight the box when checked */
-  }
-  
-  
-  
-  
-  
-
-
-.toggle-content12 {
-    position: absolute; /* Positioned relative to container */
-    z-index: 333;
-    
-    height: 0; /* Hidden by default */
-    width: 45vh;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out; /* Smooth transition */
-    background-color: #f9f9f9;
-  
-    display: flex;
-    align-items: center;
-}
-
-/* Class to show content */
-.toggle-content12.show {
+#main-block-left-1-left{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 50%;
  
-    height: 36vh; /* Adjust this value based on your content */
+}
+  #main-block-left-1-left-filter{
+    border: rgb(199, 194, 194) 1px solid;
+    height: 60%;
+    width: 12%;
+    border-radius: 30px;
+    display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  }
+  #main-block-left-1-left-filter:hover{
+    border: rgb(86, 83, 83) 1.5px solid;
+  }
+  .content-product {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.arrow {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-content21, .toggle-content22, .toggle-content23, .toggle-content24, .toggle-content25,.toggle-content26 {
+    display: none;
+   
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.show .arrow {
+    transform: rotate(180deg);
+}
+
+.show .toggle-content21{
+  display: block;
+ margin-top: 1vh;
+  height: auto;
+  position: relative;
+  z-index: 999;
+  margin-left: -2vh;
+width: 15vh;
 }
 
 
-/* General styles for the filter section */
-#filter-price {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.show .toggle-content22{
+  display: block;
+  margin-top: 1vh;
+  height: auto;
+  position: relative;
+  z-index: 999;
+  margin-left: -3vh;
+  width: 15vh;
+}
+.show .toggle-content23{
+  display: block;
+  margin-top: 1vh;
+  height: auto;
+  width: 17vh;
+  position: relative;
+  z-index: 999;
+  margin-left: -4vh;
+}
+.show .toggle-content24{
+  display: block;
+  margin-top: 1vh;
+  height: auto;
+  width: 15vh;
+  position: relative;
+  z-index: 999;
+  margin-left: -2vh;
+}
+.show .toggle-content25 {
+  display: block;
+  margin-top: 1vh;
+  height: auto;
+  width: 20vh;
+  position: relative;
+  z-index: 999;
+  margin-left: -4vh;
+}
+  
+#main-block-left-1-right{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 100%;
+  width: 30%;
+ 
+}
+#main-block-left-1-right h4{
+  margin-right: 3vh;
+}
+
+  #main-block-left-1-right-filter{
+    margin-right: 3vh;
+    border: rgb(199, 194, 194) 1px solid;
+    height: 60%;
+    width: 30%;
+    border-radius: 30px;
+    display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   }
-  .filter-section5 {
-    display: flex;
-    align-items:center ;
-    justify-content: center;
+
+  .show .toggle-content26 {
+    display: block;
    
-    width: 100%;
-    height: 4vh;
+    height: auto;
+    width: 20vh;
+    position: relative;
+    z-index: 999;
+    margin-left: -2vh;
+    margin-top: 1vh;
+  }
+
+    
+    /* Styles for the filter options */
+    .filter-options {
+     padding: 0;
+      z-index: 9;
+      height: 100%;
+      width: 100%;
+      
+     
+    }
+    
+    /* Styles for each label */
+    .label {
+      
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    
+    .label:hover {
+      background-color: #e0f7fa; /* Light cyan background on hover */
+    }
+    
+    /* Hide the default checkbox */
+    .filter-checkbox {
+      display: none;
+    }
+    
+    /* Custom checkbox styling */
+    .label h3 {
+      margin: 0 0 0 10px;
+      color: #555;
+    }
+    
+    /* Add styles for checked checkboxes */
+    .filter-checkbox:checked + h3 {
+      color: #00796b; /* Darker cyan when checked */
+      font-weight: bold;
+    }
+    
+    /* Optional: Style for the checked state */
+    .filter-checkbox:checked + h3::before {
+      content: '✓';
+      color: #00796b;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    
+    
+    
+    
+    /* Styles for the filter options */
+    .filter-options {
+      background-color: white;
+      position: relative;
+      z-index: 9999;
+      margin-top: 15px;
+    }
+    
+    /* Styles for each label */
+    .label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    
+    .label:hover {
+      background-color: #e0f7fa; /* Light cyan background on hover */
+    }
+    
+    /* Hide the default checkbox */
+    .filter-checkbox1 {
+      display: none;
+    }
+    
+    /* Custom checkbox styling */
+    .label h3 {
+      margin: 0 0 0 10px;
+      color: #555;
+    }
+    
+    /* Add styles for checked checkboxes */
+    .filter-checkbox1:checked + h3 {
+      color: #00796b; /* Darker cyan when checked */
+      font-weight: bold;
+    }
+    
+    /* Optional: Style for the checked state */
+    .filter-checkbox1:checked + h3::before {
+      content: '✓';
+      color: #00796b;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    /* filter  sleeve length*/
+    
+     on hover */
+    
+    
+    /* Styles for the filter options */
+    .filter-options1 {
+      margin-top: 15px;
+    }
+    
+    /* Styles for each label */
+    .label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    
+    .label:hover {
+      background-color: #e0f7fa; /* Light cyan background on hover */
+    }
+    
+    /* Hide the default checkbox */
+    .filter-checkbox2 {
+      display: none;
+    }
+    
+    /* Custom checkbox styling */
+    .label h3 {
+      margin: 0 0 0 10px;
+      color: #555;
+    }
+    
+    /* Add styles for checked checkboxes */
+    .filter-checkbox2:checked + h3 {
+      color: #00796b; /* Darker cyan when checked */
+      font-weight: bold;
+    }
+    
+    /* Optional: Style for the checked state */
+    .filter-checkbox2:checked + h3::before {
+      content: '✓';
+      color: #00796b;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    
+    
+   e arrow on hover */
+    
+    
+    /* Styles for the filter options */
+    .filter-options {
+      margin-top: 15px;
+    }
+    
+    /* Styles for each label */
+    .label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    
+    .label:hover {
+      background-color: #e0f7fa; /* Light cyan background on hover */
+    }
+    
+    /* Hide the default checkbox */
+    .filter-checkbox3 {
+      display: none;
+    }
+    
+    /* Custom checkbox styling */
+    .label h3 {
+      margin: 0 0 0 10px;
+      color: #555;
+    }
+    
+    /* Add styles for checked checkboxes */
+    .filter-checkbox3:checked + h3 {
+      color: #00796b; /* Darker cyan when checked */
+      font-weight: bold;
+    }
+    
+    /* Optional: Style for the checked state */
+    .filter-checkbox3:checked + h3::before {
+      content: '✓';
+      color: #00796b;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    
+    
+    
+    
+    
+    
+    /* filter  colour*/
+    
+    
+    /* Rotate the arrow on hover */
+    
+    
+    /* Styles for the filter options */
+    
+    /* Styles for each label */
+    .label1 {
+    
+      display: flex;
+      align-items: center;
+      padding: 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+      width: 5vh;
+    }
+    
+    .label1:hover {
+      background-color: #e0f7fa; /* Light cyan background on hover */
+    }
+    
+    /* Hide the default checkbox */
+    .filter-checkbox4 {
+      display: none;
+    }
+    
+    #filter-section4-colour{
+      width: 100%;
+      height: 24vh;
+    
+      display: grid;
+      column-gap: 2px;
+      row-gap: 15px;
+      grid-template-columns: 32% 32% 32%;
+      }
+    /* Styles for the color boxes */
+    .filter-colour-box {
+      width: 20px; /* Adjust width as needed */
+      height: 20px; /* Adjust height as needed */
+      margin-left: 10px;
+      border-radius: 3px; /* Rounded corners for color boxes */
+      border: 1px solid #ddd; /* Optional border */
+      display: inline-block; /* Ensure the boxes are inline */
+    }
+    
+    /* Example color for the boxes */
+    .filter-colour-box {
+      background-color: black; /* Set appropriate colors for your labels */
+    }
+    
+    /* Highlighting the selected color box */
+    .filter-checkbox4:checked + .filter-colour-box {
+      
+      border: 5px solid #00796b; /* Highlight the box when checked */
+    }
+    
+    
+    
+    
+    
+  
+  
+  .toggle-content12 {
+      position: absolute; /* Positioned relative to container */
+      z-index: 333;
+      
+      height: 0; /* Hidden by default */
+      width: 45vh;
+      overflow: hidden;
+      transition: height 0.5s ease-in-out; /* Smooth transition */
+      background-color: #f9f9f9;
+    
+      display: flex;
+      align-items: center;
   }
   
-  /* Styles for the filter section header */
-  .filter-section5 h2 {
-    font-size: 1.5rem;
-    color: #333;
-    display: flex;
-    margin-left: 2vh;
-    align-items: center;
-    padding: 10px;
+  /* Class to show content */
+  .toggle-content12.show {
    
+      height: 36vh; /* Adjust this value based on your content */
   }
   
-  .filter-section5 img {
-    width: 20px;
-    height: 20px;
-    margin-left: 1vh;
+  
+  /* General styles for the filter section */
+  #filter-price {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .filter-section5 {
+      display: flex;
+      align-items:center ;
+      justify-content: center;
+     
+      width: 100%;
+      height: 4vh;
+    }
     
-  }
-  
-  
-  /* Styles for the filter options */
-  .label {
-    display: flex;
-    align-items: center;
+    /* Styles for the filter section header */
+    .filter-section5 h2 {
+      font-size: 1.5rem;
+      color: #333;
+      display: flex;
+      margin-left: 2vh;
+      align-items: center;
+      padding: 10px;
+     
+    }
     
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s;
-  }
-  
-  .label:hover {
-    background-color: #e0f7fa; /* Light cyan background on hover */
-  }
-  
-  /* Hide the default checkbox */
-  .filter-checkbox5 {
-    display: none;
-  }
-  
-  /* Custom checkbox styling */
-  .label h3 {
-    margin: 0 0 0 10px;
-    color: #555;
-  }
-  
-  /* Add styles for checked checkboxes */
-  .filter-checkbox5:checked + h3 {
-    color: #00796b; /* Darker cyan when checked */
-    font-weight: bold;
-  }
-  
-  /* Optional: Style for the checked state */
-  .filter-checkbox5:checked + h3::before {
-    content: '✓';
-    color: #00796b;
-    margin-right: 5px;
-    font-weight: bold;
-  }
-  
-  
+    .filter-section5 img {
+      width: 20px;
+      height: 20px;
+      margin-left: 1vh;
+      
+    }
+    
+    
+    /* Styles for the filter options */
+    .label {
+      display: flex;
+      align-items: center;
+      
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    
+    .label:hover {
+      background-color: #e0f7fa; /* Light cyan background on hover */
+    }
+    
+    /* Hide the default checkbox */
+    .filter-checkbox5 {
+      display: none;
+    }
+    
+    /* Custom checkbox styling */
+    .label h3 {
+      margin: 0 0 0 10px;
+      color: #555;
+    }
+    
+    /* Add styles for checked checkboxes */
+    .filter-checkbox5:checked + h3 {
+      color: #00796b; /* Darker cyan when checked */
+      font-weight: bold;
+    }
+    
+    /* Optional: Style for the checked state */
+    .filter-checkbox5:checked + h3::before {
+      content: '✓';
+      color: #00796b;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+    
+    
   
   
 
@@ -1677,6 +1551,9 @@ justify-content: center;
 
 
 /* /////////////////Fillter section///////////////////////// */
+    #main-block-left-1{
+    display: none;
+  }
 #main-block-left{
    
     display: flex;
