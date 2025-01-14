@@ -1074,7 +1074,7 @@ justify-content: center;
      #navlogo{
         margin-left: 0vh;
        
-      
+        border: green 2px solid;
       
         
          height: 100%;
@@ -1085,205 +1085,7 @@ justify-content: center;
          height: 100%;
          width: 100%;
      }
-     #navcontent{
-         width: 100vh;
-      display: none;
-       border: #c41515 2px solid;
-        
-         align-items: center;
-         justify-content: space-evenly;
-     }
-     
-     
-     .navcontentbox{
-        
-         position: relative;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         height: 5vh;
-         width: 14vh;
-        border-radius: 10px;
-     
-     }
-     .asd{
-         text-decoration: none;
-        
-         color:black;
-         font-size: 2.5vh;
-     }
-     .navcontentbox:hover{
-         background-color: aliceblue;
-     }
-     .navcontentbox:hover .asd{
-         color: black;
-     }
-     /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-     .dropdown1{
-         display: none;
-     }
-     
-     #box1:hover .dropdown1{
-         border-top: #999d98 2px solid;
-         display: flex;
-         background-color: white;
-         margin-top: 43vh;
-        margin-left: 74vh;
-         position: absolute;
-        
-         height: 38vh;
-         width: 200vh;
-         z-index: 100;
-        
-        
-     }
-     .dd-coloum1{
-         display: flex;
-         align-items: center;
-         justify-content: center;
-       
-         height: 100%;
-         width: 10%;
-     }
-     
-     /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-     
-     .dropdown2{
-         display: none;
-     }
-     
-     #boxer:hover .dropdown2{
-         border-top: #999d98 2px solid;
-         display: flex;
-         background-color: white;
-         margin-top: 65vh;
-        margin-left: 45vh;
-         position: absolute;
-        
-         height: 60vh;
-         width: 200vh;
-         z-index: 100;
-        
-        
-     }
-     
-     .dd-coloum2{
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         
-         height: 100%;
-         width: 25vh;
-     }
-     
-     
-     
-     /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-     .dropdown3{
-         display: none;
-     }
-     
-     #box3:hover .dropdown3{
-         border-top: #999d98 2px solid;
-         display: flex;
-         background-color: white;
-         margin-top: 45vh;
-        margin-left: 17vh;
-         position: absolute;
-        
-         height: 40vh;
-         width: 200vh;
-         z-index: 100;
-        
-        
-     }
-     
-     .dd-coloum3{
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         height: 100%;
-         width: 10%;
-     }
-     /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-     .dropdown4{
-         display: none;
-     }
-     
-     #box4:hover .dropdown4{
-         border-top: #999d98 2px solid;
-         display: flex;
-         background-color: white;
-         margin-top: 25vh;
-        margin-left: -12vh;
-         position: absolute;
-        
-         height: 20vh;
-         width: 200vh;
-         z-index: 100;
-        
-        
-     }
-     
-     .dd-coloum4{
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         height: 100%;
-         width: 10%;
-     }
-     /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-     .dropdown5{
-         display: none;
-     }
-     
-     #box5:hover .dropdown5{
-         border-top: #999d98 2px solid;
-         display: flex;
-         background-color: white;
-         margin-top: 35vh;
-        margin-left: -39.5vh;
-         position: absolute;
-        
-         height: 30vh;
-         width: 200vh;
-         z-index: 100;
-        
-        
-     }
-     
-     .dd-coloum5{
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         height: 100%;
-         width: 10%;
-     }
-     /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-     .dropdown6{
-         display: none;
-     }
-     
-     #box6:hover .dropdown6{
-         border-top: #999d98 2px solid;
-         display: flex;
-         background-color: white;
-         margin-top: 25vh;
-        margin-left: -68vh;
-         position: absolute;
-        
-         height: 20vh;
-         width: 200vh;
-         z-index: 100;
-        
-        
-     }
-     
-     .dd-coloum6{
-       
-         height: 100%;
-         width: 10%;
-     }
+  
      
      .category{
          width: 80%;
@@ -1325,7 +1127,7 @@ justify-content: center;
 
      #navlogin{
         margin-right: -12vh;
-        
+          border: blue 2px solid;
         display: flex;
         align-items: end;
         justify-content: end;
@@ -1334,7 +1136,7 @@ justify-content: center;
        
     }
     .navlogin-option{
-      
+        border: pink 2px solid;
         height: 100%;
         width: 33%;
      
