@@ -26,6 +26,7 @@
   src: url(/clothing/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
 }
 #block-main{ 
+  margin-top: 6vh;
     display: flex;
     margin-top: vh;
     height: 100vh;
@@ -627,7 +628,8 @@ height: 5vh;
 
 /* /////////////////block main///////////////////////// */
 
-    #block-margin-top: 4vh;
+   #block-main{ 
+  margin-top: 4vh;
       display: block;
        
       
