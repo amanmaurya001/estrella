@@ -1138,7 +1138,7 @@ justify-content: center;
        
     }
     .navlogin-option{
-        border: pink 2px solid;
+       
         height: 100%;
         width: 33%;
      
@@ -1408,7 +1408,7 @@ justify-content: center;
    
     margin-left: 2vh;
     height: 4vh; /* Let it adjust based on content */
-   
+     border:  #888 2px solid;
   width: 17vh;
     position: relative; /* For positioning toggle content */
 }
@@ -1423,7 +1423,7 @@ justify-content: center;
 .toggle-content11 {
     position: absolute; /* Positioned relative to container */
     z-index: 333;
- border: #1bbd23 3px solid;
+
     height: 0; /* Hidden by default */
     width: 100vw;
     overflow: hidden;
