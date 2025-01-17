@@ -62,6 +62,16 @@ var swiper = new Swiper(".mySwiper", {
     // Toggle the "show" class
     content.classList.toggle('show');
   }
+ // Close the menu when clicking outside of the toggle content or the hamburger menu
+document.addEventListener('click', function(event) {
+  const content = document.getElementById('toggleContent4');
+  const menuButton = document.getElementById('mobile-navbar-img');
+  
+  // If the click is outside the menu or the hamburger icon, hide the menu
+  if (!menuButton.contains(event.target) && !content.contains(event.target)) {
+      content.classList.remove('show');
+  }
+});
   function toggleContent5() {
     const content = document.getElementById('toggleContent5');
     
