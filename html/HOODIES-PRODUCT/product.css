@@ -39,7 +39,7 @@
     overflow: hidden;
     display: flex;
     margin-top: 6vh;
-    height: 95%;
+    height: 100%;
     width: 60%;
    
 }
@@ -80,7 +80,7 @@
 #block-right{
    
     margin-top: 6vh;
-    height: 95%;
+    height: 100%;
     width: 40%;
    
 }
