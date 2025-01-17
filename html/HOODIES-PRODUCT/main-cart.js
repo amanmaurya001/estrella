@@ -81,6 +81,10 @@ function renderCart() {
             <div id="final-order-price1"><h2>Total</h2></div>
             <div id="final-order-price2"><h2>: Rs${finalPrice}</h2></div>
         </div>
+        <div id="after-order-buttons">
+          <button id="checkout" onclick="checkout()"><h1>Checkout</h1></button>
+           <button id="shopping" onclick="goToProducts()"> <h2>Continue Shop</h2></button>
+          </div>
     `;
     cart1Div.appendChild(totalDiv); // Add total price to cart1Div
 }
