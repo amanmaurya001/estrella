@@ -334,12 +334,19 @@
     color: aliceblue;
   }
 
+ #after-order-buttons{
+   
+   
+    width: 100%;
+    height: 29vh;
+    border: rgb(0, 128, 9) 2px solid;
+  }
 
   #checkout{
-    margin-left:144vh;
-    margin-top: 60vh;
-    z-index: 111;
-    position: absolute;
+   
+ margin-top: 3vh;
+ margin-left: 4vh;
+   
     border: 2px solid rgb(172, 159, 159);
     border-radius: 50px;
       height: 8vh;
@@ -352,10 +359,10 @@
       background-color: black;
     }
     #shopping{
-      margin-left:144vh;
-    margin-top: 70vh;
+      margin-top: 3vh;
+ margin-left: 4vh;
     z-index: 111;
-    position: absolute;
+   
     border: 2px solid rgb(172, 159, 159);
     border-radius: 50px;
     height: 8vh;
@@ -368,9 +375,6 @@
         background-color: black;
       }
     
-    
-
-
 
 
 
@@ -696,11 +700,14 @@
     
       
       #cart1{
-    position: fixed;
-       margin-top: 55vh;
+   position: fixed;
+       margin-top: 0vh;
         margin-left: 0vh;
          width: 100%;
-         height:30vh;
+         height:27vh;
+        
+         bottom: 0; /* Aligns the bottom of the div to the bottom of the screen */
+         left: 0; /* Ensures it starts at the left edge of the screen */
         
   
     }
@@ -857,18 +864,35 @@
           font-size: 1.7vh;
         }
       
+       #after-order-buttons{
+              display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+   
+          width: 100%;
+          height: 7vh;
+         
+        }
       
 
+
+
+
+
+
         #checkout{
-          margin-left: 5vh;
-         margin-top: 82vh;
+          margin-top: 0;
+         margin-left: 0;
           z-index: 11111;
-         position: fixed;
-         
+        padding: 0;
+       
           border-radius: 50px;
             height: 4vh;
-            width: 20vh;
+            width: 40%;
             background-color: #9ca19b;
+          }
+          #checkout h1{
+            font-size: 2vh;
           }
           #checkout:hover{
           color: aliceblue;
@@ -876,15 +900,19 @@
             background-color: black;
           }
           #shopping{
+            font-size: 1vh;
             z-index: 11111;
-         position: fixed;
-            margin-left: 27vh;
-            margin-top: 82vh;
+            margin-top: 0;
+            margin-left: 0;
+            width: 40%;
           border: 2px solid rgb(172, 159, 159);
           border-radius: 50px;
           height: 4vh;
-          width: 20vh;
+          
           background-color: #ccc;
+          }
+          #shopping h2{
+            font-size: 1.5vh;
           }
           #shopping:hover{
             color: aliceblue;
@@ -893,7 +921,6 @@
             }
           
           
-
 
 
 
