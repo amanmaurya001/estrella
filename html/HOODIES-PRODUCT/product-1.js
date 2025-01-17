@@ -39,7 +39,7 @@ var swiper = new Swiper(".mySwiper", {
             end: "top -70%",
             scrub: true,
             pin: true,
-            markers: true,
+          
         }
     });
 }
