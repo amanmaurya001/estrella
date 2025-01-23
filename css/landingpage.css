@@ -699,33 +699,9 @@ height: 100%;
 }
 
 #button1{display: none;
-    width: 27%;
-    height: 3vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5vh;
-    font-weight: 999;
-    color: #ffffff;
-  position: absolute;
- 
-    border: rgb(86, 76, 76)  solid 2px;
-    border-radius: 50px;
-    background-color: transparent;
-    margin-top: 18vh;
-    margin-left: 1.5vh;
+    
 }
-#button1 a{ display: flex;
-             font-size: 1vh;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #ffffff;
 
-}
 
 #button1:hover a{
    
