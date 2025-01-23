@@ -42,7 +42,7 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 0,
     centeredSlides: true,
     autoplay: {
-      delay: 3500,
+      delay: 12000,
       disableOnInteraction: false,
     },
   
