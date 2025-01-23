@@ -693,12 +693,12 @@ height: 100%;
 .block3-product h1{
   color: #ffffff;
    margin-left: 3vh;
-  margin-top: 15vh;
+  margin-top: 20vh;
   position: absolute;
   font-size: 2vh;
 }
 
-#button1{
+#button1{display: none;
     width: 27%;
     height: 3vh;
     display: flex;
