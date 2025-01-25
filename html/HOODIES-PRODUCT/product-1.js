@@ -29,20 +29,52 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-  if (window.innerWidth > 601) {
-    gsap.to("#scrollableDiv", {
-        y: -1500,
-        scrollTrigger: {
-            trigger: "#block-main",
-            scroller: "body",
-            start: "top",
-            end: "top -70%",
-            scrub: true,
-            pin: true,
-          
-        }
-    });
+ function setupGsapAnimation() {
+    const scrollableDiv = document.querySelector("#scrollableDiv");
+    const productPics = scrollableDiv.querySelectorAll(".product-pics");
+    const productCount = productPics.length;
+
+    // Clean up previous ScrollTrigger instances
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+    // Apply GSAP animation based on product count
+    if (productCount === 5 || productCount === 6) {
+        gsap.to("#scrollableDiv", {
+            y: -1410,
+            scrollTrigger: {
+                trigger: "#block-main",
+                scroller: "body",
+                start: "top 6%",
+                end: "top -70%",
+                scrub: true,
+                pin: true,
+            }
+        });
+    } else if (productCount === 3 || productCount === 4) {
+        gsap.to("#scrollableDiv", {
+            y: -710,
+            scrollTrigger: {
+                trigger: "#block-main",
+                scroller: "body",
+                start: "top 6%",
+                end: "top -70%",
+                scrub: true,
+                pin: true,
+            }
+        });
+    } else {
+        console.warn("Unsupported product count for animation:", productCount);
+    }
 }
+
+// Call the function to initialize GSAP animation
+setupGsapAnimation();
+
+// Reapply GSAP animation if content dynamically changes
+const observer = new MutationObserver(() => {
+    setupGsapAnimation();
+});
+observer.observe(document.querySelector("#scrollableDiv"), { childList: true });
 
 
 
