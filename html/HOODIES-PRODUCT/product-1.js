@@ -30,6 +30,12 @@ var swiper = new Swiper(".mySwiper", {
 
 
  function setupGsapAnimation() {
+    // Check if screen width is less than 600px
+    if (window.matchMedia("(max-width: 600px)").matches) {
+        console.log("Animation disabled for screen width less than 600px");
+        return; // Exit the function if the condition is met
+    }
+
     const scrollableDiv = document.querySelector("#scrollableDiv");
     const productPics = scrollableDiv.querySelectorAll(".product-pics");
     const productCount = productPics.length;
@@ -76,8 +82,8 @@ const observer = new MutationObserver(() => {
 });
 observer.observe(document.querySelector("#scrollableDiv"), { childList: true });
 
-
-
+// Recheck animation setup on window resize
+window.addEventListener("resize", setupGsapAnimation);
 
 
 
