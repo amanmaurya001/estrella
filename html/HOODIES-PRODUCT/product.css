@@ -632,7 +632,7 @@ height: 5vh;
       display: block;
         border: green 3px solid;
       
-        height: 160vh;
+        height: 155vh;
         width: 100%;
        
     }
@@ -669,7 +669,7 @@ height: 5vh;
     
     #block-right{
        border: blue 3px solid;
-        margin-top: 2vh;
+      
         height: 77vh;
         width: 100%;
        
