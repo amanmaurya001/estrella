@@ -1,6 +1,6 @@
 // Function to load the navbar content from t-shirts-women.html inside women-html folder
 function insertNavbar() {
-  fetch('../women-html/t-shirts-women.html') // Use relative path to go up one level and then into women-html folder
+  fetch('../women-html/navbar-supply.html') // Use relative path to go up one level and then into women-html folder
     .then(response => response.text()) // Get the response as text
     .then(data => {
       // Create a temporary container to hold the HTML content
