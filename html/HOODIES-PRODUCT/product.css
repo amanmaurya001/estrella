@@ -38,7 +38,7 @@
  
     overflow: hidden;
     display: flex;
-    margin-top: 6vh;
+  
     height: 100%;
     width: 60%;
    
@@ -52,11 +52,10 @@
    
     padding: 10px;
     background-color: #fff;
-  
-    display: grid;
+   display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
     column-gap: 2px;
     row-gap: 2px;
-    grid-template-columns: 50% 50%;
 }
 /*  */
 
@@ -79,7 +78,7 @@
 
 #block-right{
    
-    margin-top: 6vh;
+  
     height: 100%;
     width: 40%;
    
