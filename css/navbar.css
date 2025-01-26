@@ -1408,7 +1408,7 @@ justify-content: center;
    
     margin-left: 2vh;
     height: 4vh; /* Let it adjust based on content */
-     border:  #888 2px solid;
+     border:  #888 1px solid;
    border-radius:50px;
   width: 17vh;
     position: relative; /* For positioning toggle content */
@@ -1417,7 +1417,7 @@ justify-content: center;
    border-radius:50px;
     margin-left: 7vh;
     height: 4vh; /* Let it adjust based on content */
-    border:  #888 2px solid;
+    border:  #888 1px solid;
   width: 17vh;
     position: relative; /* For positioning toggle content */
 }
