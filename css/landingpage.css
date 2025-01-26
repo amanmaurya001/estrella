@@ -784,10 +784,10 @@ height: 100%;
  }
  #block6-left div{
   margin-left: 2vh;
-  width: 10vh;
+  width: 15vh;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30vh;
+  margin-top: 32vh;
   z-index: 9999;
   position: absolute;
  }
@@ -833,10 +833,10 @@ height: 100%;
  }
  #block6-right div{
   margin-left: 2vh;
-  width: 10vh;
+  width: 15vh;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30vh;
+  margin-top: 32vh;
   z-index: 9999;
   position: absolute;
  }
