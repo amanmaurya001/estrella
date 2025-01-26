@@ -630,16 +630,16 @@ height: 5vh;
    #block-main{ 
   margin-top: 4vh;
       display: block;
-        border: green 3px solid;
+      
       
         height: 155vh;
         width: 100%;
        
     }
-   #block-left{ border: red 3px solid;
+   #block-left{
        margin-top: 0vh;
       display: block;
-      height: 75vh;
+      height: 60vh;
       width: 100%;
     
     }
@@ -668,7 +668,7 @@ height: 5vh;
    
     
     #block-right{
-       border: blue 3px solid;
+      
       
         height: 77vh;
         width: 100%;
