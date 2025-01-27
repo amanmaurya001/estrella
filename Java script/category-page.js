@@ -27,19 +27,21 @@ window.onload = insertNavbar;
 
 
 
- // filter for size 
+// Filter for size (supporting multiple sizes per product)
 document.addEventListener('DOMContentLoaded', () => {
     const checkboxes = document.querySelectorAll('.filter-checkbox');
     const productItems = document.querySelectorAll('.product-item');
 
-    function filterProducts() {
+    function filterSize() {
         const selectedCategories = Array.from(checkboxes)
             .filter(checkbox => checkbox.checked)
             .map(checkbox => checkbox.getAttribute('data-size'));
 
         productItems.forEach(item => {
-            const itemCategory = item.getAttribute('data-size');
-            if (selectedCategories.length === 0 || selectedCategories.includes(itemCategory)) {
+            const itemSizes = item.getAttribute('data-size').split(','); // Now the size is stored as a comma-separated list of sizes
+            const hasSelectedSize = selectedCategories.some(size => itemSizes.includes(size)); // Check if the product has any of the selected sizes
+
+            if (selectedCategories.length === 0 || hasSelectedSize) {
                 item.classList.remove('hidden');
             } else {
                 item.classList.add('hidden');
@@ -48,11 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', filterProducts);
+        checkbox.addEventListener('change', filterSize);
     });
 
     // Initial filter application
-    filterProducts();
+    filterSize();
 });
 
  // filter for pattern
