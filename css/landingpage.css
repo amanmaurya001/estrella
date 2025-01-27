@@ -643,7 +643,7 @@ body{
         object-fit: fill;
         height: 100%;
         width: 100%;
-        transform: scaleX(1.9);   /* Slightly zoom out the video horizontally (90% of original width) */
+        transform: scaleX(1.5);   /* Slightly zoom out the video horizontally (90% of original width) */
       }
     
 /* ////////////////////////////////////////////////// */
