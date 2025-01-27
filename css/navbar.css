@@ -1486,12 +1486,20 @@ justify-content: center;
 
 
 .filter-options{
-    margin-top: 0;
-    
+   margin-top: 0;
+  
     display: flex;
+    align-items: center;
+    height: 80%;
 }
 
-
+.filter-options1{
+  display: grid;
+  column-gap: 0px;
+  row-gap: 0px;
+  grid-template-columns: 33% 33% 33% ; 
+  height: 80%;
+}
 
 
 
@@ -1502,6 +1510,7 @@ justify-content: center;
 
 .label{
    
+  border: #024F79 1px solid;
     display: flex;
     margin-left: 5px;
     align-items: center;
@@ -1512,7 +1521,10 @@ justify-content: center;
 .label:hover{
     background-color: #ddd;
 }
+.label h3{
+  font-size: 1.7vh;
 
+}
 
 /* filter  size*/
 
@@ -1527,26 +1539,27 @@ justify-content: center;
      
   }
 .filter-section {
-    margin-left: vh;
+  margin-left: vh;
     margin-top: 0vh;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    border:  #888 2px solid;
-    height: 3vh;
+    border-top: #565050 1px solid;
+  border-bottom: #565050 1px solid;
+    height: 20%;
     width: 100%;
 }
 
 .filter-section h2{
-    display: flex;
+  display: flex;
     align-items: center;
     justify-content: center;
   
     height: 100%;
     width: 100%;
     color: rgb(0, 0, 0);
-    font-size:2.5vh;
+    font-size:1.5vh;
     
 }
 .filter-section img{
@@ -1566,10 +1579,7 @@ justify-content: center;
     margin-right: 1vh;
     margin-left: 2vh;
 }
-.label h3{
-    font-size: 1.5vh;
 
-}
 
 
 /* filter  pattern*/
@@ -1592,9 +1602,10 @@ justify-content: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: #565050 2px solid;
+    border-top: #565050 1px solid;
+  border-bottom: #565050 1px solid;
    
-    height: 3vh;
+    height: 20%;
     width: 100%;
 }
 
@@ -1607,7 +1618,7 @@ justify-content: center;
     height: 100%;
     width: 100%;
     color: rgb(0, 0, 0);
-    font-size:2vh;
+    font-size:1.5vh;
     
 }
 .filter-section1 img{
@@ -1641,9 +1652,10 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: #565050 2px solid;
+  border-top: #565050 1px solid;
+  border-bottom: #565050 1px solid;
  
-  height: 3vh;
+  height: 20%;
   width: 100%;
 }
 
@@ -1655,7 +1667,7 @@ justify-content: center;
   height: 100%;
   width: 100%;
   color: rgb(0, 0, 0);
-  font-size:2vh;
+  font-size:1.5vh;
   
 }
 .filter-section2 img{
@@ -1672,15 +1684,10 @@ justify-content: center;
     margin-left: 1vh;
 }
 
-.filter-options1{
-    display: grid;
-    column-gap: 2px;
-    row-gap: 0px;
-    grid-template-columns: 33% 33% 33% ; 
-}
 
 
- /* filter  material*/
+
+/* filter  material*/
 
 #filter-material{   
    padding: 0;
@@ -1697,9 +1704,10 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: #565050 2px solid;
+  border-top: #565050 1px solid;
+  border-bottom: #565050 1px solid;
  
-  height: 3vh;
+  height: 20%;
   width: 100%;
 }
 
@@ -1711,7 +1719,7 @@ justify-content: center;
   height: 100%;
   width: 100%;
   color: rgb(0, 0, 0);
-  font-size:2vh;
+  font-size:1.5vh;
   
 }
 .filter-section3 img{
@@ -1744,9 +1752,9 @@ justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: #565050 2px solid;
- 
-  height: 3vh;
+  border-top: #565050 1px solid;
+  border-bottom: #565050 1px solid;
+  height: 15%;
   width: 100%;
 }
 
@@ -1758,7 +1766,7 @@ justify-content: center;
   height: 100%;
   width: 100%;
   color: rgb(0, 0, 0);
-  font-size:2vh;
+  font-size:1.5vh;
   
 }
 .filter-section4 img{
@@ -1812,7 +1820,6 @@ grid-template-columns: 20% 20% 20% 20% 20%;
 
 
 
-
 .toggle-content12 {
   position: absolute; /* Positioned relative to container */
   z-index: 333;
@@ -1834,6 +1841,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 
+
 /* filter  material*/
 
 #filter-price{   
@@ -1851,9 +1859,10 @@ grid-template-columns: 20% 20% 20% 20% 20%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: #565050 2px solid;
+  border-top: #565050 1px solid;
+  border-bottom: #565050 1px solid;
  
-  height: 4vh;
+  height: 7%;
   width: 100%;
 }
 
@@ -1865,7 +1874,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
   height: 100%;
   width: 100%;
   color: rgb(0, 0, 0);
-  font-size:2vh;
+  font-size:1.5vh;
   
 }
 .filter-section5 img{
@@ -1881,6 +1890,7 @@ grid-template-columns: 20% 20% 20% 20% 20%;
     margin-right: 1vh;
     margin-left: 2vh;
 }
+
 
 
 
