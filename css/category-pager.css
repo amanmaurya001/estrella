@@ -281,6 +281,41 @@
     font-weight: 500;
     font-family: noto;
 }
+.processor_body_right_rows_product_name div{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+  
+}
+.processor_body_right_rows_product_name div h1{
+    text-decoration: line-through;
+    display: flex;
+    padding-left: 10px;
+    font-size: 2vh;
+    color: #362e2e;
+    font-weight: 700;
+    font-family: noto;
+}
+
+.processor_body_right_rows_product_name div h2{
+   
+    display: flex;
+    padding-left: 10px;
+    font-size: 2vh;
+    color: #362e2e;
+    font-weight: 400;
+    font-family: noto;
+}
+.processor_body_right_rows_product_name div h3{
+   
+    display: flex;
+    padding-left: 10px;
+    font-size: 1.5vh;
+    color: #9c1212;
+    font-weight: 700;
+    font-family: noto;
+}
 .processor_body_right_rows_product_rating{
     height: 4%;
     width: 100%;
@@ -486,6 +521,41 @@
        font-weight: 500;
        font-family: noto;
    }
+     .processor_body_right_rows_product_name div{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+  
+}
+.processor_body_right_rows_product_name div h1{
+    text-decoration: line-through;
+    display: flex;
+    padding-left: 10px;
+    font-size: 1.3vh;
+    color: #362e2e;
+    font-weight: 700;
+    font-family: noto;
+}
+
+.processor_body_right_rows_product_name div h2{
+   
+    display: flex;
+    padding-left: 10px;
+    font-size: 1.3vh;
+    color: #362e2e;
+    font-weight: 400;
+    font-family: noto;
+}
+.processor_body_right_rows_product_name div h3{
+   
+    display: flex;
+    padding-left: 10px;
+    font-size: 1vh;
+    color: #9c1212;
+    font-weight: 700;
+    font-family: noto;
+}
 
    .processor_body_right_rows_product_rating{
        height: 6%;
