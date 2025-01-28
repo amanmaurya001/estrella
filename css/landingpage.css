@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-   
+    
+            outline: none;
+            box-shadow: none;
+    
 }
 @font-face {
   font-family: cripson;
