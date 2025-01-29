@@ -8,7 +8,7 @@
    margin-top: -6vh;
     z-index: 99999;
    position: fixed;
-    background-color: white;
+   background-color:transparent;
     display: flex;
     justify-content: space-between;
     align-items: end;
