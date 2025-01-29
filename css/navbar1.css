@@ -8,13 +8,13 @@
     margin-top: 0vh;
     z-index: 99999;
    position: fixed;
-    background-color: white;
+   background-color:transparent;
     display: flex;
     justify-content: space-between;
     align-items: end;
     height: 6vh;
     width: 100%;
-    border-bottom: 2px  rgb(95, 91, 91) solid;
+  
     
 }
 #navlogo{
