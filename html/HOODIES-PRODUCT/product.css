@@ -1091,10 +1091,8 @@ height: 5vh;
         font-size: 2.5vh;
     }
     #block-img-set-container{
-        display: grid;
-        column-gap: 1px;
-        row-gap: 1px;
-        grid-template-columns:50% 50%  ;
+       display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
         
        
         width: 100%;
@@ -1147,10 +1145,8 @@ height: 5vh;
     }
 
     #block-img-set-container1{
-      display: grid;
-      column-gap: 1px;
-      row-gap: 0px;
-      grid-template-columns:50% 50%  ;
+     display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
     
      
       width: 100%;
