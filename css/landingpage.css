@@ -796,7 +796,7 @@ height: 100%;
   display: flex;
   justify-content: space-evenly;
   margin-top: 32vh;
-  z-index: 1
+  z-index: 1;
   position: absolute;
  }
  #block6-left div a{
