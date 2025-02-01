@@ -1207,7 +1207,7 @@ justify-content: center;
         height: 0; /* Hidden by default */
        overflow: hidden;
         transition:  0.5s ease-in-out; /* Smooth transition */
-        background-color: #f9f9f9;
+      
       
       }
     
@@ -1248,7 +1248,7 @@ justify-content: center;
         height: 0; /* Hidden by default */
        overflow: hidden;
         transition:  0.5s ease-in-out; /* Smooth transition */
-        background-color: #f9f9f9;
+     
       
       }
     
@@ -1289,7 +1289,7 @@ justify-content: center;
         height: 0; /* Hidden by default */
         overflow: hidden;
         transition:  0.5s ease-in-out; /* Smooth transition */
-        background-color: #f9f9f9;
+      
       
       }
     
@@ -1331,7 +1331,7 @@ justify-content: center;
         height: 0; /* Hidden by default */
        overflow: hidden;
         transition:  0.5s ease-in-out; /* Smooth transition */
-        background-color: #f9f9f9;
+       
       
       }
     
