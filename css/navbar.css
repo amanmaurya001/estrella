@@ -3,7 +3,14 @@
   font-family: cripson;
   src: url(fonts/CrimsonPro-Italic-VariableFont_wght.ttf);
 }
-
+@font-face {
+  font-family: BonaNova;
+  src: url(fonts/BonaNovaSC-Regular.ttf);
+}
+@font-face {
+  font-family: Playfair;
+  src: url(fonts/Playfair-VariableFont_opsz\,wdth\,wght.ttf);
+}
 #navbar {
    margin-top: -6vh;
     z-index: 99999;
@@ -88,7 +95,7 @@
 #hamburger{display: none;}
 .asd{
     text-decoration: none;
-   
+    font-family: BonaNova;
     color:black;
     font-size: 2.5vh;
 }
@@ -320,7 +327,7 @@
     font-size: 2.5vh;
 }
 .tops-name{
-   
+    font-family: Playfair;
     height: 4vh;
     width: 100%;
   
@@ -1170,24 +1177,30 @@ justify-content: center;
         height: 100%;
         width: 100%;
     }
-    .toggle-content4 {
-      position: absolute;
-       width: 100vw;
-        height: 0; /* Hidden by default */
-       overflow: hidden;
-        transition:  0.5s ease-in-out; /* Smooth transition */
-        background-color: #f9f9f9;
-        left: 0;
-      }
+   .toggle-content4 {
+   
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0; /* Start hidden */
+      height: 96vh; /* Full height */
+      margin-top:4vh ;
+      overflow: hidden;
+      transition: width 0.5s ease-in-out; /* Smooth width transition */
+      overflow-y: auto; /* Enable vertical scrolling */
+      background-color: #B5CFB7;
+      border: none; /* Initially hidden */
     
-      
-      /* Class to show content */
-      .toggle-content4.show {
-       left: 0;
-        height:auto; /* Adjust this value based on your content */
-       width: 100vw;
-      }
+    }
+  
+   
     
+    
+    /* Class to show content */
+    .toggle-content4.show {
+      width: 100vw; /* Expand from left to right */
+     
+    }
 
       .toggle-content5 {
        
@@ -1272,9 +1285,9 @@ justify-content: center;
        }
 
       .toggle-content7 {
-       
+        font-family: Playfair;
         height: 0; /* Hidden by default */
-       overflow: hidden;
+        overflow: hidden;
         transition:  0.5s ease-in-out; /* Smooth transition */
         background-color: #f9f9f9;
       
