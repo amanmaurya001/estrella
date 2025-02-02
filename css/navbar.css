@@ -1183,8 +1183,8 @@ justify-content: center;
       top: 0;
       left: 0;
       width: 0; /* Start hidden */
-      height: 96vh; /* Full height */
-      margin-top:4vh ;
+      height: 100vh; /* Full height */
+    
       overflow: hidden;
       transition: width 0.5s ease-in-out; /* Smooth width transition */
       overflow-y: auto; /* Enable vertical scrolling */
@@ -1201,6 +1201,40 @@ justify-content: center;
       width: 100vw; /* Expand from left to right */
      
     }
+   #cancel-div{
+  display: flex;
+  justify-content: space-between;
+ 
+  height: 5vh;
+  width: 100%;
+
+}
+#brand-img{
+  width: 50%;
+  height: 100%;
+}
+#brand-img img{
+  width: 100%;
+  height: 100%;
+}
+#cancel-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+ 
+  height: 100%;
+  width: 10%;
+}
+#cancel-button h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 4vh;
+  font-family: Playfair;
+}
 
       .toggle-content5 {
        
