@@ -1270,7 +1270,7 @@ justify-content: center;
       
       }
       .mobile-navbar-column-item a{
-        font-size: 1.5vh;
+        font-size:2vh;
        text-decoration: none;
        color: #0b0a0a;
       }
@@ -1310,7 +1310,7 @@ justify-content: center;
         width: 100%;
         color: #0b0a0a;
        text-decoration: none;
-         font-size: 1.5vh;
+         font-size: 2vh;
       }
       .mobile-navbar-column-item1 h3{
       font-size: 2vh;
@@ -1351,7 +1351,7 @@ justify-content: center;
         width: 100%;
         color: #0b0a0a;
        text-decoration: none;
-         font-size: 1.5vh;
+         font-size: 2vh;
       }
       .mobile-navbar-column-item2 h3{
       font-size: 2vh;
