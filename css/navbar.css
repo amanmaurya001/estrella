@@ -1535,7 +1535,7 @@ justify-content: center;
 
 .filter-options{
    margin-top: 0;
-  
+   background-color: #B5CFB7;
     display: flex;
     align-items: center;
     height: 80%;
