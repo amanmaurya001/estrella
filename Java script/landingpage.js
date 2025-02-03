@@ -237,3 +237,10 @@ document.querySelectorAll('input').forEach(input => {
                                .replace(/javascript:/gi, '');  // Remove JavaScript protocol
     });
 });
+// Simulate page loading
+  window.addEventListener("load", function () {
+    setTimeout(() => { 
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    }, 2000); // 2-second delay for elegance
+});
