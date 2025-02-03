@@ -1306,7 +1306,8 @@ justify-content: center;
       .mobile-navbar-column-item1 a{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
+         margin-left: 2vh;
         height: 100%;
         width: 100%;
         color: #0b0a0a;
