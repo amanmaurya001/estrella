@@ -1469,23 +1469,24 @@ justify-content: center;
     position: relative; /* For positioning toggle content */
 }
 .toggle-content11 {
-    position: absolute; /* Positioned relative to container */
-    z-index: 333;
-
-    height: 0; /* Hidden by default */
-    width: 100vw;
-    overflow: hidden;
-    transition: height 0.5s ease-in-out; /* Smooth transition */
-    background-color: #f9f9f9;
-    margin-left: -2vh;
-    display: block;
-    align-items: center;
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 0; /* Start hidden */
+  height: 100vh; /* Full height */
+  
+  overflow: hidden;
+  transition: width 0.5s ease-in-out; /* Smooth width transition */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #B5CFB7;
+  border: none; /* Initially hidden */
+  z-index: 9999;
 }
 
 /* Class to show content */
 .toggle-content11.show {
     
-    height: 60vh; /* Adjust this value based on your content */
+    width: 100vw; /* Expand from left to right */
 }
 
 
@@ -1868,23 +1869,24 @@ grid-template-columns: 20% 20% 20% 20% 20%;
 
 
 .toggle-content12 {
-  position: absolute; /* Positioned relative to container */
-  z-index: 333;
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 0; /* Start hidden */
+  height: 100vh; /* Full height */
   
-  height: 0; /* Hidden by default */
-  width: 100vw;
   overflow: hidden;
-  transition: height 0.5s ease-in-out; /* Smooth transition */
-  background-color: #f9f9f9;
-  margin-left: -26vh;
-  display: flex;
-  align-items: center;
+  transition: width 0.5s ease-in-out; /* Smooth width transition */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #B5CFB7;
+  z-index: 9999;
 }
 
 /* Class to show content */
 .toggle-content12.show {
   
-    height: 39vh; /* Adjust this value based on your content */
+   height: 100vh;
+  width: 100vw; /* Expand from left to right */
 }
 
 
