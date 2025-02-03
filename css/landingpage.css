@@ -16,7 +16,59 @@
   font-family: bradhi;
   src: url(../fonts/BRADHI.ttf);
 }
+ /* Full-screen loading container */
+  #loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #f4efe9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
+/* Elegant logo animation */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #2c3e50;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading Bar */
+.loading-bar {
+    width: 100px;
+    height: 4px;
+    background: #ddd;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.loading-bar::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background: #2c3e50;
+    animation: loading 1.5s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0% { left: -50px; }
+    100% { left: 100px; }
+}
+
+/* Main content (hidden initially) */
+#content { display: none; padding: 20px; text-align: center; }
 #block1{
    margin-top: 6vh;
     overflow: hidden;
