@@ -130,6 +130,15 @@ document.addEventListener('click', function(event) {
         message.textContent = 'Please enter a valid email address.';
     }
 });
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+//////////////////     G S A P SECTION      ///////////////////////////////////////
 
 
 
@@ -169,17 +178,7 @@ gsap.fromTo("#block10-up h3",
     }
   }
 );
-gsap.fromTo(
-  "#block1-slider-box .swiper2 .swiper-slide:nth-child(1) img", 
-  {
-    scale: 1.1, // Initial zoomed-in state
-  },
-  {
-    scale: 1, // Final state (original size)
-    duration: 1.5, // Duration of the animation (1 second)
-    ease: "power2.out", // Ease for a smooth transition
-  }
-);
+
 
 
 
@@ -228,18 +227,7 @@ if (window.matchMedia("(max-width: 360px)").matches) {
     }
   );
 
-  // Animation for first swiper slide image in #block1-slider-box
-  gsap.fromTo(
-    "#block1-slider-box .swiper2 .swiper-slide:nth-child(1) img", 
-    {
-      scale: 1.2, // Initial zoomed-in state
-    },
-    {
-      scale: 1, // Final state (original size)
-      duration: 2.4, // Duration of the animation (1.5 seconds)
-      ease: "power2.out", // Ease for a smooth transition
-    }
-  );
+ 
 }
 document.querySelectorAll('input').forEach(input => {
     input.addEventListener('input', function() {
