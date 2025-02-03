@@ -1874,7 +1874,7 @@ position: fixed;
   left: 0;
   width: 0; /* Start hidden */
   height: 100vh; /* Full height */
-  
+   background-color: #B5CFB7;
   overflow: hidden;
   transition: width 0.5s ease-in-out; /* Smooth width transition */
   overflow-y: auto; /* Enable vertical scrolling */
