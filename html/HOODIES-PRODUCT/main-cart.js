@@ -6,15 +6,18 @@ function renderCart() {
     cart1Div.innerHTML = ''; // Clear the cart1 div
     let totalPrice = 0; // Initialize total price
 
-    cart.forEach((item, index) => {
+ cart.forEach((item, index) => {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
-
+    
         // Add item price to total price
         totalPrice += item.price;
-
+    
+        // Dynamically adjust the image path
+        const adjustedImgPath = item.img.replace(/^(\.\.\/)+/, "../../");
+    
         cartItem.innerHTML = `
-            <img src="${item.img}" alt="${item.name}">
+            <img src="${adjustedImgPath}" alt="${item.name}">
             <div id="description-box1">
                 <div><h2>${item.name}</h2></div>
                 <div><h2>Size: ${item.size}</h2></div>
@@ -26,6 +29,7 @@ function renderCart() {
         cartDiv.appendChild(cartItem);
     });
 
+    
     // Create a total price div
     const totalDiv = document.createElement('div');
     totalDiv.className = 'total-price';
