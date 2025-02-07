@@ -1,10 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  Promise.all([insertNavbar(), insertMainBlocks()]).then(() => {
-    document.body.style.visibility = "visible";
-  });
-});
-
-document.body.style.visibility = "hidden"; // Hide content until JS loads
 
 
 
