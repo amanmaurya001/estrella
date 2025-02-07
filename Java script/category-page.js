@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", function () {
+  Promise.all([insertNavbar(), insertMainBlocks()]).then(() => {
+    document.body.style.visibility = "visible";
+  });
+});
+
+document.body.style.visibility = "hidden"; // Hide content until JS loads
+
+
+
+
 // Function to load the navbar content from t-shirts-women.html
 function insertNavbar() {
   fetch('navbar-supply.html') // Fetch the navbar content from t-shirts-women.html
