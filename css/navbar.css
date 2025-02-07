@@ -1442,7 +1442,8 @@ justify-content: center;
 #main-block-left{
    
     display: flex;
-  align-items: center;
+  align-items:center;
+  justify-content: space-between;
     border-top:  rgb(179, 172, 172) 2px solid;
     
     border-bottom:  rgb(181, 176, 176) 2px solid;
@@ -1456,17 +1457,17 @@ justify-content: center;
    
     margin-left: 2vh;
     height: 4vh; /* Let it adjust based on content */
-     border:  #888 1px solid;
+   
    border-radius:50px;
-  width: 17vh;
+  width: 10vh;
     position: relative; /* For positioning toggle content */
 }
 .filter-box-container1 {
    border-radius:50px;
     margin-left: 7vh;
     height: 4vh; /* Let it adjust based on content */
-    border:  #888 1px solid;
-  width: 17vh;
+   
+  width: 10vh;
     position: relative; /* For positioning toggle content */
 }
 .toggle-content11 {
@@ -1507,7 +1508,7 @@ justify-content: center;
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 70%;
+    width: 100%;
     border-right: #888 2px solid;
 }
 
@@ -1517,19 +1518,7 @@ justify-content: center;
    
 }
 
-#filter-box-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 30%;
-   
-}
 
-#filter-box-icon img {
-    height: 80%;
-    width: 80%;
-}
 
 
 
