@@ -1444,7 +1444,7 @@ justify-content: center;
     display: flex;
   align-items:center;
   justify-content: space-between;
-    border-top:  rgb(179, 172, 172) 2px solid;
+
     
     border-bottom:  rgb(181, 176, 176) 2px solid;
     height: 6vh;
@@ -1509,7 +1509,7 @@ justify-content: center;
     justify-content: center;
     height: 100%;
     width: 100%;
-    border-right: #888 2px solid;
+   
 }
 
 #filter-box-text h2 {
