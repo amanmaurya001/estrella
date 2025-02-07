@@ -1,39 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Function to load the navbar content from t-shirts-women.html
 function insertNavbar() {
   fetch('navbar-supply.html') // Fetch the navbar content from t-shirts-women.html
@@ -58,6 +22,83 @@ function insertNavbar() {
 
 // Insert navbar when the page loads
 window.onload = insertNavbar;
+
+
+
+
+
+
+// Function to load #main-block-left-1 and #main-block-left from midi-dress.html 
+// and insert them in the correct order into html2.html
+function insertMainBlocks() {
+  fetch('women html/midi-dress.html') // Fetch the content of midi-dress.html
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.text(); // Convert response to text
+    })
+    .then(data => {
+      // Create a temporary container to hold the fetched HTML
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data;
+
+      // Find the #main-block-left-1 and #main-block-left elements in the loaded content
+      const mainBlockLeft1 = tempDiv.querySelector('#main-block-left-1');
+      const mainBlockLeft = tempDiv.querySelector('#main-block-left');
+
+      // Find #hashtags in the current page
+      const hashtagsDiv = document.querySelector('#hashtags');
+
+      // If #hashtags and #main-block-left-1 exist, insert #main-block-left-1 after #hashtags
+      if (hashtagsDiv && mainBlockLeft1) {
+        hashtagsDiv.insertAdjacentElement('afterend', mainBlockLeft1);
+
+        // If #main-block-left exists, insert it after #main-block-left-1
+        if (mainBlockLeft) {
+          mainBlockLeft1.insertAdjacentElement('afterend', mainBlockLeft);
+        } else {
+          console.warn('Element #main-block-left not found in midi-dress.html');
+        }
+      } else {
+        console.warn('Element not found:', !mainBlockLeft1 ? '#main-block-left-1' : '#hashtags');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching main blocks:', error);
+    });
+}
+
+// Insert main blocks when the page loads
+window.addEventListener('DOMContentLoaded', insertMainBlocks);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
