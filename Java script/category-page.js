@@ -1,3 +1,54 @@
+// Function to remove #main-block-left-1 and #main-block-left from every HTML page
+function removeMainBlocks() {
+  // List of div IDs to remove
+  const divSelectors = ['#main-block-left-1', '#main-block-left'];
+
+  divSelectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(element => {
+      element.remove(); // Remove each matching element
+      console.log(`Removed: ${selector}`);
+    });
+  });
+}
+
+// Run the function when the page loads
+window.addEventListener('DOMContentLoaded', removeMainBlocks);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Function to load the navbar content from t-shirts-women.html
 function insertNavbar() {
   fetch('navbar-supply.html') // Fetch the navbar content from t-shirts-women.html
