@@ -31,7 +31,7 @@ window.onload = insertNavbar;
 // Function to load #main-block-left-1 and #main-block-left from midi-dress.html 
 // and insert them in the correct order into html2.html
 function insertMainBlocks() {
-  fetch('women html/midi-dress.html') // Fetch the content of midi-dress.html
+  fetch('navbar-supply.html') // Fetch the content of midi-dress.html
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
