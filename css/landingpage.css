@@ -70,7 +70,7 @@
 /* Main content (hidden initially) */
 #content { display: none; padding: 20px; text-align: center; }
 #block1{
-   margin-top: 6vh;
+ 
     overflow: hidden;
     height: 94vh;
     width: 100%;
@@ -661,7 +661,7 @@ body{
   
 }
     #block1{
-          margin-top: 4vh;
+        
         overflow: hidden;
         height: 88vh;
         width: 100%;
