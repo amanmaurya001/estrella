@@ -12,7 +12,7 @@
   src: url(../fonts/Playfair-VariableFont_opsz,wdth,wght.ttf);
 }
 #navbar {
-   margin-top: -6vh;
+   margin-top: -1vh;
     z-index: 99999;
    position: fixed;
    background-color:transparent;
@@ -1064,7 +1064,7 @@ justify-content: center;
 
     #navbar {
      
-        margin-top: -4vh;
+        margin-top: -1vh;
         position:fixed;
         border-bottom: 2px  rgb(95, 91, 91) solid;
         z-index: 9999;
