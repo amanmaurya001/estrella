@@ -409,9 +409,9 @@
   
    
    #heading-1{
-     
+        margin-top: 3vh;
        display: flex;
-       align-items: flex-end;
+       align-items: center;
        justify-content: center;
        height: 8vh;
        width: 100%;
