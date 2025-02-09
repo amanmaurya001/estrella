@@ -1060,7 +1060,11 @@ justify-content: center;
         align-items: center;
         color: #0b0a0a;
     }
-    
+    #hamburger { order: 1; } /* Move hamburger to the first position */
+    #navlogo { order: 2; } /* Logo comes second */
+    #navlogin { order: 3; } /* Login button comes third */
+
+
 
     #navbar {
      
@@ -1134,7 +1138,7 @@ justify-content: center;
      }
 
      #navlogin{
-        margin-right: -12vh;
+        margin-right: 0vh;
          
         display: flex;
         align-items: end;
