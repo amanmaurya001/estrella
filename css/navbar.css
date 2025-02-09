@@ -1188,7 +1188,7 @@ justify-content: center;
       left: 0;
       width: 0; /* Start hidden */
       height: 100vh; /* Full height */
-    
+     z-index: 9999999;
       overflow: hidden;
       transition: width 0.5s ease-in-out; /* Smooth width transition */
       overflow-y: auto; /* Enable vertical scrolling */
@@ -1203,7 +1203,7 @@ justify-content: center;
     /* Class to show content */
     .toggle-content4.show {
       width: 100vw; /* Expand from left to right */
-     
+      z-index: 9999999;
     }
    #cancel-div{
   display: flex;
