@@ -386,7 +386,7 @@
 
     /* /////////////////Headings///////////////////////// */
   #heading{
-    overflow: hidden;
+       overflow: hidden;
        display: flex;
        align-items: center;
        justify-content: center;
@@ -409,7 +409,7 @@
   
    
    #heading-1{
-       margin-top: 2vh;
+     
        display: flex;
        align-items: center;
        justify-content: center;
