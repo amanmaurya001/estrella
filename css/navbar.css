@@ -1456,18 +1456,18 @@ justify-content: center;
 .filter-box-container {
    
     margin-left: 1vh;
-    height: 4vh; /* Let it adjust based on content */
+    height: 3vh; /* Let it adjust based on content */
    
    border-radius:50px;
-  width: 10vh;
+  width: 6vh;
     position: relative; /* For positioning toggle content */
 }
 .filter-box-container1 {
    border-radius:50px;
     margin-left: 7vh;
-    height: 4vh; /* Let it adjust based on content */
+    height: 3vh; /* Let it adjust based on content */
    
-  width: 10vh;
+  width: 6vh;
     position: relative; /* For positioning toggle content */
 }
 .toggle-content11 {
