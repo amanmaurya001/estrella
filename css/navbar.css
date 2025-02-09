@@ -1138,7 +1138,7 @@ justify-content: center;
      }
 
      #navlogin{
-        margin-right: 0vh;
+        margin-right: 1.5vh;
          
         display: flex;
         align-items: end;
@@ -1170,7 +1170,7 @@ justify-content: center;
       margin-left: 1.5vh;
        display: block;
         height: 65%;
-        width: 4vh;
+        width: 2.5vh;
        
     }
     #mobile-navbar-img{
