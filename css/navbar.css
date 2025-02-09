@@ -1070,7 +1070,7 @@ justify-content: center;
      
      
    
-        border-bottom: 2px  rgb(95, 91, 91) solid;
+        border-bottom: transparent;
         z-index: 9999;
          background-color:white;
          display: flex;
