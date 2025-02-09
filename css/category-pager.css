@@ -112,7 +112,7 @@
     flex-direction: column;  /* Stack items vertically */
     justify-content: center;  /* Center vertically */
     align-items: center;  /* Center horizontally */
-  border:  red 2px solid;
+
     height: 18vh;
     width: 100%;
 }
