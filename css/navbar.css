@@ -1973,7 +1973,7 @@ position: fixed;
         justify-content: center;
           height: 30%;
           width: 100%;
-        
+        border-bottom: #999d98 1px solid;
          }
          .footer-coloumn-box-mobile-view{
           height: 70%;
