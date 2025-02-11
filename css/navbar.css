@@ -1947,14 +1947,14 @@ position: fixed;
             margin-top: 3vh;
              height: 60vh;
              width: 100%;
-             border: 2px rgb(0, 0, 0) solid;
+             border: 1px rgb(0, 0, 0) solid;
          }
          
          .footer-coloumn0{
          display: none;
          }
          .footer-coloumn{
-            border-top: #999d98 2px solid;
+            border-top: #999d98 1px solid;
             height: 20%;
             width: 100%;
             
@@ -1962,7 +1962,7 @@ position: fixed;
          .footer-coloumn1{
             height: 20%;
             width: 100%;
-            border-top: #999d98 2px solid;
+            border-top: #999d98 1px solid;
          }
          .footer-coloumn-box0{
           display: none;
