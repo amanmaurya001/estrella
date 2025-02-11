@@ -2012,7 +2012,7 @@ position: fixed;
        .footer-coloumn1-block{
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-around;
           height: 25%;
           width: 100%;
          
@@ -2039,8 +2039,8 @@ position: fixed;
           
        }
        .footer-coloumn1-block-socialmedia img{
-          height: 50%;
-          width:35%;
+          height: 80%;
+          width:80%;
       
        }
       
