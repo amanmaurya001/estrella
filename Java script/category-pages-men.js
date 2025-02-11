@@ -1,6 +1,6 @@
-// Function to load the navbar content from t-shirts-women.html inside women-html folder
+// Function to load the navbar content from navbar-supply.html
 function insertNavbar() {
-  fetch('../women-html/navbar-supply.html') // Use relative path to go up one level and then into women-html folder
+  fetch('../women-html/navbar-supply.html') // Fetch the navbar content
     .then(response => response.text()) // Get the response as text
     .then(data => {
       // Create a temporary container to hold the HTML content
@@ -10,9 +10,14 @@ function insertNavbar() {
       // Find the navbar by ID in the loaded content
       const navbar = tempDiv.querySelector('#navbar');
       
-      // If the navbar exists, prepend it to the body of the current page
+      // If the navbar exists, insert it after the <div id="heading">
       if (navbar) {
-        document.body.prepend(navbar);
+        const headingDiv = document.getElementById('heading');
+        if (headingDiv) {
+          headingDiv.insertAdjacentElement('afterend', navbar);
+        } else {
+          console.warn('Element with ID "heading" not found. Navbar not inserted.');
+        }
       }
     })
     .catch(error => {
@@ -22,6 +27,7 @@ function insertNavbar() {
 
 // Insert navbar when the page loads
 window.onload = insertNavbar;
+
 
 
 
