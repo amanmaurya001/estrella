@@ -1,3 +1,57 @@
+function insertNavbar() {
+  fetch('../../html/women-html/navbar-supply.html') // Adjusted relative path
+    .then(response => response.text()) // Get the response as text
+    .then(data => {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data; 
+
+      const navbar = tempDiv.querySelector('#navbar');
+      
+      if (navbar) {
+        document.body.insertAdjacentElement('afterbegin', navbar);
+      } else {
+        console.warn('Navbar with ID "navbar" not found. Navbar not inserted.');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching navbar:', error);
+    });
+}
+
+// Insert navbar when the page loads
+window.onload = insertNavbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4.5,
    loop:true,
