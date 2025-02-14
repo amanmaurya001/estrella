@@ -15,23 +15,23 @@
 }
 @font-face {
   font-family: greatvibes;
-  src: url(/clothing/fonts/GreatVibes-Regular.ttf);
+  src: url(../../../fonts/GreatVibes-Regular.ttf);
 }
 @font-face {
   font-family: cripson;
-  src: url(/clothing/fonts/CrimsonPro-Italic-VariableFont_wght.ttf);
+  src: url(../../../fonts/CrimsonPro-Italic-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: gowun;
-  src: url(/clothing/fonts/GowunBatang-Regular.ttf);
+  src: url(../../../fonts/GowunBatang-Regular.ttf);
 }
 @font-face {
   font-family: noto;
-  src: url(/clothing/fonts/NotoSerif-Italic-VariableFont_wdth\,wght.ttf);
+  src: url(../../../fonts/NotoSerif-Italic-VariableFont_wdth\,wght.ttf);
 }
 @font-face {
   font-family: dmsans;
-  src: url(/clothing/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+  src: url(../../../fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
 }
 #block-main{ 
   margin-top: 6vh;
