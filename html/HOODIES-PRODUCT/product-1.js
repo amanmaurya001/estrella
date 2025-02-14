@@ -1,26 +1,16 @@
 function insertNavbar() {
-  const navbarPath = '../../html/women-html/navbar-supply.html'; // Adjusted path
-
-  fetch(navbarPath)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.text();
-    })
+  fetch('../../../html/women-html/navbar-supply.html') // Adjusted relative path
+    .then(response => response.text()) // Get the response as text
     .then(data => {
-      console.log('Fetched navbar content:', data); // Log the content to debug
-
       const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = data;
+      tempDiv.innerHTML = data; 
 
       const navbar = tempDiv.querySelector('#navbar');
-
+      
       if (navbar) {
         document.body.insertAdjacentElement('afterbegin', navbar);
-        console.log('Navbar inserted successfully.');
       } else {
-        console.warn('Navbar with ID "navbar" not found. Check navbar-supply.html structure.');
+        console.warn('Navbar with ID "navbar" not found. Navbar not inserted.');
       }
     })
     .catch(error => {
@@ -28,8 +18,9 @@ function insertNavbar() {
     });
 }
 
-// Run after DOM is loaded
-document.addEventListener('DOMContentLoaded', insertNavbar);
+// Insert navbar when the page loads
+window.onload = insertNavbar;
+
 
 
 
