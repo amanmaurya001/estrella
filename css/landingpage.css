@@ -8,6 +8,10 @@
             box-shadow: none;
     
 }
+*:focus{
+  outline: none;
+  box-shadow: none;
+}
 @font-face {
   font-family: cripson;
   src: url(../fonts/CrimsonPro-Italic-VariableFont_wght.ttf);
