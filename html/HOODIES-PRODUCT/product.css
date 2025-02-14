@@ -10,6 +10,10 @@
   src: url(../../../fonts/Playfair-VariableFont_opsz\,wdth\,wght.ttf);
 }
 @font-face {
+  font-family: PlayfairDisplay;
+  src: url(../../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+@font-face {
   font-family: greatvibes;
   src: url(/clothing/fonts/GreatVibes-Regular.ttf);
 }
