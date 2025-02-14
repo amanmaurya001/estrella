@@ -34,7 +34,7 @@ window.onload = insertNavbar;
 
 
 function insertFooter() {
-  fetch('../../html/women-html/navbar-supply.html') // Adjusted relative path
+  fetch('navbar-supply.html') // Adjusted relative path
     .then(response => response.text()) // Get the response as text
     .then(data => {
       const tempDiv = document.createElement('div');
