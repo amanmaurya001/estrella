@@ -34,7 +34,7 @@
   src: url(../../../fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
 }
 #block-main{ 
-  margin-top: 6vh;
+
     display: flex;
   
     height: 100vh;
@@ -648,7 +648,7 @@ height: 5vh;
 /* /////////////////block main///////////////////////// */
 
    #block-main{ 
-  margin-top: 4vh;
+
       display: block;
       
       
