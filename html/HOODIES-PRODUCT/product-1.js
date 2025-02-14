@@ -18,10 +18,34 @@ function insertNavbar() {
     });
 }
 
-// Insert navbar when the page loads
-window.onload = insertNavbar;
 
 
+
+function insertFooter() {
+  fetch('../../../html/women-html/footer-supply.html') // Adjusted relative path
+    .then(response => response.text()) // Get the response as text
+    .then(data => {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data; 
+
+      const footer = tempDiv.querySelector('#footer');
+      
+      if (footer) {
+        document.body.insertAdjacentElement('beforeend', footer); // Insert at the end of body
+      } else {
+        console.warn('Footer with ID "footer" not found. Footer not inserted.');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching footer:', error);
+    });
+}
+
+// Insert footer when the page loads
+window.onload = function() {
+  insertNavbar();
+  insertFooter();
+};
 
 
 
