@@ -125,7 +125,7 @@ var swiper = new Swiper(".mySwiper", {
     // Apply GSAP animation based on product count
     if (productCount === 5 || productCount === 6) {
         gsap.to("#scrollableDiv", {
-            y: -1410,
+            y: -1790,
             scrollTrigger: {
                 trigger: "#block-main",
                 scroller: "body",
