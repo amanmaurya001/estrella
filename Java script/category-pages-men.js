@@ -1,3 +1,12 @@
+window.addEventListener("scroll", function () {
+  let navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) { // Change 50 to adjust when it sticks
+      navbar.classList.add("sticky");
+  } else {
+      navbar.classList.remove("sticky");
+  }
+});
+
 // Function to load the navbar content from navbar-supply.html
 function insertNavbar() {
   fetch('../women-html/navbar-supply.html') // Fetch the navbar content
