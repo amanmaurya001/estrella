@@ -55,7 +55,7 @@
 .scrollable {
     
     
-    height: 110vh;
+    height: auto;
     width: 100%; /* Set height for scrollable effect */
      padding-top: 28vh;
     padding: 10px;
@@ -68,8 +68,8 @@
 /*  */
 
 .product-pics{
-    height: 80vh;
-    width: 58.5vh;
+   height: auto;
+    width: 100%;
     
 }
 .product-pics img{
