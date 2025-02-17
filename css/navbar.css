@@ -12,17 +12,24 @@
   src: url(../fonts/Playfair-VariableFont_opsz,wdth,wght.ttf);
 }
 #navbar {
+  
+  z-index: 99999;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 6vh;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out; /* Smooth effect */
+}
 
-    z-index: 99999;
-   position: sticky;
-   background-color:transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    height: 6vh;
-    width: 100%;
-    border-bottom: 2px  rgb(95, 91, 91) solid;
-    
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* Change as needed */
+
 }
 #navlogo{
    margin-left: 3vh;
