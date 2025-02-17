@@ -57,7 +57,7 @@
     
     height: 110vh;
     width: 100%; /* Set height for scrollable effect */
-   
+     padding-top: 28vh;
     padding: 10px;
     background-color: #fff;
    display: grid;
