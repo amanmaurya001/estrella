@@ -39,7 +39,28 @@ function insertNavbar() {
 // Insert navbar when the page loads
 window.onload = insertNavbar;
 
+function insertFooter() {
+  fetch('navbar-supply-product.html') // Adjust path if needed
+    .then(response => response.text()) // Get response as text
+    .then(data => {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data; 
 
+      const footer = tempDiv.querySelector('#footer');
+      
+      if (footer) {
+        document.body.appendChild(footer); // Insert footer at the end
+      } else {
+        console.warn('Footer with ID "footer" not found. Footer not inserted.');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching footer:', error);
+    });
+}
+
+// Insert footer when the page loads
+window.addEventListener('DOMContentLoaded', insertFooter);
 
 
 
