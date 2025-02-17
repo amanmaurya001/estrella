@@ -1,3 +1,20 @@
+window.addEventListener("scroll", function () {
+  let navbar = document.getElementById("navbar");
+  if (window.scrollY > 50) { // Change 50 to adjust when it sticks
+      navbar.classList.add("sticky");
+  } else {
+      navbar.classList.remove("sticky");
+  }
+});
+
+
+
+
+
+
+
+
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4.5,
    
