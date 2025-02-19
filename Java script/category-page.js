@@ -80,7 +80,7 @@ window.onload = insertNavbar;
 // INSERT FOOTER
 
 function insertFooter() {
-  fetch('navbar-supply-product.html') // Adjust path if needed
+  fetch('navbar-supply.html') // Adjust path if needed
     .then(response => response.text()) // Get response as text
     .then(data => {
       const tempDiv = document.createElement('div');
