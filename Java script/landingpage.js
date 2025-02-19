@@ -254,10 +254,15 @@ document.querySelectorAll('input').forEach(input => {
                                .replace(/javascript:/gi, '');  // Remove JavaScript protocol
     });
 });
-// Simulate page loading
-  window.addEventListener("load", function () {
-    setTimeout(() => { 
-        document.getElementById("loading").style.display = "none";
-        document.getElementById("content").style.display = "block";
-    }, 2000); // 2-second delay for elegance
+// Elegant page transition with fade-out effect
+window.addEventListener("load", function () {
+  setTimeout(() => { 
+      document.getElementById("loading").style.opacity = "0"; // Smooth fade-out
+
+      setTimeout(() => {
+          document.getElementById("loading").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          document.getElementById("content").style.opacity = "1"; // Smooth fade-in
+      }, 1000); // 1-second delay for fade-out
+  }, 2500); // 2.5-second delay for elegance
 });
