@@ -797,7 +797,7 @@ body{
   }
   50% {
     transform: rotate(180deg) scale(1.05); /* Gentle scale effect */
-    box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.7); /* Stronger gold shimmer */
+    box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.7); /* Stronger gold shimmer */
   }
   100% {
     transform: rotate(360deg) scale(1);
