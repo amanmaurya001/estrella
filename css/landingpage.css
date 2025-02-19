@@ -805,6 +805,18 @@ body{
   }
 }
 
+    @keyframes glowingGold {
+  0% {
+    border-top: 3px solid #000000; /* Subtle gold accent */
+    box-shadow: 0px 0px 15px rgba(29, 29, 28, 0.5); /* Soft golden glow */
+  }
+  100% {
+    border-top: 3px solid rgba(0, 0, 0, 0.8); /* Brighter gold */
+    box-shadow: 0px 0px 30px rgba(25, 25, 25, 0.8); /* Stronger golden glow */
+  }
+}
+
+
 
 
     #block1{
