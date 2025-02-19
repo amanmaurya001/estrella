@@ -6,6 +6,18 @@ window.addEventListener("scroll", function () {
       navbar.classList.remove("sticky");
   }
 });
+// Elegant page transition with fade-out effect
+window.addEventListener("load", function () {
+  setTimeout(() => { 
+      document.getElementById("loading").style.opacity = "0"; // Smooth fade-out
+
+      setTimeout(() => {
+          document.getElementById("loading").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          document.getElementById("content").style.opacity = "1"; // Smooth fade-in
+      }, 1000); // 1-second delay for fade-out
+  }, 2500); // 2.5-second delay for elegance
+});
 
 function insertNavbar() {
   fetch('navbar-supply-product.html') // Adjusted relative path
