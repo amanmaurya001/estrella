@@ -11,6 +11,112 @@
   font-family: Playfair;
   src: url(../fonts/Playfair-VariableFont_opsz,wdth,wght.ttf);
 }
+/* Full-page blur effect while loading */
+#loading {
+ 
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.2); /* Subtle dim */
+  transition: opacity 1s ease-in-out;
+}
+
+/* Centered Loading Content */
+.loading-content {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Container for the logo and text */
+.logo-container {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -40px; /* Add space between logo and "ESTRELLA" text */
+}
+
+/* Style for the logo image */
+.logo-image {
+ 
+  width: 150px; /* Adjust based on your logo size */
+  height: auto;
+  margin-bottom: 10px; /* Space between logo and text */
+  animation: fadeIn 2s ease-in-out; /* Optional fade-in animation */
+}
+
+/* Luxurious Floating "ESTRELLA" Text */
+.logo {
+  font-style: italic; /* Italic text */
+  font-size: 5rem;
+  font-weight:lighter;
+  font-family: "Playfair Display", serif;
+  color: rgb(0, 0, 0);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: floatGlow 3s infinite alternate ease-in-out;
+}
+
+/* Elegant Golden Pulsing Ring Loader */
+.ring-loader {
+  width: 100px; /* Elegant size for the ring */
+  height: 100px;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-top: 6px solid #FFD700; /* Gold tone for elegance */
+  animation: pulseRotate 2s infinite linear, glowingGold 2s infinite alternate ease-in-out;
+  margin-top: 15px;
+  position: relative;
+}
+
+/* Smooth Pulse Rotation */
+@keyframes pulseRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.3); /* Gold shimmer effect */
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05); /* Gentle scale effect */
+    box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.7); /* Stronger gold shimmer */
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.3); /* Soft shimmer */
+  }
+}
+
+/* Luxurious Golden Glow Effect */
+@keyframes glowingGold {
+  0% {
+    border-top: 6px solid #000000; /* Subtle gold accent */
+    box-shadow: 0px 0px 15px rgba(29, 29, 28, 0.5); /* Soft golden glow */
+  }
+  100% {
+    border-top: 6px solid rgba(0, 0, 0, 0.8); /* Brighter gold */
+    box-shadow: 0px 0px 30px rgba(25, 25, 25, 0.8); /* Stronger golden glow */
+  }
+}
+
+
+
+
+
+
+
 #navbar {
   
   z-index: 99999;
