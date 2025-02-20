@@ -1479,13 +1479,13 @@ button:hover {
     z-index: 1;
     position:absolute ;
     color: #ffffff;
-    font-size: 3.5vh;
+    font-size: 2.7vh;
     margin-left: 4vh;
     
    }
    #block6-left div{
     margin-left: 4vh;
-    width: 10vh;
+    width: 20vh;
     display: flex;
     justify-content: space-evenly;
     margin-top: 48vh;
@@ -1494,7 +1494,7 @@ button:hover {
    }
    #block6-left div a{
     color: #ffffff;
-    font-size: 2.8vh;
+    font-size: 2vh;
    }
    #block6-left a{
     display: block;
@@ -1518,13 +1518,13 @@ button:hover {
     z-index: 1;
     position:absolute ;
     color: #ffffff; 
-    font-size: 3.5vh;
+    font-size: 2.7vh;
     margin-left: 4vh;
     
    }
    #block6-right div{
-    margin-left: 2vh;
-    width: 10vh;
+    margin-left: 4vh;
+    width: 20vh;
     display: flex;
     justify-content: space-evenly;
     margin-top: 48vh;
@@ -1533,7 +1533,7 @@ button:hover {
    }
    #block6-right div a{
     color: #ffffff;
-    font-size: 2.8vh;
+    font-size: 2vh;
    }
   /* ////////////////////////////////////////////////// */
  #block7{
