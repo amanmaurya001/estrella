@@ -1744,7 +1744,7 @@ margin-right: 2vh;
 #block-img-set{
   border-top: #888 2px solid;
   border: red solid 3px;
-  height: 77vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 
@@ -1873,20 +1873,19 @@ font-weight: 600;
 
 
 
-#customAlert {
-margin-left: 84vh;
-margin-top: -6vh;
-border-radius: 5px;
-height: 5vh;
-font-family: Arial, sans-serif;
-font-size: 16px;
-color: #333;
-text-align: center;
-transition: opacity 0.3s;
-}
+   
+      #customAlert {
+        
+        margin-left: 0vh;
+        margin-top: -6vh;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        color: #333;
+        text-align: center;
+        transition: opacity 0.3s;
+      }
 
-
-  
    
    
  }
