@@ -69,7 +69,10 @@ window.onload = function() {
 };
 
 
-
+  setTimeout(() => {
+    console.log("Refreshing GSAP ScrollTrigger...");
+    ScrollTrigger.refresh(); // Forces recalculation of positions
+}, 300);
 
 
 
