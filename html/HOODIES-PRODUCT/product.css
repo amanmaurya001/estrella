@@ -1325,7 +1325,7 @@ overflow: hidden; /* Prevent scrolling */
 #block-right{
  
   padding-top:1vh ;
-  height: 95%;
+  height: 100%;
   width: 55%;
  
 }
@@ -1341,8 +1341,8 @@ align-items: center;
 #block-right1 h2{
 
 font-family:PlayfairDisplay ;
-  padding-left: 5vh;
- font-size: 3vh;
+  padding-left: 2vh;
+ font-size: 2.3vh;
 }
 #block-right2{
 
@@ -1355,7 +1355,7 @@ font-family:PlayfairDisplay ;
 }
 #block-right2 h4{
  
-  padding-left: 5vh;
+  padding-left: 2vh;
  color: #888888ca;
 }
 #block-right3{
@@ -1369,13 +1369,13 @@ margin-top: 3vh;
 }
 #block-right3 h1{
  
-padding-left: 5vh;
-font-size: 4vh;
+padding-left: 2vh;
+font-size: 2.5vh;
 }
 #block-right3 h2{
  
 
-font-size: 3.5vh;
+font-size: 2.5vh;
 }
 #block-right4{
 
@@ -1388,7 +1388,7 @@ margin-top: 5px;
 }
 #block-right4 h3{
  
-  padding-left: 5vh;
+  padding-left: 2vh;
 
 }
 #block-right5{
@@ -1416,7 +1416,7 @@ width: 100%;
 
 }
 #block-right5 .product-related-pics:first-child {
-margin-left: 5vh;
+margin-left: 2vh;
 }
 
 /* Style the other four children */
@@ -1434,7 +1434,7 @@ margin-left: 1vh;
 }
 #block-right6 h3{
 font-family: Playfair;
-  padding-left: 5vh;
+  padding-left: 2vh;
 
 }
 .size-options{
@@ -1446,15 +1446,16 @@ font-family: Playfair;
 }
 
 .size-button {
+  
  border-radius: 30px;
   border: 1px solid black;
- height: 60%;
+ height: 40%;
  width: 10vh;
- margin-left: 4vh;
+ margin-left: 1vh;
  background: transparent;
   color: rgb(0, 0, 0);
   cursor: pointer;
-font-size: 1vh;
+font-size: 0.8vh;
 }
 
 .size-button:hover {
@@ -1473,7 +1474,7 @@ font-size: 1vh;
  
  height: 3%;
  width: 100%;
- margin-left: 5vh;
+ margin-left: 2vh;
  color: #181414;
 }
 #block-size-guide a{
@@ -1488,8 +1489,8 @@ font-size: 1vh;
 
 #block-right7{
 
-  
-  margin-left: 2vh;
+ 
+  margin-left: 0vh;
 display: flex;
   align-items: center;
   justify-content: center;
@@ -1503,7 +1504,7 @@ display: flex;
   align-items: center;
   justify-content: center;
   height: 90%;
-  width: 93%;
+  width: 90%;
  background-color: #000000;
 }
 #add h2{
@@ -1522,13 +1523,13 @@ font-family:Playfair ;
 }
 #block-right8 h2{
  
-  padding-left: 5vh;
+  padding-left: 2vh;
 
 }
 #block-right8 h4{
   color: #888;
  margin-top: 2vh;
-  padding-left: 5vh;
+  padding-left: 2vh;
 
 }
 #block-right9{
@@ -1543,7 +1544,7 @@ font-family:Playfair ;
   text-align: center;
 }
 
-.star-rating {padding-left: 5vh;
+.star-rating {padding-left: 2vh;
   display: inline-flex;
   direction: ltr; /* Align stars from left to right */
 }
@@ -1556,6 +1557,9 @@ font-family:Playfair ;
 .star.filled {
   color: rgb(0, 0, 0); /* Color for filled stars */
 }
+
+
+
 
 
 
