@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 99999999999999999999999999999;
   backdrop-filter: blur(15px);
   background: rgba(0, 0, 0, 0.2); /* Subtle dim */
   transition: opacity 1s ease-in-out;
@@ -1175,7 +1175,7 @@ justify-content: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 99999999999999999999999999999;
   backdrop-filter: blur(15px);
   background: rgba(0, 0, 0, 0.2); /* Subtle dim */
   transition: opacity 1s ease-in-out;
@@ -2313,7 +2313,7 @@ position: fixed;
      display: flex;
      justify-content: center;
      align-items: center;
-     z-index: 1000;
+      z-index: 99999999999999999999999999999;
      backdrop-filter: blur(15px);
      background: rgba(0, 0, 0, 0.2); /* Subtle dim */
      transition: opacity 1s ease-in-out;
