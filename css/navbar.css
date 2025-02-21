@@ -2441,7 +2441,7 @@ position: fixed;
         
          border-bottom: violet 7px solid;
       
-           border-bottom: transparent;
+         
            z-index: 9999;
             background-color:white;
             display: flex;
