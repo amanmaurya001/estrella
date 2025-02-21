@@ -1677,16 +1677,16 @@ button:hover {
   width: 100%;
  }
   
-   #block10{
+  #block10{
     margin-top: 5vh;
-    height: 100vh;
+    height: 140vh;
     width: 100%;
   
    
   }
   #block10-up{
     
-    height: 8vh;
+    height: 15%;
     width: 100%;
    
     display: flex;
@@ -1697,22 +1697,22 @@ button:hover {
     font-size: 3vh;
     font-weight: 100;
   }
-  #block10-mid{
+  #block10-mid{ 
     padding-left: 2vh;
     padding-right: 2vh;
-    margin-top: 2vh;
-    height: 66vh;
+    margin-top: 1vh;
+    height: 85%;
     width: 100%;
     
     display: grid;
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-columns: 48% 48%;
-  
+    column-gap: 20px;
+       row-gap: 20px;
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: 50% 50%; /* Two equal rows */
    
   }
   #block10-mid-product{
-    height: 32vh;
+  
     width: 100%;
     margin-left: 0;
    
@@ -1724,7 +1724,7 @@ button:hover {
   text-decoration: none;
   }
   #block10-mid-product-img{
-    height: 29vh;
+    height: 90%;
   width: 100%;
  
   display: flex;
@@ -1742,7 +1742,7 @@ button:hover {
     transition: all 0.7s ease; 
   }
   #block10-mid-product-name{
-    height: 3vh;
+    height: 10%;
   width: 100%;
   
   align-items: center;
