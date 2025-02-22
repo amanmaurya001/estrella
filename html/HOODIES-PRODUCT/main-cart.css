@@ -5,6 +5,13 @@
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
    
   }
+#cart-cover{
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    width: 100%;
+   
+  }
   #head{
    
     border-bottom: #000000 2px solid;
@@ -164,19 +171,72 @@
     font-size: 18px;
   }
   
+ #close-button {
+  position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#close-button:hover {
+    background-color: #000;
+    color: #fff;
+}
+  #checkout-overlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the overlay is above other content */
+}
+
+#checkout-form-container {
+
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    height: 100%;
+}
+
+#checkout-overlay.active {
+    display: flex;
+}
   
-  
+   
 #cart{
- position: absolute;
+
   width: 69%;
   height: auto;
- 
+  overflow-y: scroll; /* This makes it scrollable vertically */
+}
+#cart::-webkit-scrollbar {
+  display: none;
 }
 #cart1{
-  
- margin-left: 140vh;
+ 
+
   width: 30%;
-  height: 85vh;
+  height: 100%;
  
 }
 .total-price{
@@ -397,11 +457,12 @@
   }
   #checkoutForm{
     
-    height: 92vh;
-    width: 50vh;
+      height: 100%;
+    width: 100%;
   }
   #placeorder{
   
+ position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -498,7 +559,13 @@
 
 
 @media screen and (min-width: 320px) and (max-width: 450px) {
-
+  #cart-cover{
+    display: block;
+   
+    height: 95vh;
+    width: 100%;
+   
+  }
     #head{
    
       border-bottom: #000000 2px solid;
@@ -618,10 +685,11 @@
       
       #cart{
        
-        position: absolute;
-        height: 74vh;
-        width: 100%;
-        overflow-y: auto;  /* Enable vertical scrolling */
+  
+      height: 68vh;
+      width: 100%;
+      overflow-y: auto;  /* Enable vertical scrolling */
+    
       
       }
      
@@ -700,15 +768,9 @@
     
       
       #cart1{
-   position: fixed;
-       margin-top: 0vh;
-        margin-left: 0vh;
-         width: 100%;
-         height:27vh;
-        
-         bottom: 0; /* Aligns the bottom of the div to the bottom of the screen */
-         left: 0; /* Ensures it starts at the left edge of the screen */
-        
+     width: 100%;
+            height:27vh;
+           
   
     }
       .total-price{
@@ -938,10 +1000,45 @@
               border: #818580 2px solid;
               width: 100%;
             }
+      #checkout-overlay {
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensure the overlay is above other content */
+        }
+        
+        #checkout-form-container {
+        
+         
+            background-color: white;
+            padding: 5px;
+            width: 100%;
+          
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            height: 100%;
+        }
+        
+        #checkout-overlay.active {
+            display: flex;
+        }
+
+
+    
             #checkoutForm{
              
-              height: 68vh;
-              width: 350px;
+           
+            height: 100%;
+            width: 100%;
             }
             #placeorder{
              
@@ -949,22 +1046,22 @@
               align-items: center;
               justify-content: center;
               border-bottom: black 1px solid;
-              height: 4vh;
+               height: 5%;
               
             }
          #placeorder h1{
              
               
-              font-size: 2vh;
+                font-size: 2.3vh;
             
             }
             
             .details{
-              height: 6.5vh;
+            height: 9%
               
             }
          .details1{ 
-              height: 11vh; 
+                    height: 15%; 
               
             }
             
@@ -975,10 +1072,10 @@
             
             label {
              
-               font-size: 1.2vh;
+                font-size: 1.5vh;
               font-weight: bold;
               color: #333;
-              margin-bottom: 14px;
+            margin-bottom: 25px;
               margin-left: 3vh;
             }
             
@@ -986,26 +1083,26 @@
             input[type="number"],
             input[type="email"]
              {
-                   margin-left: 3vh;
-                 margin-top: -3px;
-                 font-size: 1.5vh;
-              width: 80%;
-              height: 1vh;
-              padding: 9px;
-              border: 1px solid #a1acb0;
-              border-radius: 10px;
-              box-sizing: border-box;
-              transition: border-color 0.3s, background-color 0.3s;
+                  margin-left: 3vh;
+               margin-top: 5px;
+               font-size: 1.5vh;
+            width: 80%;
+            height: 50%;
+            padding: 9px;
+            border: 1px solid #a1acb0;
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, background-color 0.3s;
             }
               textarea {
-              font-size: 1vh;
-              width: 100%;
-              height: 1vh;
-              padding: 4px;
-               border: 1px solid #a1acb0;
-              border-radius: 10px;
-              box-sizing: border-box;
-              transition: border-color 0.3s, background-color 0.3s;
+             font-size: 1.5vh;
+            width: 100%;
+            height: 1vh;
+            padding: 4px;
+             border: 1px solid #a1acb0;
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, background-color 0.3s;
             }
         #address{
               margin-left: 3vh;
