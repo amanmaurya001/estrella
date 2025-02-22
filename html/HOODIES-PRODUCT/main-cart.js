@@ -135,85 +135,93 @@ function checkout() {
     }
 }
 
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+// DETAILS FORM
 function showCheckoutForm() {
-    const cartDiv = document.getElementById('cart');
-    cartDiv.innerHTML = `
-    <div id="checkoutbox">
-      
+    // Get the checkout overlay and form container
+    const overlay = document.getElementById('checkout-overlay');
+    const formContainer = document.getElementById('checkout-form-container');
+
+    // Create the form content
+    formContainer.innerHTML = `
+       
         <form id="checkoutForm" onsubmit="submitForm(event)">
-           
-        <div id="placeorder">
-          <h1>Order Details</h1>
+     
+            <div id="placeorder">
+        
+                <h1>Order Details</h1>
+                  <div id="close-button" onclick="closeCheckoutForm()">X</div>
             </div>
-
             <div class="details">
-             <label for="name">Name:</label><br>
-            <input id="input" type="text" id="name" required><br><br>
+                <label for="name">Name:</label><br>
+                <input id="input" type="text" id="name" required><br><br>
             </div>
-
-             <div class="details">
-             <label for="name">Phone no:</label><br>
-            <input id="input" type="number" id="number" required><br><br>
-            </div>
-            
-
             <div class="details">
-             <label for="email">Email:</label><br>
-            <input id="input" type="email" id="email" required><br><br>
+                <label for="name">Phone no:</label><br>
+                <input id="input" type="number" id="number" required><br><br>
             </div>
-
+            <div class="details">
+                <label for="email">Email:</label><br>
+                <input id="input" type="email" id="email" required><br><br>
+            </div>
             <div class="details1">
-             <label for="address">Address:</label><br>
-            <textarea id="address" required></textarea><br><br>
+                <label for="address">Address:</label><br>
+                <textarea id="address" required></textarea><br><br>
             </div>
-
-
-
-             <div class="details2">
-
-            <div class="state-city">
-               <div class="details">
-                <label id="label1" for="name">State:</label><br>
-                <input id="state" type="text" id="name" required><br><br>
-               </div>
-            </div>
-
-            <div class="state-city">
-                 <div class="details">
-                 <label id="label1" for="name">City:</label><br>
-                 <input id="city" type="text" id="name" required><br><br>
-                 </div>
-            </div>
-
-             <div class="state-city">
-                 <div class="details">
-                 <label id="label1" for="name">Pin code:</label><br>
-                 <input id="pin" type="text" id="name" required><br><br>
-                 </div>
-            </div>
-
-
+            <div class="details2">
+                <div class="state-city">
+                    <div class="details">
+                        <label id="label1" for="name">State:</label><br>
+                        <input id="state" type="text" id="name" required><br><br>
+                    </div>
+                </div>
+                <div class="state-city">
+                    <div class="details">
+                        <label id="label1" for="name">City:</label><br>
+                        <input id="city" type="text" id="name" required><br><br>
+                    </div>
+                </div>
+                <div class="state-city">
+                    <div class="details">
+                        <label id="label1" for="name">Pin code:</label><br>
+                        <input id="pin" type="text" id="name" required><br><br>
+                    </div>
+                </div>
             </div>
             <div class="details">
-             <label for="name">Landmark:</label><br>
-            <input id="input" type="text" id="name" required><br><br>
+                <label for="name">Landmark:</label><br>
+                <input id="input" type="text" id="name" required><br><br>
             </div>
-           
-             <div class="details3">
-              <button id="submit" type="submit"><h1>Submit</h1></button>
-           </div>
-
-           
-
-           
+            <div class="details3">
+                <button id="submit" type="submit"><h1>Place Order</h1></button>
+            </div>
         </form>
-        </div>
     `;
+
+    // Show the overlay
+    overlay.classList.add('active');
 }
 
+// Function to close the form when submitting
 function submitForm(event) {
     event.preventDefault(); // Prevent form submission
-    alert("Your Order is placed successfully! We will contact you on whatsapp for futher details");
-    localStorage.removeItem('cart'); // Clear the cart after checkout
+    alert("Your Order is placed successfully! We will contact you on whatsapp for further details");
+
+    // Clear the cart after checkout
+    localStorage.removeItem('cart'); 
     renderCart(); // Re-render the cart (should be empty now)
+
+    // Close the overlay
+    const overlay = document.getElementById('checkout-overlay');
+    overlay.classList.remove('active');
+}
+
+// Function to close the form when submitting
+function closeCheckoutForm() {
+    const overlay = document.getElementById('checkout-overlay');
+    overlay.classList.remove('active'); // This will hide the overlay and form
 }
