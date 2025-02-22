@@ -13,11 +13,17 @@
    
 </div>
 
-   
-    <div id="cart"></div>
-     
-    <div id="cart1"></div>
-   
+   <div id="cart-cover">
+        <div id="cart"></div> <!-- This will hold the cart items dynamically rendered by JavaScript -->
+        <div id="cart1"></div> <!-- This will hold the order summary and checkout buttons -->
+    
+        <!-- Full-screen checkout overlay (initially hidden) -->
+        <div id="checkout-overlay">
+            <div id="checkout-form-container">
+                <!-- Form content will be dynamically inserted here via JavaScript -->
+            </div>
+        </div>
+    </div>
 
 
     <script src="../../html/HOODIES-PRODUCT/main-cart.js"></script>
