@@ -196,6 +196,17 @@ function showCheckoutForm() {
                 <label for="name">Landmark:</label><br>
                 <input id="input" type="text" id="name" required><br><br>
             </div>
+             <!-- Notification Section with Terms and Conditions -->
+            <div class="notification-section">
+                <h2>Important Information</h2>
+                <h4>Please record a video while opening your parcel. This helps us verify any damage, stains, broken tags, or other issues with the product and ensures quick resolution if needed.</h4>
+                <h4>Please record a video while opening your parcel. This helps us verify any damage, stains, or issues with the product. Do not break any tags, as once broken, the dress will not be replaceable.</h4>
+                <h4>Important Information</h4>
+                <label>
+                    <input type="checkbox" id="agreeCheckbox" required>
+                    I have read and agree to the Terms and Conditions
+                </label>
+            </div>
             <div class="details3">
                 <button id="submit" type="submit"><h1>Place Order</h1></button>
             </div>
