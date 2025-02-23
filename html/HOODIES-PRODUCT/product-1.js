@@ -69,13 +69,6 @@ window.onload = function() {
 };
 
 
-  setTimeout(() => {
-    console.log("Refreshing GSAP ScrollTrigger...");
-    ScrollTrigger.refresh(); // Forces recalculation of positions
-}, 300);
-
-
-
 
 
 
@@ -132,61 +125,6 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
- function setupGsapAnimation() {
-    // Check if screen width is less than 600px
-    if (window.matchMedia("(max-width: 600px)").matches) {
-        console.log("Animation disabled for screen width less than 600px");
-        return; // Exit the function if the condition is met
-    }
-
-    const scrollableDiv = document.querySelector("#scrollableDiv");
-    const productPics = scrollableDiv.querySelectorAll(".product-pics");
-    const productCount = productPics.length;
-
-    // Clean up previous ScrollTrigger instances
-    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-
-    // Apply GSAP animation based on product count
-    if (productCount === 5 || productCount === 6) {
-        gsap.to("#scrollableDiv", {
-            y: -1790,
-            scrollTrigger: {
-                trigger: "#block-main",
-                scroller: "body",
-                start: "top 6%",
-                end: "top -70%",
-                scrub: true,
-                pin: true,
-            }
-        });
-    } else if (productCount === 3 || productCount === 4) {
-        gsap.to("#scrollableDiv", {
-            y: -710,
-            scrollTrigger: {
-                trigger: "#block-main",
-                scroller: "body",
-                start: "top 6%",
-                end: "top -70%",
-                scrub: true,
-                pin: true,
-            }
-        });
-    } else {
-        console.warn("Unsupported product count for animation:", productCount);
-    }
-}
-
-// Call the function to initialize GSAP animation
-setupGsapAnimation();
-
-// Reapply GSAP animation if content dynamically changes
-const observer = new MutationObserver(() => {
-    setupGsapAnimation();
-});
-observer.observe(document.querySelector("#scrollableDiv"), { childList: true });
-
-// Recheck animation setup on window resize
-window.addEventListener("resize", setupGsapAnimation);
 
 
 
