@@ -36,18 +36,15 @@
 
 
 #block-main{ 
- border: 2px rgb(0, 21, 255) solid;
-    display: flex;
   
-    height: 100vh;
+    display: flex;
+   
+    height: 270vh;
     width: 100%;
 
-  overflow: hidden; /* Prevent scrolling */
 }
 #block-left{
- 
-    overflow: hidden;
-    display: flex;
+
   
     height: 100%;
     width: 60%;
@@ -89,8 +86,12 @@
 #block-right{
    
   
-    height: 100%;
+   adding-top:1vh ;
+    height: 90vh;
     width: 40%;
+    position: sticky;
+   
+    top: 57px; /* Adjust this value to match your navbar height and desired pin position */
    
 }
 #block-right1{
