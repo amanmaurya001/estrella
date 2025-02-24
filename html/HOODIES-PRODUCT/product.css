@@ -837,18 +837,18 @@ border: rgb(4, 255, 0) solid 1px;
       
       
       #block-size-guide{border: rgb(4, 255, 0) solid 1px;
-        margin-top: 6vh;
+        margin-top: 5vh;
        
        height: 3%;
-       width: 100%;
+       width: 90%;
        margin-left: 2vh;
        color: #181414;
       }
       #block-size-guide a{
         text-decoration: none;
         color: #191515;
-        font-size: 2vh;
-        font-family: cripson;
+        font-size: 1.8vh;
+        font-family: Playfair;
         font-weight: 500;
     
       }
