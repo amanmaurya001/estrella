@@ -1382,7 +1382,7 @@ height: 5vh;
 #block-left{
 
 
-
+border: red solid 3px;
 
  
   height: 100%;
@@ -1415,7 +1415,7 @@ height: 5vh;
 
 
 
-#block-right{
+#block-right{border: red solid 3px;
  
   padding-top:0vh ;
   height: 90vh;
@@ -1427,7 +1427,7 @@ height: 5vh;
  
 }
 #block-right1{
-
+border: red solid 3px;
 
  display: flex;
 align-items: center;
@@ -1442,7 +1442,7 @@ font-family:PlayfairDisplay ;
  font-size: 2.3vh;
 }
 #block-right2{
-
+border: red solid 3px;
   margin-top: 5px;
   display: flex;
   align-items: center;
@@ -1456,7 +1456,7 @@ font-family:PlayfairDisplay ;
  color: #888888ca;
 }
 #block-right3{
-
+border: red solid 3px;
 margin-top: 3vh;
   display: flex;
   align-items: center;
@@ -1475,7 +1475,7 @@ font-size: 2.5vh;
 font-size: 2.5vh;
 }
 #block-right4{
-
+border: red solid 3px;
 margin-top: 5px;
   display: flex;
   align-items: center;
@@ -1489,7 +1489,7 @@ margin-top: 5px;
 
 }
 #block-right5{
-
+border: red solid 3px;
   margin-top: 2vh;
   display: flex;
   align-items: center;
@@ -1498,7 +1498,7 @@ margin-top: 5px;
  
 }
 .product-related-pics{
- 
+ border: red solid 3px;
   border-radius: 50%;
   height: 90%;
   width: 4%;
@@ -1522,7 +1522,7 @@ margin-left: 1vh;
 }
 
 #block-right6{
-
+border: red solid 3px;
    margin-top: 5vh;
    align-items: center;
    height: 12%;
@@ -1534,7 +1534,7 @@ font-family: Playfair;
   padding-left: 2vh;
 
 }
-.size-options{
+.size-options{border: red solid 3px;
   align-items: center;
   display: flex;
   height: 80%;
@@ -1568,7 +1568,7 @@ font-size: 0.8vh;
 
 #block-size-guide{
   margin-top: 5vh;
- 
+ border: red solid 3px;
  height: 3%;
  width: 100%;
  margin-left: 2vh;
@@ -1585,7 +1585,7 @@ font-size: 0.8vh;
 
 
 #block-right7{
-
+border: red solid 3px;
  
   margin-left: 0vh;
 display: flex;
@@ -1613,7 +1613,7 @@ font-family:Playfair ;
 #block-right8{
   margin-top: 5vh;
   
-
+border: red solid 3px;
    height: 6%;
    width: 100%;
   
@@ -1631,13 +1631,13 @@ font-family:Playfair ;
 }
 #block-right9{
   margin-top: 5vh;
-  
+  border: red solid 3px;
 
    height: 6%;
    width: 100%;
   
 }
-.product-rating { 
+.product-rating { border: red solid 3px;
   text-align: center;
 }
 
