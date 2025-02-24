@@ -1275,7 +1275,7 @@ height: 5vh;
   border: red solid 3px;
   display: flex;
  margin-top: 0;
-  height: 100vh;
+ height:390vh;
   width: 100%;
 
 overflow: hidden; /* Prevent scrolling */
@@ -1283,7 +1283,7 @@ overflow: hidden; /* Prevent scrolling */
 #block-left{
 
 
-  overflow: hidden;
+
 
  
   height: 100%;
@@ -1294,14 +1294,7 @@ overflow: hidden; /* Prevent scrolling */
 .scrollable {
   
 
-  height: auto;
-  width: 100%; /* Set height for scrollable effect */
- padding: 10px;
-
-  background-color: #fff;
-
   display: block;
- 
 }
 /*  */
 
@@ -1325,9 +1318,13 @@ overflow: hidden; /* Prevent scrolling */
 
 #block-right{
  
-  padding-top:1vh ;
-  height: 100%;
+  padding-top:0vh ;
+  height: 90vh;
   width: 55%;
+  position: sticky;
+   
+  top: 37px; /* Adjust this value to match your navbar height and desired pin position */
+
  
 }
 #block-right1{
@@ -1752,25 +1749,30 @@ margin-right: 2vh;
 }
 #block-img-set h2{
 margin-bottom: 2vh;
+   height: 5%;
   margin-top: 2vh;
   margin-left: 2vh;
   font-size: 2.5vh;
 }
 #block-img-set-container{
 display: grid;
-grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+grid-template-columns: 1fr 1fr; 
+padding: 10px;
+column-gap: 5px;
+row-gap: 5px;
   border: rgb(4, 255, 0) solid 3px;
  
   width: 100%;
-  height: 69vh;
+  height: 90%;
 }
 .img-set{
   margin-top: 0vh;
-  height:34vh;
-  width: 98.7%;
- 
+  height:100%;
+  width: 100%%;
+ overflow: hidden;
 }
 .img-set img{
+   object-fit: fill; /* Stretches the image to completely fit */
 height: 100%;
 width: 100%;
 }
