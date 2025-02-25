@@ -399,7 +399,7 @@
    
     width: 100%;
     height: 29vh;
-    border: rgb(0, 128, 9) 2px solid;
+   
   }
 
   #checkout{
@@ -1188,6 +1188,37 @@
               margin-right: 0;
             }
             
+.notification-section{
+           
+            height: auto;
+          }
+        
+          .notification-section h2{
+         
+          
+           display: flex;
+           align-items: center;
+           justify-content: center;
+          }
+          .notification-section h4{
+            font-size: 1.2vh;
+            padding: 5px;
+           
+           display: flex;
+           align-items: center;
+           justify-content: center;
+          }
+          .notification-section label{
+            padding: 1vh;
+        
+         
+          font-size: 1.3vh;
+           }
+           #agreeCheckbox{
+         
+               height: 1.2vh;
+             width: 1.2vh;
+           } 
 
 
   }
