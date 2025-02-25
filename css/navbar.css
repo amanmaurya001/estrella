@@ -1425,7 +1425,7 @@ justify-content: center;
       overflow: hidden;
       transition: width 0.2s ease-in-out; /* Smooth width transition */
       overflow-y: auto; /* Enable vertical scrolling */
-      background-color: #B5CFB7;
+      background-color: #1E2D24;
       border: none; /* Initially hidden */
     
     }
