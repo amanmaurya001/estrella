@@ -709,6 +709,7 @@ height: 5vh;
        
     }
     #block-right1 h2{
+        font-family: PlayfairDisplay;
         padding-left: 2vh;
        font-size: 2.6vh;
      }
@@ -1426,7 +1427,6 @@ height: 5vh;
  
 }
 #block-right1{
-
 
  display: flex;
 align-items: center;
