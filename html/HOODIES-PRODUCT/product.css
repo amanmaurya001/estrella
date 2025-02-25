@@ -1679,7 +1679,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 9vh;
+    height: 7vh;
     width: 100%;
    
   }
@@ -1687,6 +1687,7 @@
     color: #c93a3a;
   }
   #block-discription h3{
+       font-weight: 300;
      font-family: Playfair;
     margin-left: 2vh;
     font-size: 3vh;
