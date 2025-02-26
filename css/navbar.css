@@ -238,7 +238,7 @@
     background-color: white;
  top: 6%;
   left: 0;
-    position: absolute;
+     position: fixed;
    
     height: 38vh;
     width: 200vh;
@@ -281,7 +281,7 @@
     background-color: white;
  top: 6%;
   left: 0;
-    position: absolute;
+     position: fixed;
    
     height: 52vh;
     width: 200vh;
@@ -322,7 +322,7 @@
     background-color: white;
   top: 6%;
   left: 0;
-    position: absolute;
+      position: fixed;
    
     height: 40vh;
     width: 200vh;
@@ -363,7 +363,7 @@
     background-color: white;
  top: 6%;
   left: 0;
-    position: absolute;
+    position: fixed;
    
     height: 20vh;
     width: 200vh;
@@ -3548,7 +3548,7 @@ position: fixed;
           background-color: white;
           top: 6%;
           left: 0;
-          position: absolute;
+         position: fixed;
          
           height: 38vh;
           width: 100vw;
@@ -3594,7 +3594,7 @@ position: fixed;
           background-color: white;
           top: 6%;
           left: 0;
-          position: absolute;
+      position: fixed;
          
           height: 52vh;
           width: 100vw;
@@ -3635,7 +3635,7 @@ position: fixed;
           background-color: white;
           top: 6%;
           left: 0;
-          position: absolute;
+        position: fixed;
          
           height: 40vh;
           width: 100vw;
@@ -3677,7 +3677,7 @@ position: fixed;
           background-color: white;
           top: 6%;
           left: 0;
-          position: absolute;
+    position: fixed;
          
           height: 20vh;
           width: 100vw;
