@@ -777,6 +777,7 @@ height: 100%;
 
 /* ////////////////////////////////////////////////// */
 #block6{
+    margin-top:5vh;
   justify-content: space-between;
   display: flex;
   
@@ -785,7 +786,7 @@ height: 100%;
    
  }
  #block6-left{
-
+padding:2vh;
   height: 100%;
   width: 50%;
  
@@ -824,7 +825,7 @@ height: 100%;
  }
 
  #block6-right{
-
+padding:2vh;
   height: 100%;
   width: 50%;
   
