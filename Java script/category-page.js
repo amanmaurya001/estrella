@@ -112,7 +112,7 @@ window.addEventListener('DOMContentLoaded', insertFooter);
 // INSEERT FILTER 
 
 function insertMainBlocks() {
-  fetch('navbar-supply.html') // Fetch the content of midi-dress.html
+  fetch('navbar-supply.html') // Fetch the content of navbar-supply.html
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -124,25 +124,17 @@ function insertMainBlocks() {
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = data;
 
-      // Find the #main-block-left-1 and #main-block-left elements in the loaded content
-      const mainBlockLeft1 = tempDiv.querySelector('#main-block-left-1');
+      // Find the #main-block-left element in the loaded content
       const mainBlockLeft = tempDiv.querySelector('#main-block-left');
 
       // Find #hashtags in the current page
       const hashtagsDiv = document.querySelector('#hashtags');
 
-      // If #hashtags and #main-block-left-1 exist, insert #main-block-left-1 after #hashtags
-      if (hashtagsDiv && mainBlockLeft1) {
-        hashtagsDiv.insertAdjacentElement('afterend', mainBlockLeft1);
-
-        // If #main-block-left exists, insert it after #main-block-left-1
-        if (mainBlockLeft) {
-          mainBlockLeft1.insertAdjacentElement('afterend', mainBlockLeft);
-        } else {
-          console.warn('Element #main-block-left not found in midi-dress.html');
-        }
+      // If #hashtags and #main-block-left exist, insert #main-block-left after #hashtags
+      if (hashtagsDiv && mainBlockLeft) {
+        hashtagsDiv.insertAdjacentElement('afterend', mainBlockLeft);
       } else {
-        console.warn('Element not found:', !mainBlockLeft1 ? '#main-block-left-1' : '#hashtags');
+        console.warn('Element not found:', !mainBlockLeft ? '#main-block-left' : '#hashtags');
       }
     })
     .catch(error => {
@@ -152,11 +144,6 @@ function insertMainBlocks() {
 
 // Insert main blocks when the page loads
 window.addEventListener('DOMContentLoaded', insertMainBlocks);
-
-
-
-
-
 
 
 
