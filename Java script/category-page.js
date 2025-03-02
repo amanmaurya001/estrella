@@ -12,8 +12,7 @@ window.addEventListener("load", function () {
 
       setTimeout(() => {
           document.getElementById("loading").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          document.getElementById("content").style.opacity = "1"; // Smooth fade-in
+        
       }, 1000); // 1-second delay for fade-out
   }, 2500); // 2.5-second delay for elegance
 });
