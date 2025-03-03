@@ -609,7 +609,6 @@ setInterval(() => {
 
 
 
-
 function insertMainBlocks() {
   fetch('navbar-supply.html')
     .then(response => response.text())
@@ -626,6 +625,7 @@ function insertMainBlocks() {
 
         // Reattach event listeners after insertion
         initializeFilters();
+        initializeSorting();
       } else {
         console.warn('Element not found:', !mainBlockLeft ? '#main-block-left' : '#hashtags');
       }
@@ -669,77 +669,61 @@ function initializeFilters() {
   filterProducts();
 }
 
-window.addEventListener('DOMContentLoaded', insertMainBlocks);
-
-
-
-
-
-
-
-
-// Initialize sorting functionality
+// Ensure sorting is initialized after #main-block-left is inserted
 function initializeSorting() {
-  const sortCheckboxes = document.querySelectorAll('.filter-checkbox5');  // Target only sorting checkboxes
-  const productItems = Array.from(document.querySelectorAll('.product-item'));
+  const sortCheckboxes = document.querySelectorAll('.filter-checkbox5');
+  const productItems = document.querySelectorAll('.product-item');
   const mainBlockRight = document.getElementById('main-block-right');
 
-  function sortProducts() {
-    let selectedSort = null;
+  function sortAndFilterProducts() {
+    const selectedPrices = Array.from(sortCheckboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.getAttribute('data-Price'));
 
-    // Ensure only one sorting option is applied at a time
-    sortCheckboxes.forEach(checkbox => {
-      if (checkbox.checked) {
-        selectedSort = checkbox.getAttribute('data-Price');
-      }
-    });
+    const productsArray = Array.from(productItems);
 
-    if (!selectedSort) return; // If no sorting is selected, do nothing
-
-    // Get all visible products (not hidden by filters)
-    let visibleProducts = productItems.filter(item => !item.classList.contains('hidden'));
-
-    // Ensure prices are valid numbers
-    visibleProducts.forEach(item => {
-      if (!item.getAttribute('data-Price')) {
-        console.warn(`Missing data-Price attribute on:`, item);
-      }
-    });
-
-    if (selectedSort === "Price-Low-to-High") {
-      visibleProducts.sort((a, b) => {
-        return parseInt(a.getAttribute('data-Price') || "0", 10) - parseInt(b.getAttribute('data-Price') || "0", 10);
-      });
-    } else if (selectedSort === "Price-High-to-Low") {
-      visibleProducts.sort((a, b) => {
-        return parseInt(b.getAttribute('data-Price') || "0", 10) - parseInt(a.getAttribute('data-Price') || "0", 10);
-      });
-    } else {
-      visibleProducts = visibleProducts.filter(item => {
-        const price = parseInt(item.getAttribute('data-Price') || "0", 10);
-        switch (selectedSort) {
-          case 'Price-Below-499': return price <= 499;
-          case '500-999': return price >= 500 && price < 1000;
-          case '1000-1499': return price >= 1000 && price < 1500;
-          case '1500-1999': return price >= 1500 && price < 2000;
-          case 'Above-2000': return price >= 2000;
-          default: return true;
+    const filteredProducts = productsArray.filter(item => {
+      const itemPrice = parseInt(item.getAttribute('data-Price'), 10);
+      return selectedPrices.length === 0 || selectedPrices.some(priceRange => {
+        switch (priceRange) {
+          case 'Price-Below-499':
+            return itemPrice <= 499;
+          case '500-999':
+            return itemPrice >= 500 && itemPrice < 1000;
+          case '1000-1499':
+            return itemPrice >= 1000 && itemPrice < 1500;
+          case '1500-1999':
+            return itemPrice >= 1500 && itemPrice < 2000;
+          case 'Above-2000':
+            return itemPrice >= 2000;
+          case 'Price-Low-to-High':
+            return true;
+          case 'Price-High-to-Low':
+            return true;
+          default:
+            return false;
         }
       });
+    });
+
+    if (selectedPrices.includes('Price-Low-to-High')) {
+      filteredProducts.sort((a, b) => parseInt(a.getAttribute('data-Price')) - parseInt(b.getAttribute('data-Price')));
+    } else if (selectedPrices.includes('Price-High-to-Low')) {
+      filteredProducts.sort((a, b) => parseInt(b.getAttribute('data-Price')) - parseInt(a.getAttribute('data-Price')));
     }
 
-    // Clear the current DOM and append the sorted products
-    mainBlockRight.innerHTML = ''; // Remove old products
-    visibleProducts.forEach(item => mainBlockRight.appendChild(item)); // Insert sorted products
-
-    console.log("Sorting applied:", selectedSort);
+    productItems.forEach(item => item.classList.add('hidden'));
+    filteredProducts.forEach(item => {
+      item.classList.remove('hidden');
+      mainBlockRight.appendChild(item);
+    });
   }
 
-  // Add event listeners to sorting checkboxes
-  sortCheckboxes.forEach(checkbox => checkbox.addEventListener('change', sortProducts));
+  sortCheckboxes.forEach(checkbox => checkbox.addEventListener('change', sortAndFilterProducts));
 
-  // Apply sorting initially if any checkbox is pre-checked
-  sortProducts();
+  sortAndFilterProducts();
 }
+
+window.addEventListener('DOMContentLoaded', insertMainBlocks);
 
 
