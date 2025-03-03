@@ -1,5 +1,4 @@
 
-
 @font-face {
   font-family: cripson;
   src: url(../fonts/CrimsonPro-Italic-VariableFont_wght.ttf);
@@ -263,7 +262,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px rgb(40, 193, 37) solid;
+   
     height: 100%;
     width: 10%;
 }
@@ -272,7 +271,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px rgb(185, 193, 37) solid;
+   
     height: 100%;
     width: 30%;
 }
@@ -307,7 +306,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px rgb(40, 193, 37) solid;
+   
     height: 100%;
     width: 10%;
 }
@@ -315,7 +314,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 5px rgb(4, 6, 103) solid;
+  
     height: 100%;
     width: 40%;
 }
@@ -345,7 +344,7 @@
 }
 
 .dd-coloum3{
-  border: 2px rgb(21, 135, 15) solid;
+ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -353,7 +352,7 @@
     width: 10%;
 }
 .dd-coloum3-ad{
-  border: 7px rgb(199, 19, 16) solid;
+ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3906,7 +3905,7 @@ padding-left: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px rgb(40, 193, 37) solid;
+   
     height: 100%;
     width: 10%;
 }
@@ -3915,7 +3914,7 @@ padding-left: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px rgb(185, 193, 37) solid;
+  
     height: 100%;
     width: 30%;
 }
@@ -3950,7 +3949,7 @@ padding-left: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px rgb(40, 193, 37) solid;
+   
     height: 100%;
     width: 13%;
 }
@@ -3958,7 +3957,7 @@ padding-left: 2vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 5px rgb(4, 6, 103) solid;
+  
     height: 100%;
     width: 30%;
 }
@@ -3988,7 +3987,7 @@ padding-left: 2vh;
 }
 
 .dd-coloum3{
-  border: 2px rgb(21, 135, 15) solid;
+ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3996,7 +3995,7 @@ padding-left: 2vh;
     width: 12.5%;
 }
 .dd-coloum3-ad{
-  border: 7px rgb(199, 19, 16) solid;
+  
     display: flex;
     align-items: center;
     justify-content: center;
