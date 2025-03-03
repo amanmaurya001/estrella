@@ -610,85 +610,65 @@ setInterval(() => {
 
 
 
+function insertMainBlocks() {
+  fetch('navbar-supply.html')
+    .then(response => response.text())
+    .then(data => {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data;
 
-function initializeFilters() {
-    const checkboxes = document.querySelectorAll('.filter-checkbox, .filter-checkbox1, .filter-checkbox2, .filter-checkbox3, .filter-checkbox4');
-    const priceCheckboxes = document.querySelectorAll('.filter-checkbox5'); // Separate price sorting checkboxes
-    const mainBlockRight = document.getElementById('main-block-right'); // Parent container for products
+      const mainBlockLeft = tempDiv.querySelector('#main-block-left');
+      const hashtagsDiv = document.querySelector('#hashtags');
 
-    function filterAndSortProducts() {
-        let selectedFilters = Array.from(checkboxes)
-            .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.getAttribute('data-size') || 
-                              checkbox.getAttribute('data-pattern') || 
-                              checkbox.getAttribute('data-Sleeves') || 
-                              checkbox.getAttribute('data-material') ||
-                              checkbox.getAttribute('data-colour'));
+      if (hashtagsDiv && mainBlockLeft) {
+        hashtagsDiv.insertAdjacentElement('afterend', mainBlockLeft);
+        console.log("main-block-left inserted successfully.");
 
-        let selectedPriceFilters = Array.from(priceCheckboxes)
-            .filter(checkbox => checkbox.checked)
-            .map(checkbox => checkbox.getAttribute('data-Price'));
-
-        let productsArray = Array.from(document.querySelectorAll('.product-item'));
-
-        // 1️⃣ **Filter Products First**
-        let filteredProducts = productsArray.filter(item => {
-            const itemCategories = [
-                item.getAttribute('data-size'),
-                item.getAttribute('data-pattern'),
-                item.getAttribute('data-Sleeves'),
-                item.getAttribute('data-material'),
-                item.getAttribute('data-colour')
-            ].filter(Boolean);
-
-            let matchesFilters = selectedFilters.length === 0 || selectedFilters.some(cat => itemCategories.includes(cat));
-
-            // 2️⃣ **Apply Price Filtering**
-            let itemPrice = parseInt(item.getAttribute('data-Price'), 10) || 0;
-            let matchesPrice = selectedPriceFilters.length === 0 || selectedPriceFilters.some(priceRange => {
-                switch (priceRange) {
-                    case 'Price-Below-499':
-                        return itemPrice <= 499;
-                    case '500-999':
-                        return itemPrice >= 500 && itemPrice < 1000;
-                    case '1000-1499':
-                        return itemPrice >= 1000 && itemPrice < 1500;
-                    case '1500-1999':
-                        return itemPrice >= 1500 && itemPrice < 2000;
-                    case 'Above-2000':
-                        return itemPrice >= 2000;
-                    default:
-                        return true;
-                }
-            });
-
-            return matchesFilters && matchesPrice; // Show only if both filters match
-        });
-
-        // 3️⃣ **Apply Sorting if Needed**
-        let sortingType = selectedPriceFilters.find(cat => ["Price-Low-to-High", "Price-High-to-Low"].includes(cat));
-
-        if (sortingType) {
-            filteredProducts.sort((a, b) => {
-                const priceA = parseInt(a.getAttribute('data-Price'), 10) || 0;
-                const priceB = parseInt(b.getAttribute('data-Price'), 10) || 0;
-
-                return sortingType === "Price-Low-to-High" ? priceA - priceB : priceB - priceA;
-            });
-        }
-
-        // 4️⃣ **Clear and Update DOM**
-        mainBlockRight.innerHTML = ''; // Remove all products
-        filteredProducts.forEach(item => mainBlockRight.appendChild(item)); // Append filtered & sorted items
-
-        console.log("Products updated:", filteredProducts);
-    }
-
-    checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterAndSortProducts));
-    priceCheckboxes.forEach(checkbox => checkbox.addEventListener('change', filterAndSortProducts));
-
-    // Apply filters initially in case any are pre-checked
-    filterAndSortProducts();
+        // Reattach event listeners after insertion
+        initializeFilters();
+      } else {
+        console.warn('Element not found:', !mainBlockLeft ? '#main-block-left' : '#hashtags');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching main blocks:', error);
+    });
 }
+
+// Ensure filters are initialized after #main-block-left is inserted
+function initializeFilters() {
+  const checkboxes = document.querySelectorAll('.filter-checkbox, .filter-checkbox1, .filter-checkbox2, .filter-checkbox3, .filter-checkbox4, .filter-checkbox5');
+  const productItems = document.querySelectorAll('.product-item');
+
+  function filterProducts() {
+    const selectedCategories = Array.from(checkboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.getAttribute('data-size') || checkbox.getAttribute('data-pattern') || 
+                        checkbox.getAttribute('data-Sleeves') || checkbox.getAttribute('data-material') ||
+                        checkbox.getAttribute('data-colour') || checkbox.getAttribute('data-Price'));
+
+    productItems.forEach(item => {
+      const itemCategories = [
+        item.getAttribute('data-size'),
+        item.getAttribute('data-pattern'),
+        item.getAttribute('data-Sleeves'),
+        item.getAttribute('data-material'),
+        item.getAttribute('data-colour'),
+        item.getAttribute('data-Price')
+      ].filter(Boolean);
+
+      const isVisible = selectedCategories.length === 0 || selectedCategories.some(cat => itemCategories.includes(cat));
+
+      item.classList.toggle('hidden', !isVisible);
+    });
+  }
+
+  checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterProducts));
+
+  // Apply filters initially in case any are pre-checked
+  filterProducts();
+}
+
+window.addEventListener('DOMContentLoaded', insertMainBlocks);
 
 
