@@ -611,67 +611,54 @@ setInterval(() => {
 
 
 
+function initializeFilters() {
+  const checkboxes = document.querySelectorAll('.filter-checkbox, .filter-checkbox1, .filter-checkbox2, .filter-checkbox3, .filter-checkbox4, .filter-checkbox5');
+  const productItems = Array.from(document.querySelectorAll('.product-item')); // Convert to array for sorting
+  const mainBlockRight = document.getElementById('main-block-right'); // Parent container for products
 
- function insertMainBlocks() {
-    fetch('navbar-supply.html')
-      .then(response => response.text())
-      .then(data => {
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = data;
-  
-        const mainBlockLeft = tempDiv.querySelector('#main-block-left');
-        const hashtagsDiv = document.querySelector('#hashtags');
-  
-        if (hashtagsDiv && mainBlockLeft) {
-          hashtagsDiv.insertAdjacentElement('afterend', mainBlockLeft);
-          console.log("main-block-left inserted successfully.");
-  
-          // Reattach event listeners after insertion
-          initializeFilters();
-        } else {
-          console.warn('Element not found:', !mainBlockLeft ? '#main-block-left' : '#hashtags');
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching main blocks:', error);
-      });
-  }
-  
-  // Ensure filters are initialized after #main-block-left is inserted
-  function initializeFilters() {
-    const checkboxes = document.querySelectorAll('.filter-checkbox, .filter-checkbox1, .filter-checkbox2, .filter-checkbox3, .filter-checkbox4, .filter-checkbox5');
-    const productItems = document.querySelectorAll('.product-item');
-  
-    function filterProducts() {
-      const selectedCategories = Array.from(checkboxes)
-        .filter(checkbox => checkbox.checked)
-        .map(checkbox => checkbox.getAttribute('data-size') || checkbox.getAttribute('data-pattern') || 
-                          checkbox.getAttribute('data-Sleeves') || checkbox.getAttribute('data-material') ||
-                          checkbox.getAttribute('data-colour') || checkbox.getAttribute('data-Price'));
-  
-      productItems.forEach(item => {
-        const itemCategories = [
-          item.getAttribute('data-size'),
-          item.getAttribute('data-pattern'),
-          item.getAttribute('data-Sleeves'),
-          item.getAttribute('data-material'),
-          item.getAttribute('data-colour'),
-          item.getAttribute('data-Price')
-        ].filter(Boolean);
-  
-        const isVisible = selectedCategories.length === 0 || selectedCategories.some(cat => itemCategories.includes(cat));
-  
-        item.classList.toggle('hidden', !isVisible);
+  function filterAndSortProducts() {
+    const selectedCategories = Array.from(checkboxes)
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.getAttribute('data-size') || checkbox.getAttribute('data-pattern') || 
+                        checkbox.getAttribute('data-Sleeves') || checkbox.getAttribute('data-material') ||
+                        checkbox.getAttribute('data-colour') || checkbox.getAttribute('data-Price'));
+
+    // First, filter products
+    const filteredProducts = productItems.filter(item => {
+      const itemCategories = [
+        item.getAttribute('data-size'),
+        item.getAttribute('data-pattern'),
+        item.getAttribute('data-Sleeves'),
+        item.getAttribute('data-material'),
+        item.getAttribute('data-colour')
+      ].filter(Boolean);
+
+      return selectedCategories.length === 0 || selectedCategories.some(cat => itemCategories.includes(cat));
+    });
+
+    // Check if sorting is selected
+    let sortingType = selectedCategories.find(cat => 
+      ["Price-Low-to-High", "Price-High-to-Low"].includes(cat)
+    );
+
+    if (sortingType) {
+      filteredProducts.sort((a, b) => {
+        const priceA = parseInt(a.getAttribute('data-Price'), 10) || 0;
+        const priceB = parseInt(b.getAttribute('data-Price'), 10) || 0;
+
+        return sortingType === "Price-Low-to-High" ? priceA - priceB : priceB - priceA;
       });
     }
-  
-    checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterProducts));
-  
-    // Apply filters initially in case any are pre-checked
-    filterProducts();
+
+    // Clear and update DOM with sorted & filtered products
+    mainBlockRight.innerHTML = ''; // Clear previous product items
+    filteredProducts.forEach(item => mainBlockRight.appendChild(item)); // Append in new order
   }
-  
-  window.addEventListener('DOMContentLoaded', insertMainBlocks);
-  
+
+  checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterAndSortProducts));
+
+  // Apply filters initially in case any are pre-checked
+  filterAndSortProducts();
+}
 
 
