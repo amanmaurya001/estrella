@@ -1742,9 +1742,15 @@ justify-content: center;
       margin-left: 4vh;
       }
       .mobile-navbar-column-item a{
-        font-size:1.7vh;
-       text-decoration: none;
-       color: #0b0a0a;
+        display: flex;
+          align-items: center;
+          justify-content: left;
+          color: hsl(40, 100%, 90%);
+          height: 100%;
+          width: 100%;
+          font-family:Merriweather;
+         text-decoration: none;
+           font-size: 1.7vh;
       }
 
 
@@ -2872,9 +2878,15 @@ padding-left: 2vh;
          margin-left: 4vh;
          }
          .mobile-navbar-column-item a{
-           font-size:1.7vh;
-          text-decoration: none;
-          color: #0b0a0a;
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          color: hsl(40, 100%, 90%);
+          height: 100%;
+          width: 100%;
+          font-family:Merriweather;
+         text-decoration: none;
+           font-size: 1.7vh;
          }
    
    
