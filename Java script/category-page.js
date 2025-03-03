@@ -672,3 +672,74 @@ function initializeFilters() {
 window.addEventListener('DOMContentLoaded', insertMainBlocks);
 
 
+
+
+
+
+
+
+// Initialize sorting functionality
+function initializeSorting() {
+  const sortCheckboxes = document.querySelectorAll('.filter-checkbox5');  // Target only sorting checkboxes
+  const productItems = Array.from(document.querySelectorAll('.product-item'));
+  const mainBlockRight = document.getElementById('main-block-right');
+
+  function sortProducts() {
+    let selectedSort = null;
+
+    // Ensure only one sorting option is applied at a time
+    sortCheckboxes.forEach(checkbox => {
+      if (checkbox.checked) {
+        selectedSort = checkbox.getAttribute('data-Price');
+      }
+    });
+
+    if (!selectedSort) return; // If no sorting is selected, do nothing
+
+    // Get all visible products (not hidden by filters)
+    let visibleProducts = productItems.filter(item => !item.classList.contains('hidden'));
+
+    // Ensure prices are valid numbers
+    visibleProducts.forEach(item => {
+      if (!item.getAttribute('data-Price')) {
+        console.warn(`Missing data-Price attribute on:`, item);
+      }
+    });
+
+    if (selectedSort === "Price-Low-to-High") {
+      visibleProducts.sort((a, b) => {
+        return parseInt(a.getAttribute('data-Price') || "0", 10) - parseInt(b.getAttribute('data-Price') || "0", 10);
+      });
+    } else if (selectedSort === "Price-High-to-Low") {
+      visibleProducts.sort((a, b) => {
+        return parseInt(b.getAttribute('data-Price') || "0", 10) - parseInt(a.getAttribute('data-Price') || "0", 10);
+      });
+    } else {
+      visibleProducts = visibleProducts.filter(item => {
+        const price = parseInt(item.getAttribute('data-Price') || "0", 10);
+        switch (selectedSort) {
+          case 'Price-Below-499': return price <= 499;
+          case '500-999': return price >= 500 && price < 1000;
+          case '1000-1499': return price >= 1000 && price < 1500;
+          case '1500-1999': return price >= 1500 && price < 2000;
+          case 'Above-2000': return price >= 2000;
+          default: return true;
+        }
+      });
+    }
+
+    // Clear the current DOM and append the sorted products
+    mainBlockRight.innerHTML = ''; // Remove old products
+    visibleProducts.forEach(item => mainBlockRight.appendChild(item)); // Insert sorted products
+
+    console.log("Sorting applied:", selectedSort);
+  }
+
+  // Add event listeners to sorting checkboxes
+  sortCheckboxes.forEach(checkbox => checkbox.addEventListener('change', sortProducts));
+
+  // Apply sorting initially if any checkbox is pre-checked
+  sortProducts();
+}
+
+
