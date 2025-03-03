@@ -612,53 +612,83 @@ setInterval(() => {
 
 
 function initializeFilters() {
-  const checkboxes = document.querySelectorAll('.filter-checkbox, .filter-checkbox1, .filter-checkbox2, .filter-checkbox3, .filter-checkbox4, .filter-checkbox5');
-  const productItems = Array.from(document.querySelectorAll('.product-item')); // Convert to array for sorting
-  const mainBlockRight = document.getElementById('main-block-right'); // Parent container for products
+    const checkboxes = document.querySelectorAll('.filter-checkbox, .filter-checkbox1, .filter-checkbox2, .filter-checkbox3, .filter-checkbox4');
+    const priceCheckboxes = document.querySelectorAll('.filter-checkbox5'); // Separate price sorting checkboxes
+    const mainBlockRight = document.getElementById('main-block-right'); // Parent container for products
 
-  function filterAndSortProducts() {
-    const selectedCategories = Array.from(checkboxes)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.getAttribute('data-size') || checkbox.getAttribute('data-pattern') || 
-                        checkbox.getAttribute('data-Sleeves') || checkbox.getAttribute('data-material') ||
-                        checkbox.getAttribute('data-colour') || checkbox.getAttribute('data-Price'));
+    function filterAndSortProducts() {
+        let selectedFilters = Array.from(checkboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.getAttribute('data-size') || 
+                              checkbox.getAttribute('data-pattern') || 
+                              checkbox.getAttribute('data-Sleeves') || 
+                              checkbox.getAttribute('data-material') ||
+                              checkbox.getAttribute('data-colour'));
 
-    // First, filter products
-    const filteredProducts = productItems.filter(item => {
-      const itemCategories = [
-        item.getAttribute('data-size'),
-        item.getAttribute('data-pattern'),
-        item.getAttribute('data-Sleeves'),
-        item.getAttribute('data-material'),
-        item.getAttribute('data-colour')
-      ].filter(Boolean);
+        let selectedPriceFilters = Array.from(priceCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.getAttribute('data-Price'));
 
-      return selectedCategories.length === 0 || selectedCategories.some(cat => itemCategories.includes(cat));
-    });
+        let productsArray = Array.from(document.querySelectorAll('.product-item'));
 
-    // Check if sorting is selected
-    let sortingType = selectedCategories.find(cat => 
-      ["Price-Low-to-High", "Price-High-to-Low"].includes(cat)
-    );
+        // 1️⃣ **Filter Products First**
+        let filteredProducts = productsArray.filter(item => {
+            const itemCategories = [
+                item.getAttribute('data-size'),
+                item.getAttribute('data-pattern'),
+                item.getAttribute('data-Sleeves'),
+                item.getAttribute('data-material'),
+                item.getAttribute('data-colour')
+            ].filter(Boolean);
 
-    if (sortingType) {
-      filteredProducts.sort((a, b) => {
-        const priceA = parseInt(a.getAttribute('data-Price'), 10) || 0;
-        const priceB = parseInt(b.getAttribute('data-Price'), 10) || 0;
+            let matchesFilters = selectedFilters.length === 0 || selectedFilters.some(cat => itemCategories.includes(cat));
 
-        return sortingType === "Price-Low-to-High" ? priceA - priceB : priceB - priceA;
-      });
+            // 2️⃣ **Apply Price Filtering**
+            let itemPrice = parseInt(item.getAttribute('data-Price'), 10) || 0;
+            let matchesPrice = selectedPriceFilters.length === 0 || selectedPriceFilters.some(priceRange => {
+                switch (priceRange) {
+                    case 'Price-Below-499':
+                        return itemPrice <= 499;
+                    case '500-999':
+                        return itemPrice >= 500 && itemPrice < 1000;
+                    case '1000-1499':
+                        return itemPrice >= 1000 && itemPrice < 1500;
+                    case '1500-1999':
+                        return itemPrice >= 1500 && itemPrice < 2000;
+                    case 'Above-2000':
+                        return itemPrice >= 2000;
+                    default:
+                        return true;
+                }
+            });
+
+            return matchesFilters && matchesPrice; // Show only if both filters match
+        });
+
+        // 3️⃣ **Apply Sorting if Needed**
+        let sortingType = selectedPriceFilters.find(cat => ["Price-Low-to-High", "Price-High-to-Low"].includes(cat));
+
+        if (sortingType) {
+            filteredProducts.sort((a, b) => {
+                const priceA = parseInt(a.getAttribute('data-Price'), 10) || 0;
+                const priceB = parseInt(b.getAttribute('data-Price'), 10) || 0;
+
+                return sortingType === "Price-Low-to-High" ? priceA - priceB : priceB - priceA;
+            });
+        }
+
+        // 4️⃣ **Clear and Update DOM**
+        mainBlockRight.innerHTML = ''; // Remove all products
+        filteredProducts.forEach(item => mainBlockRight.appendChild(item)); // Append filtered & sorted items
+
+        console.log("Products updated:", filteredProducts);
     }
 
-    // Clear and update DOM with sorted & filtered products
-    mainBlockRight.innerHTML = ''; // Clear previous product items
-    filteredProducts.forEach(item => mainBlockRight.appendChild(item)); // Append in new order
-  }
+    checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterAndSortProducts));
+    priceCheckboxes.forEach(checkbox => checkbox.addEventListener('change', filterAndSortProducts));
 
-  checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterAndSortProducts));
-
-  // Apply filters initially in case any are pre-checked
-  filterAndSortProducts();
+    // Apply filters initially in case any are pre-checked
+    filterAndSortProducts();
 }
 
 
