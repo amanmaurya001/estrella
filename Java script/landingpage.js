@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
   let navbar = document.getElementById("navbar");
-  if (window.scrollY > 50) { // Change 50 to adjust when it sticks
+  if (window.scrollY > 0) { // Change 50 to adjust when it sticks
       navbar.classList.add("sticky");
   } else {
       navbar.classList.remove("sticky");
@@ -9,6 +9,14 @@ window.addEventListener("scroll", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingElement = document.getElementById("loading");
+  loadingElement.style.opacity = "0"; // Smooth fade-out
+
+  setTimeout(() => {
+    loadingElement.style.display = "none";
+  }, 1000); // 1-second delay for fade-out
+});
 
 
 
