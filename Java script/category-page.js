@@ -28,7 +28,7 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   // Function to load content from navbar-supply.html
-  fetch('navbar-supply.html')
+  fetch('../navbar-supply.html')
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
