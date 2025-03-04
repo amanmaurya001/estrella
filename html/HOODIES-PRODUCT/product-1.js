@@ -7,67 +7,54 @@ window.addEventListener("scroll", function () {
   }
 });
 // Elegant page transition with fade-out effect
-window.addEventListener("load", function () {
-  setTimeout(() => { 
-      document.getElementById("loading").style.opacity = "0"; // Smooth fade-out
+// SCREEN LOADER
 
-      setTimeout(() => {
-          document.getElementById("loading").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          document.getElementById("content").style.opacity = "1"; // Smooth fade-in
-      }, 1000); // 1-second delay for fade-out
-  }, 2500); // 2.5-second delay for elegance
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingElement = document.getElementById("loading");
+  loadingElement.style.opacity = "0"; // Smooth fade-out
+
+  setTimeout(() => {
+    loadingElement.style.display = "none";
+  }, 1000); // 1-second delay for fade-out
 });
 
-function insertNavbar() {
-  fetch('navbar-supply-product.html') // Adjusted relative path
-    .then(response => response.text()) // Get the response as text
-    .then(data => {
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = data; 
 
+async function fetchHtmlComponent(filePath) {
+  try {
+      const response = await fetch(filePath);
+      const data = await response.text();
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = data;
+      return tempDiv;
+  } catch (error) {
+      console.error(`Error fetching ${filePath}:`, error);
+      return null;
+  }
+}
+
+async function insertNavbarAndFooter() {
+  const filePath = 'navbar-supply-product.html';
+  const tempDiv = await fetchHtmlComponent(filePath);
+
+  if (tempDiv) {
       const navbar = tempDiv.querySelector('#navbar');
-      
-      if (navbar) {
-        document.body.insertAdjacentElement('afterbegin', navbar);
-      } else {
-        console.warn('Navbar with ID "navbar" not found. Navbar not inserted.');
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching navbar:', error);
-    });
-}
-
-
-
-
-function insertFooter() {
-  fetch('navbar-supply-product.html') // Adjusted relative path
-    .then(response => response.text()) // Get the response as text
-    .then(data => {
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = data; 
-
       const footer = tempDiv.querySelector('#footer');
-      
-      if (footer) {
-        document.body.insertAdjacentElement('beforeend', footer); // Insert at the end of body
+
+      if (navbar) {
+          document.body.insertAdjacentElement('afterbegin', navbar);
       } else {
-        console.warn('Footer with ID "footer" not found. Footer not inserted.');
+          console.warn('Navbar with ID "navbar" not found. Navbar not inserted.');
       }
-    })
-    .catch(error => {
-      console.error('Error fetching footer:', error);
-    });
+
+      if (footer) {
+          document.body.insertAdjacentElement('beforeend', footer);
+      } else {
+          console.warn('Footer with ID "footer" not found. Footer not inserted.');
+      }
+  }
 }
 
-// Insert footer when the page loads
-window.onload = function() {
-  insertNavbar();
-  insertFooter();
-};
-
+window.onload = insertNavbarAndFooter;
 
 
 
