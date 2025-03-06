@@ -1,3 +1,7 @@
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    localStorage.setItem("cartCount", cart.length); // Store count in localStorage
+  }
 function renderCart() {
     const cartDiv = document.getElementById('cart');
     const cart1Div = document.getElementById('cart1'); // Get the new cart1 element
@@ -28,7 +32,7 @@ function renderCart() {
         `;
         cartDiv.appendChild(cartItem);
     });
-
+    updateCartCount(); // Update cart count here
     
     // Create a total price div
     const totalDiv = document.createElement('div');
@@ -110,6 +114,7 @@ function checkout() {
     } else {
         alert("Checkout successful! Total items: " + cart.length);
         localStorage.removeItem('cart'); // Clear the cart after checkout
+         updateCartCount(); // Ensure cart count updates when an item is removed
         renderCart();
     }
 }
