@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const cartCountSpan = document.getElementById("cart-count");
+  const cartCount = localStorage.getItem("cartCount") || 0;
+  cartCountSpan.textContent = cartCount;
+});
 
 
 
