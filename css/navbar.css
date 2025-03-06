@@ -23,7 +23,7 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background: red;
+  background: black;
  
   color: white;
   font-size: 14px;
@@ -31,7 +31,6 @@
   padding: 2px 6px;
 
   
-}
 
 /* Full-page blur effect while loading */
 #loading {
@@ -2547,6 +2546,19 @@ padding-left: 2vh;
   /*//////////////////////////////////////////////////////////////////*/
   /*///////////////////// TABLET  VIEW /////////////////////*/
  @media screen and (min-width: 451px) and (max-width: 1024px) {
+ #cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: black;
+   
+    color: white;
+    font-size: 8px;
+    border-radius: 50%;
+    padding: 2px 6px;
+  
+    
+  }
 
 
 
@@ -3688,6 +3700,19 @@ padding-left: 2vh;
   /*//////////////////////////////////////////////////////////////////*/
   /*///////////////////// TABLET  landscape /////////////////////*/
      @media screen and (min-width: 1025px) and (max-width: 1366px) {
+        #cart-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: black;
+       
+        color: white;
+        font-size: 12px;
+        border-radius: 50%;
+        padding: 2px 6px;
+      
+        
+      }
      /* Full-page blur effect while loading */
 #loading {
  
@@ -5066,6 +5091,19 @@ justify-content: center;
   /*//////////////////////////////////////////////////////////////////*/
   /*///////////////////// small laptop /////////////////////*/
      @media screen and (min-width: 1367px) and (max-width: 1440px) {
+            #cart-count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background: black;
+       
+        color: white;
+        font-size: 14px;
+        border-radius: 50%;
+        padding: 2px 6px;
+      
+        
+      }
     /* Full-page blur effect while loading */
 #loading {
  
@@ -6442,6 +6480,19 @@ justify-content: center;
   /*//////////////////////////////////////////////////////////////////*/
   /*///////////////////// small laptop /////////////////////*/
   @media screen and (min-width: 1441px) and (max-width: 1919px){
+        #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: black;
+     
+      color: white;
+      font-size: 14px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    
+      
+    }
 /* Full-page blur effect while loading */
 #loading {
  
