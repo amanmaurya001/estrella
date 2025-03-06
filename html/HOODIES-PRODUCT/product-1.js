@@ -42,6 +42,7 @@ async function insertNavbarAndFooter() {
 
       if (navbar) {
           document.body.insertAdjacentElement('afterbegin', navbar);
+          updateCartCount(); // Update the cart count after inserting the navbar
       } else {
           console.warn('Navbar with ID "navbar" not found. Navbar not inserted.');
       }
@@ -55,6 +56,13 @@ async function insertNavbarAndFooter() {
 }
 
 window.onload = insertNavbarAndFooter;
+
+function updateCartCount() {
+  const cartCountSpan = document.getElementById("cart-count");
+  const cartCount = localStorage.getItem("cartCount") || 0;
+  cartCountSpan.textContent = cartCount;
+}
+
 
 
 
@@ -177,29 +185,29 @@ var swiper = new Swiper(".mySwiper", {
         alertBox.style.display = 'none';
     }, 3000);
 }
-
 function addToCart(name, size, img, price, productCode) {
-    // Check if size is selected
-    if (!size) {
-        showCustomAlert("Please select a size before adding to cart.");
-        return; // Prevent adding to cart if no size is selected
-    }
+  if (!size) {
+      showCustomAlert("Please select a size before adding to cart.");
+      return;
+  }
 
-    // Create an item object including product code
-    const item = { name, size, img, price, productCode };
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(item);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    showCustomAlert(`${name} added to cart!`);
+  const item = { name, size, img, price, productCode };
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.push(item);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  showCustomAlert(`${name} added to cart!`);
+
+  // Update the cart count in local storage
+  const cartCount = cart.length;
+  localStorage.setItem("cartCount", cartCount);
+
+  // Update the cart count element on the page
+  const cartCountSpan = document.getElementById("cart-count");
+  if (cartCountSpan) {
+      cartCountSpan.textContent = cartCount;
+  }
 }
 
-
-function toggleContent() {
-  const content = document.getElementById('toggleContent');
-  
-  // Toggle the "show" class
-  content.classList.toggle('show');
-}
 
 
 function toggleContent1() {
