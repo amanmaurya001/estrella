@@ -1,9 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const cartCountSpan = document.getElementById("cart-count");
-  const cartCount = localStorage.getItem("cartCount") || 0;
-  cartCountSpan.textContent = cartCount;
-});
-
 
 
 
@@ -35,8 +29,8 @@ window.addEventListener("scroll", () => {
 // INSERT NAVBAR, FOOTER, AND MAIN BLOCKS
 //////////////////////////////////
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Function to load content from navbar-supply.html
+document.addEventListener("DOMContentLoaded", () => {
+  // Fetch navbar and insert it
   fetch('../navbar-supply.html')
     .then(response => {
       if (!response.ok) {
@@ -59,6 +53,7 @@ function insertPageContent(data) {
   const headingDiv = document.getElementById('heading');
   if (headingDiv && navbar) {
     headingDiv.insertAdjacentElement('afterend', navbar);
+    updateCartCount(); // Call the function to update cart count here
   } else {
     console.warn('Element with ID "heading" not found. Navbar not inserted.');
   }
@@ -76,11 +71,17 @@ function insertPageContent(data) {
   const hashtagsDiv = document.querySelector('#hashtags');
   if (hashtagsDiv && mainBlockLeft) {
     hashtagsDiv.insertAdjacentElement('afterend', mainBlockLeft);
-    initializeFilters();  // Initialize filters independently
-    initializeSorting();  // Initialize sorting independently
+    initializeFilters();
+    initializeSorting();
   } else {
     console.warn('Element not found:', !mainBlockLeft ? '#main-block-left' : '#hashtags');
   }
+}
+
+function updateCartCount() {
+  const cartCountSpan = document.getElementById("cart-count");
+  const cartCount = localStorage.getItem("cartCount") || 0;
+  cartCountSpan.textContent = cartCount;
 }
 
 // Initialize filters after main content is inserted
