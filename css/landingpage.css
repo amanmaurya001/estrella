@@ -704,11 +704,14 @@ body{
     }
   #hero2-1{
       text-align:left;
-      width: 80%;
+      width: 70%;
       left: 12%;
        top: 5%;
       font-size: 3.3vh;
       font-weight: 600;
+    
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+
     }
     #hero2-2{
      
