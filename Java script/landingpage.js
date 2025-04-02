@@ -25,7 +25,26 @@ document.addEventListener("DOMContentLoaded", () => {
   cartCountSpan.textContent = cartCount;
 });
 
-
+var swiper = new Swiper("#xxxx", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+ 
+  breakpoints: {
+    320: {
+      slidesPerView: 1, // Change to 1 slide when screen width is between 320px and 450px
+      spaceBetween: 20,
+    },
+    451: {
+      slidesPerView: 2, // Default setting when above 450px
+      spaceBetween: 30,
+    },
+  },
+});
 
 
 var swiper = new Swiper(".mySwiper", {
