@@ -125,7 +125,7 @@ width: 100%;
   align-items: center;
   justify-content: flex-end;
   height: 90vh;
- 
+   position: relative;
 }
 .block3-text-1,.block3-text-2,.block3-text-3{
   position: absolute;
