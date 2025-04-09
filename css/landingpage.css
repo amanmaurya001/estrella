@@ -1595,9 +1595,9 @@ height: 100%;
 }
 .block3-product h1{
 color: #ffffff;
-font-size: 2.8vh;
-   margin-left: 4vh;
-  margin-top: 19vh;
+font-size: 2.5vh;
+   margin-left: 2vh;
+  margin-top: 23vh;
   position: absolute;
 }
 .block3-product img{
@@ -1615,12 +1615,12 @@ height: 100%;
   color: #ffffff;
 position: absolute;
 width: 80%;
-  height: 4vh;
+  height: 3vh;
   border: rgb(255, 255, 255)  solid 2px;
  border-radius: 50px;
   background-color: transparent;
-  margin-top: 23vh;
-  margin-left: 4vh;
+  margin-top: 27vh;
+  margin-left: 2vh;
 }
 #button1 a{display: flex;
   align-items: center;
