@@ -783,24 +783,25 @@ body{
 }
 .block3-text-1{
   top: 20%;
-  left:12%;
+  left:15%;
   font-size: 2.5vh;
   font-weight: 100;
 }
 .block3-text-2{
   top: 30%;
-  left: 9%;
+  left: 12%;
   font-size: 6vh;
   font-weight: 100;
 
 }
 .block3-text-3{
   top: 55%;
-  left: 4%;
+  left: 8%;
   font-size: 5vh;
   font-weight: 100;
 }
 #box2{
+  border:3px green solid;
  margin-right: 1vh;
 height: 90%;
 width: 50%;
@@ -832,7 +833,7 @@ height: 100%;
 }
 .block3-product h1{
 color: #ffffff;
-font-size: 2.8vh;
+font-size: 2.5vh;
    margin-left: 2vh;
   margin-top:21vh;
   position: absolute;
@@ -851,7 +852,7 @@ height: 100%;
   font-weight: 999;
   color: #ffffff;
 position: absolute;
-width: 60%;
+width: 80%;
   height: 2vh;
   border: rgb(255, 255, 255)  solid 2px;
  border-radius: 50px;
@@ -1596,7 +1597,7 @@ height: 100%;
 color: #ffffff;
 font-size: 2.8vh;
    margin-left: 4vh;
-  margin-top: 24vh;
+  margin-top: 19vh;
   position: absolute;
 }
 .block3-product img{
@@ -1618,7 +1619,7 @@ width: 80%;
   border: rgb(255, 255, 255)  solid 2px;
  border-radius: 50px;
   background-color: transparent;
-  margin-top: 28vh;
+  margin-top: 23vh;
   margin-left: 4vh;
 }
 #button1 a{display: flex;
