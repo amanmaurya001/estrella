@@ -121,7 +121,7 @@ width: 100%;
 
 .block3 {
 
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: flex-end;
   height: 90vh;
@@ -771,7 +771,7 @@ body{
   
 .block3 {
    
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 35vh;
