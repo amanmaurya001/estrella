@@ -2003,14 +2003,14 @@ font-weight: 700;
     align-items: center;
     margin-top: 3vh;
      height: 15vh;
-     width: 97%;
+     width: 100%;
     margin-left: 0;
      border: 2px rgb(145, 149, 145) solid;
  }
  #about h3{
     font-size: 1.5vh;
     padding-left: 1.4vh;
-    padding-right: 1vh;
+    padding-right: 1.4vh;
  }
  .subscribe-container {
   text-align: center;
