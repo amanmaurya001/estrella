@@ -133,56 +133,7 @@ button h2 {
 
 
 
-#close-button {
-position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 0;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 28px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-}
 
-#close-button:hover {
-  background-color: #000;
-  color: #fff;
-}
-#checkout-overlay {
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  display: none; /* Initially hidden */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure the overlay is above other content */
-}
-
-#checkout-form-container {
-
-  background-color: white;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  height: 100%;
-}
-
-#checkout-overlay.active {
-  display: flex;
-}
 
  /* ////////////////////////////////*/
 /* ////////////////////////////////*/
@@ -411,116 +362,263 @@ color: #2E2E2E;
 
 
 /* form*/
-
-
-
-
-
-
-#checkoutbox{
-  margin-top: 1vh;
-  margin-left: 40vh;
-  display: flex;
-  align-items: center;
-  height: 90vh;
-  justify-content: center;
-  border: #818580 2px solid;
-  width: 39%;
+#close-button {
+position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 0;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
 }
-#checkoutForm{
-  overflow-y: scroll; /* This makes it scrollable vertically */
+
+#close-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+#checkout-overlay {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure the overlay is above other content */
+}
+
+#checkout-form-container {
+
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  height: 100%;
+}
+
+#checkout-overlay.active {
+  display: flex;
+}
+
+
+
+
+
+/* Form styling */
+#checkoutForm { 
+  overflow-y: scroll;
   height: 100%;
   width: 100%;
+  padding: 0px 30px;
+  scrollbar-width: none; /* Firefox */
 }
+
 #checkoutForm::-webkit-scrollbar {
   display: none;
 }
-#placeorder{
 
-position: relative;
+/* Header section */
+#placeorder {
+ 
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: #a1acb0 2px solid;
-  height: 6vh;
+  border-bottom: 1px solid #2f2c2c;
+  height: 70px;
+  padding: 0 15px;
+  background-color: #fff;
+  z-index: 10;
+  margin-bottom: 20px;
 }
 
-
-.details{
-  height: 8vh;
- 
+#placeorder h1 {
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  color: #232f3e;
+  font-size: 24px;
+  margin: 0;
 }
 
+#close-button {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+  background: #f0f0f0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
 
-.details, .details1, .details2 {
+#close-button:hover {
+  background: #e0e0e0;
+  transform: scale(1.1);
+}
 
+/* Form field styling */
+.details {
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.details1, .details2 {
+  margin-bottom: 20px;
 }
 
 label {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
+  font-weight: 500;
+  color: #232f3e;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 16px;
+  font-family: 'Amazon Ember', Arial, sans-serif;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="email"],
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
 textarea {
   width: 100%;
-  padding: 12px;
-  border: 2px solid #ff4081;
-  border-radius: 10px;
+  padding: 12px 15px;
+  border: 1px solid #5a5757;
+  border-radius: 8px;
   box-sizing: border-box;
-  transition: border-color 0.3s, background-color 0.3s;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  background-color: #fff;
 }
 
-input:focus,
+input:focus, 
 textarea:focus {
-  border-color: #00bcd4;
+  border-color: #b13527;
   outline: none;
-  background-color: #e0f7fa;
+  box-shadow: 0 0 0 1px #b34e43;
+  background-color: #fff;
+}
+
+/* Textarea specific styling */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* State/city section styling */
+.state-city {
+  display: flex;
+  width: 33%;
+  padding: 0 5px;
+}
+
+.state-city:first-child {
+  padding-left: 0;
+}
+
+.state-city:last-child {
+  padding-right: 0;
+}
+
+.details2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+/* Notification section */
+.notification-section {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: 4px solid #000000;
+}
+
+.notification-section h2 {
+  color: #232f3e;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+.notification-section h4 {
+  color: #555;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #ff9900;
+  transform: scale(1.2);
+}
+
+/* Submit button */
+.details3 {
+  margin-top: 20px;
+  padding-bottom: 15px;
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.02);
 }
 
 #submit {
-  margin-left: 2vh;
-  background-color: #ff4081;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
+  background: linear-gradient(to bottom, #d1b38c, #b29a5b); /* Soft luxurious gold gradient */
+  border: 1px solid #d9c29f; /* Subtle gold border */
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px; /* Rounded edges for a more polished look */
   cursor: pointer;
   width: 90%;
   font-size: 18px;
- 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-left: 2vh;
+  font-family: 'Playfair Display', serif; /* Classic luxury serif font */
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #submit:hover {
-  background-color: #e91e63;
-  transform: translateY(-3px);
+  background: linear-gradient(to bottom, #b29a5b, #a08040); /* Richer gold gradient on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 #submit:active {
-  transform: translateY(0);
+  background: linear-gradient(to bottom, #a08040, #8b6f2b); /* Slightly darker gold on click */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-textarea {
-  resize: vertical;
-  height: 100px;
-}
-
-.state-city {
-  display: flex;
-  justify-content: space-between;
-}
-
-.state-city .details {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.state-city .details:last-child {
-  margin-right: 0;
+#submit h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
 }
 /* ////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////// */
@@ -929,232 +1027,255 @@ textarea {
     
     
     
-          #checkoutbox{
-            margin-top: 1vh;
-           margin-left: 0vh;
-            display: flex;
-            align-items: center;
-            height: 68vh;
-            justify-content: center;
-            border: #818580 2px solid;
-            width: 100%;
-          }
-   #close-button {
-          position: absolute;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-            top: 10px;
-            right: 10px;
-            background-color: #fff;
-            color: #000;
-            border: transparent;
-            border-radius: 0;
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            line-height: 28px;
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        
-        #close-button:hover {
-            background-color: #000;
-            color: #fff;
-        }
-    #checkout-overlay {
+       /* form*/ 
+   /* form*/ 
+/* form*/
 
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-          display: none; /* Initially hidden */
-          justify-content: center;
-          align-items: center;
-          z-index: 1000; /* Ensure the overlay is above other content */
-      }
-      
-      #checkout-form-container {
-      
-       
-          background-color: white;
-          padding: 5px;
-          width: 100%;
-        
-          max-width: 600px;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          overflow-y: auto;
-          height: 100%;
-      }
-      
-      #checkout-overlay.active {
-          display: flex;
-      }
+  #checkout-overlay {
 
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the overlay is above other content */
+  }
   
-          #checkoutForm{
-           
-         
-          height: 100%;
-          width: 100%;
-          }
-          #placeorder{
-           
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: black 1px solid;
-             height: 5%;
-            
-          }
-       #placeorder h1{
-           
-            
-              font-size: 2.3vh;
-          
-          }
-          
-          .details{
-          height: 9%
-            
-          }
-       .details1{ 
-                  height: 15%; 
-            
-          }
-          
-          
-          .details, .details1, .details2 {
-         
-          }
-          
-          label {
-           
-              font-size: 1.5vh;
-            font-weight: bold;
-            color: #333;
-          margin-bottom: 25px;
-            margin-left: 3vh;
-          }
-          
-          input[type="text"],
-          input[type="number"],
-          input[type="email"]
-           {
-                margin-left: 3vh;
-             margin-top: 5px;
-             font-size: 1.5vh;
-          width: 80%;
-          height: 50%;
-          padding: 9px;
-          border: 1px solid #a1acb0;
-          border-radius: 10px;
-          box-sizing: border-box;
-          transition: border-color 0.3s, background-color 0.3s;
-          }
-            textarea {
-           font-size: 1.5vh;
-          width: 100%;
-          height: 1vh;
-          padding: 4px;
-           border: 1px solid #a1acb0;
-          border-radius: 10px;
-          box-sizing: border-box;
-          transition: border-color 0.3s, background-color 0.3s;
-          }
-      #address{
-            margin-left: 3vh;
-          width: 80%;
-            height: 7.5vh;
-          }
-          
-          
-          
-          input:focus,
-          textarea:focus {
-            border-color: #00bcd4;
-            outline: none;
-            background-color: #e0f7fa;
-          }
-          
-          #submit {
-            margin-left: 2vh;
-            background-color: #ff4081;
-            color: white;
-            padding: 8px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            width: 90%;
-            font-size: 8px;
-           margin-top: 2vh;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-          }
-          
-          #submit:hover {
-            background-color: #e91e63;
-            transform: translateY(-3px);
-          }
-          
-          #submit:active {
-            transform: translateY(0);
-          }
-          
-          textarea {
-            resize: vertical;
-            height: 100px;
-          }
-          
-          .state-city {
-            display: flex;
-            justify-content: space-between;
-          }
-          
-          .state-city .details {
-            flex: 1;
-            margin-right: 10px;
-          }
-          
-          .state-city .details:last-child {
-            margin-right: 0;
-          }
-          
-.notification-section{
-         
-          height: auto;
-        }
-      
-        .notification-section h2{
-       
-        
-         display: flex;
-         align-items: center;
-         justify-content: center;
-        }
-        .notification-section h4{
-          font-size: 1.2vh;
-          padding: 5px;
-         
-         display: flex;
-         align-items: center;
-         justify-content: center;
-        }
-        .notification-section label{
-          padding: 1vh;
-      
-       
-        font-size: 1.3vh;
-         }
-         #agreeCheckbox{
-       
-             height: 1.2vh;
-           width: 1.2vh;
-         } 
+  #checkout-form-container {
+ 
+    background-color: white;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    height: 100%;
+  }
+  
+  #checkout-overlay.active {
+    display: flex;
+  }
+
+
+
+
+
+/* Main container styling */
+
+
+
+/* Form styling */
+#checkoutForm { 
+ 
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  padding: 0px 20px;
+  scrollbar-width: none; /* Firefox */
+}
+
+#checkoutForm::-webkit-scrollbar {
+  display: none;
+}
+
+/* Header section */
+#placeorder {
+ 
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #2f2c2c;
+  height: 70px;
+  padding: 0 15px;
+  background-color: #ffffff;
+  z-index: 10;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#placeorder h1 {
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+}
+
+#close-button {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+  background: #f0f0f0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+#close-button:hover {
+  background: #e0e0e0;
+  transform: scale(1.1);
+}
+
+/* Form field styling */
+.details {
+ 
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.details1, .details2 {
+
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 500;
+  color: #232f3e;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 16px;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #5a5757;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  background-color: #fff;
+}
+
+input:focus, 
+textarea:focus {
+  border-color: #b13527;
+  outline: none;
+  box-shadow: 0 0 0 1px #b34e43;
+  background-color: #fff;
+}
+
+/* Textarea specific styling */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* State/city section styling */
+.state-city {
+  display: flex;
+  width: 33%;
+  padding: 0 5px;
+}
+
+.state-city:first-child {
+  padding-left: 0;
+}
+
+.state-city:last-child {
+  padding-right: 0;
+}
+
+.details2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+/* Notification section */
+.notification-section {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: 4px solid #000000;
+}
+
+.notification-section h2 {
+  color: #232f3e;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+.notification-section h4 {
+  color: #555;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #ff9900;
+  transform: scale(1.2);
+}
+
+/* Submit button */
+.details3 {
+  margin-top: 20px;
+  padding-bottom: 15px;
+  position: sticky;
+  bottom: 0;
+  background-color: #fff;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.02);
+}
+
+#submit {
+  background: linear-gradient(to bottom, #d1b38c, #b29a5b); /* Soft luxurious gold gradient */
+  border: 1px solid #d9c29f; /* Subtle gold border */
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px; /* Rounded edges for a more polished look */
+  cursor: pointer;
+  width: 90%;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-left: 2vh;
+  font-family: 'Playfair Display', serif; /* Classic luxury serif font */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#submit:hover {
+  background: linear-gradient(to bottom, #b29a5b, #a08040); /* Richer gold gradient on hover */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+#submit:active {
+  background: linear-gradient(to bottom, #a08040, #8b6f2b); /* Slightly darker gold on click */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#submit h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
 
 
 }
