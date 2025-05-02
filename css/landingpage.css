@@ -1309,8 +1309,8 @@ margin-top: 20px ;
 .subscribe-container h2 {
 letter-spacing: 0.5px;
   font-family:Qwitcher;
-margin-bottom: 20px;
-font-size: 4vh;
+margin-bottom: 30px;
+font-size: 6vh;
 letter-spacing: 0px; /* Adjust the value as needed */
 font-weight: 100;
 color: whitesmoke;
@@ -1318,7 +1318,7 @@ color: whitesmoke;
 
 .subscribe-container p {
   color: whitesmoke;
-margin-bottom: 15px;
+margin-bottom: 25px;
 font-size: 1.5vh;
 }
 
@@ -1327,10 +1327,10 @@ font-size: 1.5vh;
   width: 35vh;
   height: 5vh;
   border: none;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 1px solid #aaa;
   background-color: transparent;
   outline: none;
-  
+  color: whitesmoke;
   font-size: 16px;
 }
 
