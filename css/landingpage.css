@@ -1323,6 +1323,7 @@ font-size: 1.5vh;
 }
 
 .subscribe-container input {
+  color: whitesmoke;
 padding: 10px;
 width: 32vh;
 height: 5vh;
