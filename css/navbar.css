@@ -2450,8 +2450,8 @@ padding-left: 2vh;
       #footer{
         display: block;
             background-color: black;
-            margin-top: 3vh;
-             height: 60vh;
+            margin-top: 0vh;
+             height: 80vh;
              width: 100%;
              border: 1px rgb(0, 0, 0) solid;
          }
