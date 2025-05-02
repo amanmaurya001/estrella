@@ -121,7 +121,7 @@ width: 100%;
 
 .block3 {
 
-  display: none;
+  display: block;
   align-items: center;
   justify-content: flex-end;
   height: 90vh;
