@@ -1,3 +1,162 @@
+// Function to check and refresh JWT if needed (run on page load)
+function checkAndRefreshJWT() {
+  try {
+    // Check if token exists in localStorage
+    const token = localStorage.getItem('jwt_token');
+    const tokenExpiry = localStorage.getItem('jwt_expiry');
+    const currentTime = new Date().getTime();
+    
+    // If no token exists or token is expired, request a new one
+    if (!token || !tokenExpiry || currentTime >= parseInt(tokenExpiry)) {
+      console.log("Token missing or expired, requesting new token");
+      
+      // Request new token from server
+      return fetch('http://localhost:3000/api/get-token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to get token');
+        return response.json();
+      })
+      .then(data => {
+        if (data.success && data.token) {
+          // Store new token with expiry
+          const expiryTime = new Date().getTime() + (10 * 60 * 1000); // Match server's 10m expiry
+          localStorage.setItem('jwt_token', data.token);
+          localStorage.setItem('jwt_expiry', expiryTime.toString());
+          console.log("New token obtained and stored");
+          return true;
+        } else {
+          throw new Error('Invalid token response');
+        }
+      });
+    } else {
+      console.log("Token is valid");
+      return Promise.resolve(true);
+    }
+  } catch (error) {
+    console.error("JWT check/refresh error:", error);
+    return Promise.reject(error);
+  }
+}
+
+// Your original addToCart function with token verification added
+function addToCart(productName, selectedSize) {
+  // Optional: show a loading state or disable button
+  console.log("Sending to backend:", productName, "Size:", selectedSize);
+  
+  // First check and refresh token if needed
+  checkAndRefreshJWT()
+    .then(() => {
+      // Get the refreshed token from localStorage
+      const token = localStorage.getItem('jwt_token');
+      if (!token) {
+        throw new Error("No JWT token found in localStorage");
+      }
+      
+      return fetch('https://backend-test-5iqp.onrender.com/api/add-to-collection', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}` // Add the token here
+        },
+        body: JSON.stringify({ productName: productName, size: selectedSize })
+      });
+    })
+    .then(response => {
+      if (!response.ok) {
+        // If unauthorized or forbidden (token issue), try one more refresh
+        if (response.status === 401 || response.status === 403) {
+          console.log("Token rejected by server, requesting new token");
+          
+          // Clear existing token
+          localStorage.removeItem('jwt_token');
+          localStorage.removeItem('jwt_expiry');
+          
+          // Alert user and suggest refresh
+          alert("Your session has expired. Please refresh the page and try again.");
+          throw new Error('Session expired');
+        }
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Success:', data);
+      
+      // Store data in localStorage if successful
+      if (data.success && data.product) {
+        // Format the product to match your cart structure
+        const cartItem = {
+          name: data.product.product_name || "Product Name",
+          size: selectedSize || "Default", // Use selectedSize here
+          price: data.product.product_price || 0,
+          productCode: data.product.product_code || productName,
+          img: data.product.product_imageurl || "default-image.jpg"
+        };
+        
+        // Get existing cart
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Add new item to cart
+        cart.push(cartItem);
+        
+        // Save updated cart
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Update cart count
+        updateCartCount();
+        
+        // Optional: show confirmation to user
+        console.log('Product added to cart');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Optional: show error message to user
+    });
+}
+
+// Check for token validity when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  checkAndRefreshJWT()
+    .then(() => {
+      console.log("Token check/refresh completed successfully");
+    })
+    .catch(error => {
+      console.error("Failed to initialize token:", error);
+      alert("There was a problem connecting to the server. Please refresh the page.");
+    });
+    
+  // Rest of your DOMContentLoaded code...
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.addEventListener("scroll", function () {
   let navbar = document.getElementById("navbar");
   if (window.scrollY > 0) { // Change 50 to adjust when it sticks
@@ -185,30 +344,13 @@ var swiper = new Swiper(".mySwiper", {
         alertBox.style.display = 'none';
     }, 3000);
 }
-function addToCart(name, size, img, price, productCode) {
-  if (!size) {
-      showCustomAlert("Please select a size before adding to cart.");
-      return;
-  }
 
-  const item = { name, size, img, price, productCode };
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  cart.push(item);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  showCustomAlert(`${name} added to cart!`);
-
-  // Update the cart count in local storage
-  const cartCount = cart.length;
-  localStorage.setItem("cartCount", cartCount);
-
-  // Update the cart count element on the page
-  const cartCountSpan = document.getElementById("cart-count");
-  if (cartCountSpan) {
-      cartCountSpan.textContent = cartCount;
-  }
+function toggleContent() {
+  const content = document.getElementById('toggleContent1');
+  
+  // Toggle the "show" class
+  content.classList.toggle('show');
 }
-
-
 
 function toggleContent1() {
   const content = document.getElementById('toggleContent1');
