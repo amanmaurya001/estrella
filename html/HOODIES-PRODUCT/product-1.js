@@ -11,7 +11,7 @@ function checkAndRefreshJWT() {
       console.log("Token missing or expired, requesting new token");
       
       // Request new token from server
-      return fetch('http://localhost:3000/api/get-token', {
+      return fetch('https://backend-test-5iqp.onrender.com/api/get-token', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
