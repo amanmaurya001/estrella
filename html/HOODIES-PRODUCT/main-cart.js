@@ -222,22 +222,227 @@ function showCheckoutForm() {
     overlay.classList.add('active');
 }
 
-// Function to close the form when submitting
-function submitForm(event) {
-    event.preventDefault(); // Prevent form submission
-    alert("Your Order is placed successfully! We will contact you on whatsapp for further details");
-
-    // Clear the cart after checkout
-    localStorage.removeItem('cart'); 
-    renderCart(); // Re-render the cart (should be empty now)
-
-    // Close the overlay
-    const overlay = document.getElementById('checkout-overlay');
-    overlay.classList.remove('active');
+// Function to check and refresh JWT token
+async function checkAndRefreshJWT() {
+    try {
+        // Check if token exists in localStorage
+        const token = localStorage.getItem('jwt_token');
+        const tokenExpiry = localStorage.getItem('jwt_expiry');
+        const currentTime = new Date().getTime();
+        
+        // If no token exists or token is expired, request a new one
+        if (!token || !tokenExpiry || currentTime >= parseInt(tokenExpiry)) {
+            console.log("Token missing or expired, requesting new token");
+            
+            // Request new token from server
+            const response = await fetch('https://backend-test-5iqp.onrender.com/api/get-token', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            
+            if (!response.ok) throw new Error('Failed to get token');
+            const data = await response.json();
+            
+            if (data.success && data.token) {
+                // Store new token with expiry
+                const expiryTime = new Date().getTime() + (60 * 60 * 1000); // 1 hour expiry
+                localStorage.setItem('jwt_token', data.token);
+                localStorage.setItem('jwt_expiry', expiryTime.toString());
+                console.log("New token obtained and stored");
+                return data.token;
+            } else {
+                throw new Error('Invalid token response');
+            }
+        } else {
+            console.log("Token is valid");
+            return token;
+        }
+    } catch (error) {
+        console.error("JWT check/refresh error:", error);
+        throw error;
+    }
 }
 
-// Function to close the form when submitting
+// Function to get JWT token (now using checkAndRefreshJWT)
+async function getJWTToken() {
+    try {
+        return await checkAndRefreshJWT();
+    } catch (error) {
+        console.error("Error getting JWT token:", error);
+        throw new Error('Failed to get valid token');
+    }
+}
+
 function closeCheckoutForm() {
     const overlay = document.getElementById('checkout-overlay');
     overlay.classList.remove('active'); // This will hide the overlay and form
 }
+
+
+
+async function submitForm(event) {
+    event.preventDefault();
+
+    // Get the JWT token before submitting the form
+    const token = await getJWTToken();
+    
+    if (!token) {
+        alert('No valid token found. Please log in again.');
+        return;  // Exit if no token
+    }
+
+    // Get cart from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItems = cart.map(item => ({
+        productCode: item.productCode,
+        size: item.size
+    }));
+
+    // Get address inputs
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('number').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const addressText = document.getElementById('address').value.trim();
+    const state = document.getElementById('state').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const pin = document.getElementById('pin').value.trim();
+    const landmark = document.getElementById('landmark').value.trim();
+
+    // Validate all fields
+    if (!name || !phone || !email || !addressText || !state || !city || !pin || !landmark) {
+        alert('Please fill all address fields');
+        return;
+    }
+
+    // Prepare address object
+    const address = {
+        name,
+        phone,
+        email,
+        address: addressText,
+        state,
+        city,
+        pin,
+        landmark
+    };
+
+    // Prepare payload for API request
+    const payload = {
+        cart: cartItems,
+        address: address
+    };
+
+    // Log payload for debugging
+    console.log('Submitting Order:', payload);
+
+    // Send checkout request with JWT token
+    try {
+        const response = await fetch('https://backend-test-5iqp.onrender.com/api/checkout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}` // Send token in header
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) throw new Error('Server error');
+        
+        const data = await response.json();
+        if (data.success) {
+            showOrderConfirmation(data);  // Display order confirmation
+        } else {
+            alert('Order failed: ' + (data.message || 'Unknown error'));
+        }
+    } catch (err) {
+        alert('Something went wrong, please try again');
+        console.error(err);
+    }
+}
+
+
+
+// Show order confirmation popup
+async function showOrderConfirmation(orderData) {
+    window.orderData = orderData;
+    const popup = document.getElementById('orderConfirmationPopup');
+    const orderItemsContainer = document.getElementById('orderItems');
+    orderItemsContainer.innerHTML = '';
+
+    const { cart, address, pricing } = orderData.order;
+    const orderHash = orderData.orderHash;
+
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.style.cssText = 'display: flex; margin-bottom: 10px; padding: 10px; border: 1px solid #eee; border-radius: 4px;';
+        itemElement.innerHTML = `
+            <img src="${item.imageUrl || 'placeholder.jpg'}" alt="${item.productName}" style="width: 60px; height: 80px; object-fit: contain; margin-right: 15px;">
+            <div style="flex-grow: 1;">
+                <div style="font-weight: bold; margin-bottom: 5px;">${item.productName}</div>
+                <div>Product Code: ${item.productCode}</div>
+                <div>Size: ${item.size}</div>
+                <div>Price: ₹${item.price.toFixed(2)}</div>
+            </div>
+        `;
+        orderItemsContainer.appendChild(itemElement);
+    });
+
+    // Show address
+    const shippingAddressElement = document.getElementById('shippingAddress');
+    shippingAddressElement.innerHTML = `
+        <p>${address.name}</p>
+        <p>${address.address1}</p>
+        <p>${address.city}, ${address.state} - ${address.pin}</p>
+        <p>Landmark: ${address.landmark || 'N/A'}</p>
+        <p>Phone: ${address.phone}</p>
+        <p>Email: ${address.email}</p>
+    `;
+
+    // Pricing info
+    document.getElementById('subtotal').textContent = `₹${pricing.subtotal.toFixed(2)}`;
+    document.getElementById('discount').textContent = `₹${pricing.discount.toFixed(2)}`;
+    document.getElementById('delivery').textContent = pricing.delivery === 0 ? 'FREE' : `₹${pricing.delivery.toFixed(2)}`;
+    document.getElementById('total').textContent = `₹${pricing.total.toFixed(2)}`;
+
+    popup.style.display = 'flex';
+
+    document.getElementById('closePopup').onclick = () => popup.style.display = 'none';
+
+    document.getElementById('continueShoppingBtn').onclick = async () => {
+        try {
+            const token = await getJWTToken(); // Get JWT token from localStorage or fetch new one
+
+            const response = await fetch('https://backend-test-5iqp.onrender.com/api/save-order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    order: orderData.order,
+                    orderHash: orderHash
+                })
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                alert('Order is placed!');
+                localStorage.removeItem('cart');
+                popup.style.display = 'none';
+                window.location.href = 'index.html';
+            } else {
+                alert('Failed to save order: ' + (data.message || 'Unknown error'));
+            }
+        } catch (err) {
+            alert('Something went wrong, please try again');
+            console.error('Error saving order:', err);
+        }
+    };
+
+    popup.onclick = e => {
+        if (e.target === popup) popup.style.display = 'none';
+    };
+}
+
