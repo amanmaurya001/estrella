@@ -10,18 +10,17 @@ function renderCart() {
     cart1Div.innerHTML = ''; // Clear the cart1 div
     let totalPrice = 0; // Initialize total price
 
- cart.forEach((item, index) => {
+    cart.forEach((item, index) => {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
     
         // Add item price to total price
         totalPrice += item.price;
-    
-        // Dynamically adjust the image path
-        const adjustedImgPath = item.img.replace(/^(\.\.\/)+/, "../../");
+       // Dynamically display the image without path adjustment
+       const imgPath = item.img; // No path adjustment here
     
         cartItem.innerHTML = `
-            <img src="${adjustedImgPath}" alt="${item.name}">
+            <img src="${imgPath}" alt="${item.name}">
             <div id="description-box1">
                 <div><h2>${item.name}</h2></div>
                 <div><h2>Size: ${item.size}</h2></div>
@@ -33,8 +32,17 @@ function renderCart() {
         cartDiv.appendChild(cartItem);
     });
     updateCartCount(); // Update cart count here
-    
-    // Create a total price div
+
+
+
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+///////////////////////////////////
+ // Create a total price div
     const totalDiv = document.createElement('div');
     totalDiv.className = 'total-price';
     
@@ -98,26 +106,22 @@ function renderCart() {
 }
 
 
+///////////////////////////////////
+///////////////////////////////////
+//  to delete 
 
 
 function removeFromCart(index) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount(); // Ensure cart count updates when an item is removed
     renderCart();
 }
 
-function checkout() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    if (cart.length === 0) {
-        alert("Your cart is empty!");
-    } else {
-        alert("Checkout successful! Total items: " + cart.length);
-        localStorage.removeItem('cart'); // Clear the cart after checkout
-         updateCartCount(); // Ensure cart count updates when an item is removed
-        renderCart();
-    }
-}
+
+
+
 
 function goToProducts() {
     window.location.href = 'http://127.0.0.1:5501/clothing/html/landingpage.html';
@@ -139,7 +143,6 @@ function checkout() {
         }
     }
 }
-
 ///////////////////////////////////
 ///////////////////////////////////
 ///////////////////////////////////
@@ -163,50 +166,62 @@ function showCheckoutForm() {
             </div>
             <div class="details">
                 <label for="name">Name:</label><br>
-                <input id="input" type="text" id="name" required><br><br>
+                <input  type="text" id="name" required><br><br>
             </div>
             <div class="details">
                 <label for="name">Phone no:</label><br>
-                <input id="input" type="number" id="number" required><br><br>
+                <input  type="number" id="number" required><br><br>
             </div>
             <div class="details">
                 <label for="email">Email:</label><br>
-                <input id="input" type="email" id="email" required><br><br>
+                <input  type="email" id="email" required><br><br>
             </div>
             <div class="details1">
                 <label for="address">Address:</label><br>
                 <textarea id="address" required></textarea><br><br>
             </div>
+
+
+
             <div class="details2">
                 <div class="state-city">
                     <div class="details">
                         <label id="label1" for="name">State:</label><br>
-                        <input id="state" type="text" required><br><br>
+                        <input id="state" type="text"  required><br><br>
                     </div>
                 </div>
                 <div class="state-city">
                     <div class="details">
                         <label id="label1" for="name">City:</label><br>
-                        <input id="city" type="text"  required><br><br>
+                        <input id="city" type="text" required><br><br>
                     </div>
                 </div>
                 <div class="state-city">
                     <div class="details">
                         <label id="label1" for="name">Pin code:</label><br>
-                        <input id="pin" type="text" required><br><br>
+                        <input id="pin" type="text"  required><br><br>
                     </div>
                 </div>
             </div>
+
+
+
             <div class="details">
                 <label for="name">Landmark:</label><br>
-                <input id="input" type="text"  required><br><br>
+                <input id="landmark" type="text"  required><br><br>
             </div>
+
+
+
+
+
+
              <!-- Notification Section with Terms and Conditions -->
             <div class="notification-section">
                 <h2>Important Information</h2>
                 <h4>Please record a video while opening your parcel. This helps us verify any damage, stains, broken tags, or other issues with the product and ensures quick resolution if needed.</h4>
                 <h4>Please record a video while opening your parcel. This helps us verify any damage, stains, or issues with the product. Do not break any tags, as once broken, the dress will not be replaceable.</h4>
-                <h4>Important Information</h4>
+               
                 <label>
                     <input type="checkbox" id="agreeCheckbox" required>
                     I have read and agree to the Terms and Conditions
@@ -445,4 +460,3 @@ async function showOrderConfirmation(orderData) {
         if (e.target === popup) popup.style.display = 'none';
     };
 }
-
