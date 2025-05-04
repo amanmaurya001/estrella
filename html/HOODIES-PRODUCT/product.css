@@ -997,7 +997,8 @@
          background: transparent;
           color: rgb(0, 0, 0);
           cursor: pointer;
-        font-size: 1vh;
+        font-size: 0.7vh;
+           font-weight:300;
         }
         
         .size-button:hover {
