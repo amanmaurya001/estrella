@@ -181,25 +181,25 @@ function showCheckoutForm() {
                 <div class="state-city">
                     <div class="details">
                         <label id="label1" for="name">State:</label><br>
-                        <input id="state" type="text" id="name" required><br><br>
+                        <input id="state" type="text" required><br><br>
                     </div>
                 </div>
                 <div class="state-city">
                     <div class="details">
                         <label id="label1" for="name">City:</label><br>
-                        <input id="city" type="text" id="name" required><br><br>
+                        <input id="city" type="text"  required><br><br>
                     </div>
                 </div>
                 <div class="state-city">
                     <div class="details">
                         <label id="label1" for="name">Pin code:</label><br>
-                        <input id="pin" type="text" id="name" required><br><br>
+                        <input id="pin" type="text" required><br><br>
                     </div>
                 </div>
             </div>
             <div class="details">
                 <label for="name">Landmark:</label><br>
-                <input id="input" type="text" id="name" required><br><br>
+                <input id="input" type="text"  required><br><br>
             </div>
              <!-- Notification Section with Terms and Conditions -->
             <div class="notification-section">
