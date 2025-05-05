@@ -1287,21 +1287,22 @@ font-weight: 700;
   display: flex;
   align-items: center; 
   margin-top: 3vh;
-  height: 15vh;
+  height:20vh;
   width: 100%;
     margin-left: 0vh;
  
 }
 #about h3{
-  font-size: 1.5vh;
+  font-size: 1vh;
   padding-left: 1.4vh;
   padding-right: 1vh;
+  font-weight:300;
 }
 .subscribe-container {
 text-align: center;
 padding: 20px;
 background-color: #000000;
-
+border-radius: 15px 15px 0 0;
 width: 100%;
 margin-top: 20px ;
 }
