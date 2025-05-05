@@ -1384,7 +1384,7 @@ input[type="checkbox"] {
 /* Form field styling */
 .details {
  
-  height: 13vh;
+  height: 10vh;
   margin-bottom: 10px;
 }
 
@@ -1407,10 +1407,10 @@ input[type="number"],
 input[type="email"], 
 textarea {
    
-  height: 5vh;
+  height: 3vh;
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #5a5757;
+  border: 0.5px solid #5a5757;
   border-radius: 8px;
   box-sizing: border-box;
   transition: all 0.3s ease;
