@@ -882,8 +882,7 @@
          
       }
       #block-right1 h2{
-          font-family: PlayfairDisplay;
-      
+            font-family: Playfair;
          font-size: 2.6vh;
          letter-spacing: 1.5px;
        }
@@ -991,8 +990,8 @@
        .size-button {
          
           border: 1px solid black;
-         height: 60%;
-         width: 7vh;
+         height: 40%;
+         width: 8vh;
          margin-left: 1.3vh;
          background: transparent;
           color: rgb(0, 0, 0);
@@ -1062,7 +1061,8 @@
           
        }
        #block-right8 h2{
-           font-size: 2.5vh;
+           font-size: 2.1vh;
+           font-weight:400;
          
         
        }
@@ -1122,7 +1122,7 @@
       #block-discription{
           max-height: auto;
           width: 100%;
-      
+      margin-top:3vh;
       }
       
       .block-discription-options{
