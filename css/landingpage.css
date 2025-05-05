@@ -931,7 +931,7 @@ width: 80%;
 /* ////////////////////////////////////////////////// */
 #block5{
   overflow: hidden;
-margin-top: 4vh;
+margin-top: 2vh;
 
   height: 30vh;
   width: 100%;
@@ -1059,7 +1059,7 @@ font-size: 1.3vh;
  
   justify-content: space-between;
   display: flex;
-  margin-top:4vh;
+  margin-top:2vh;
      height: 45vh;
      width: 100%;
 
@@ -1137,7 +1137,7 @@ font-size: 1.3vh;
  #block9{
   justify-content: space-between;
   display: flex;
-  
+  margin-top:2vh;
      height: 42vh;
      width: 100%;
     
