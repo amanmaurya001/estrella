@@ -1090,7 +1090,7 @@ width: 3vh;
 
 #footer{
     display: flex;
-    background-color: black;
+    background: linear-gradient(to right,#00093c,#2d0b00);
 
      height: 50vh;
      width: 100%;
@@ -2449,7 +2449,7 @@ padding-left: 2vh;
    /*sjhfsdgfsdfhhsjdkjksdfhsdj*/
       #footer{
         display: block;
-            background-color: black;
+          background: linear-gradient(to right,#00093c,#2d0b00);
             margin-top: 0vh;
              height: 80vh;
              width: 100%;
