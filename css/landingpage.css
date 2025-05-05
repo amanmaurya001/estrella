@@ -1289,8 +1289,8 @@ font-weight: 700;
   margin-top: 3vh;
   height:16vh;
   width: 100%;
-    margin-left: 0vh;
- border: transparent;
+  margin-left: 0vh;
+  border: #45a049 solid 2px; 
 }
 #about h3{
    border: #45a049 solid 2px; 
