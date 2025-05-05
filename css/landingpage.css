@@ -1293,6 +1293,7 @@ font-weight: 700;
   border: #45a049 solid 2px; 
 }
 #about h3{
+  height:100%;
    border: #45a049 solid 2px; 
   border-radius: 15px;
   font-size: 1vh;
