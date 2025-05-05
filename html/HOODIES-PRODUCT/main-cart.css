@@ -1353,10 +1353,11 @@ input[type="checkbox"] {
 }
 
 #placeorder h1 {
-  font-family: 'Amazon Ember', Arial, sans-serif;
+  font-family: Playfair;
   color: #000000;
   font-size: 24px;
   margin: 0;
+  font-weight:400;
 }
 
 #close-button {
@@ -1395,7 +1396,7 @@ input[type="checkbox"] {
 label {
   font-weight: 300;
   color: #232f3e;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
   display: block;
   font-size: 13px;
   font-family: 'Amazon Ember', Arial, sans-serif;
