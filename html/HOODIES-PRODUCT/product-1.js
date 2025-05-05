@@ -346,7 +346,7 @@ var swiper = new Swiper(".mySwiper", {
 }
 
 function toggleContent() {
-  const content = document.getElementById('toggleContent1');
+  const content = document.getElementById('toggleContent');
   
   // Toggle the "show" class
   content.classList.toggle('show');
