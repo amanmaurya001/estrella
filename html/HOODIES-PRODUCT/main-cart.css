@@ -1383,21 +1383,21 @@ input[type="checkbox"] {
 /* Form field styling */
 .details {
  
-  height: auto;
-  margin-bottom: 15px;
+  height: 13vh;
+  margin-bottom: 10px;
 }
 
 .details1, .details2 {
 
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 label {
-  font-weight: 500;
+  font-weight: 300;
   color: #232f3e;
   margin-bottom: 8px;
   display: block;
-  font-size: 16px;
+  font-size: 13px;
   font-family: 'Amazon Ember', Arial, sans-serif;
 }
 
@@ -1405,13 +1405,15 @@ input[type="text"],
 input[type="number"], 
 input[type="email"], 
 textarea {
+   
+  height: 5vh;
   width: 100%;
   padding: 12px 15px;
   border: 1px solid #5a5757;
   border-radius: 8px;
   box-sizing: border-box;
   transition: all 0.3s ease;
-  font-size: 15px;
+  font-size: 11px;
   font-family: 'Amazon Ember', Arial, sans-serif;
   background-color: #fff;
 }
