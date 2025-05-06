@@ -996,15 +996,15 @@ input[type="email"] {
   height:16vh;
   width: 100%;
   margin-left: 0vh;
-  border: #45a049 solid 2px; 
+  border: transparent; 
 }
 #about h3{
-  word-spacing:1vh;
+  word-spacing:0.5vh;
   height:100%;
-   border: #45a049 solid 2px; 
+  border: #45a049 solid 2px; 
   border-radius: 15px;
   font-size: 1.3vh;
- padding:1vh;
+  padding:2vh;
   font-weight:300;
 }
 .subscribe-container {
