@@ -1,8 +1,4 @@
-
-
-
 // SCREEN LOADER
-
 document.addEventListener("DOMContentLoaded", () => {
   const loadingElement = document.getElementById("loading");
   loadingElement.style.opacity = "0"; // Smooth fade-out
@@ -84,18 +80,17 @@ function updateCartCount() {
   cartCountSpan.textContent = cartCount;
 }
 
-// Initialize filters after main content is inserted
+// =========================
+// FILTER INITIALIZATION
+// =========================
+
 function initializeFilters() {
   const checkboxes = document.querySelectorAll('.filter-checkbox, .filter-checkbox1, .filter-checkbox2, .filter-checkbox3, .filter-checkbox4, .filter-checkbox5');
   const productItems = document.querySelectorAll('.product-item');
 
-  // Get selected filter values
   const getSelectedValues = (elements, attribute) =>
-    Array.from(elements)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.getAttribute(attribute));
+    Array.from(elements).filter(cb => cb.checked).map(cb => cb.getAttribute(attribute));
 
-  // Apply filters
   function applyFilters() {
     const selectedCategories = [
       ...getSelectedValues(checkboxes, 'data-size'),
@@ -121,27 +116,25 @@ function initializeFilters() {
     });
   }
 
-  // Apply filters initially
   applyFilters();
-  // Attach event listeners for filtering
-  checkboxes.forEach(checkbox => checkbox.addEventListener('change', applyFilters));
+  checkboxes.forEach(cb => cb.addEventListener('change', applyFilters));
 }
 
-// Initialize sorting after main content is inserted
+// =========================
+// SORT INITIALIZATION
+// =========================
+
 function initializeSorting() {
   const sortCheckboxes = document.querySelectorAll('.filter-checkbox5');
   const productItems = document.querySelectorAll('.product-item');
   const mainBlockRight = document.getElementById('main-block-right');
 
-  // Get selected sorting criteria
   const getSelectedSorting = () =>
-    Array.from(sortCheckboxes)
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.getAttribute('data-Price'));
+    Array.from(sortCheckboxes).filter(cb => cb.checked).map(cb => cb.getAttribute('data-Price'));
 
-  // Apply sorting
   function applySorting() {
     const selectedPrices = getSelectedSorting();
+
     const filteredProducts = Array.from(productItems).filter(item => {
       const itemPrice = parseInt(item.getAttribute('data-Price'), 10);
       return selectedPrices.length === 0 || selectedPrices.some(priceRange => {
@@ -151,21 +144,19 @@ function initializeSorting() {
           case '1000-1499': return itemPrice >= 1000 && itemPrice < 1500;
           case '1500-1999': return itemPrice >= 1500 && itemPrice < 2000;
           case 'Above-2000': return itemPrice >= 2000;
-          case 'Price-Low-to-High': return true;
+          case 'Price-Low-to-High':
           case 'Price-High-to-Low': return true;
           default: return false;
         }
       });
     });
 
-    // Sorting by price
     if (selectedPrices.includes('Price-Low-to-High')) {
       filteredProducts.sort((a, b) => parseInt(a.getAttribute('data-Price')) - parseInt(b.getAttribute('data-Price')));
     } else if (selectedPrices.includes('Price-High-to-Low')) {
       filteredProducts.sort((a, b) => parseInt(b.getAttribute('data-Price')) - parseInt(a.getAttribute('data-Price')));
     }
 
-    // Show sorted products
     productItems.forEach(item => item.classList.add('hidden'));
     filteredProducts.forEach(item => {
       item.classList.remove('hidden');
@@ -173,69 +164,48 @@ function initializeSorting() {
     });
   }
 
-  // Apply sorting initially
   applySorting();
-  // Attach event listeners for sorting
-  sortCheckboxes.forEach(checkbox => checkbox.addEventListener('change', applySorting));
+  sortCheckboxes.forEach(cb => cb.addEventListener('change', applySorting));
 }
 
-
-
-
- 
-
-
-
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-// SWIPERS
-
+// =========================
+// SWIPER SLIDERS
+// =========================
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 9,
-   
-    spaceBetween: 5,
-    loop:true,
-    grabCursor: true,
-    autoplay: {
-        delay: 1200,
-        disableOnInteraction: false,
-      },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-  var swiper = new Swiper(".mySwiper1", {
-    slidesPerView: 4.5,
-   
-    spaceBetween: 5,
-    loop:true,
-    grabCursor: true,
-    autoplay: {
-        delay: 1200,
-        disableOnInteraction: false,
-      },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  slidesPerView: 9,
+  spaceBetween: 5,
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 1200,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
+var swiper = new Swiper(".mySwiper1", {
+  slidesPerView: 4.5,
+  spaceBetween: 5,
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 1200,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
+// =========================
+// FILTER DROPDOWNS
+// =========================
 
-
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-// DROP DOWN
 
 
   function toggleContent() {
@@ -305,34 +275,4 @@ var swiper = new Swiper(".mySwiper", {
     // Toggle the "show" class
     content.classList.toggle('show');
   }
-  //////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-// FILTERS DROP DOWN 
-
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-//////////////////////////////////
-// LITTLE BAR ON TOP
-const messages = [
-  "Free delivery over 1599",
-  "Flat 300 discount over 2599",
-  "10% discount over 4999"
-];
-
-let currentIndex = 0;
-const messageElement = document.getElementById("message");
-
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % messages.length;
-  messageElement.textContent = messages[currentIndex];
-}, 12000); // Change text every 4 seconds
-
-
 
