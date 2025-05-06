@@ -504,7 +504,7 @@ src: url(../fonts/BRADHI.ttf);
   margin-top: 20px;
 }
 
-.subscribe-container h3 {
+.subscribe-container h2{
   letter-spacing: 0.5px;
   font-family: Qwitcher;
   margin-bottom: 30px;
