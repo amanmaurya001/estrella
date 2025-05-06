@@ -31,474 +31,338 @@
   padding: 2px 6px;
 
 }
-
-/* Full-page blur effect while loading */
-#loading {
- 
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999999999999999999999999999;
-  backdrop-filter: blur(15px);
-  background: rgba(0, 0, 0, 0.2); /* Subtle dim */
-  transition: opacity 1s ease-in-out;
-}
-
-/* Centered Loading Content */
-.loading-content {
+/* ====================
+   NAVBAR BASE STYLING
+   ==================== */
+   #navbar {
+    z-index: 99999;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 6vh;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+  }
   
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Container for the logo and text */
-.logo-container {
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: -40px; /* Add space between logo and "ESTRELLA" text */
-}
-
-/* Style for the logo image */
-.logo-image {
- 
-  width: 150px; /* Adjust based on your logo size */
-  height: auto;
-  margin-bottom: 10px; /* Space between logo and text */
-  animation: fadeIn 2s ease-in-out; /* Optional fade-in animation */
-}
-
-/* Luxurious Floating "ESTRELLA" Text */
-.logo {
-  font-style: italic; /* Italic text */
-  font-size: 5rem;
-  font-weight:lighter;
-  font-family: "Playfair Display", serif;
-  color: rgb(0, 0, 0);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  animation: floatGlow 3s infinite alternate ease-in-out;
-}
-
-/* Elegant Golden Pulsing Ring Loader */
-.ring-loader {
-  width: 100px; /* Elegant size for the ring */
-  height: 100px;
-  border-radius: 50%;
-  border: 6px solid rgba(255, 255, 255, 0.2); /* Light border */
-  border-top: 6px solid #FFD700; /* Gold tone for elegance */
-  animation: pulseRotate 2s infinite linear, glowingGold 2s infinite alternate ease-in-out;
-  margin-top: 15px;
-  position: relative;
-}
-
-/* Smooth Pulse Rotation */
-@keyframes pulseRotate {
-  0% {
-    transform: rotate(0deg) scale(1);
-    box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.3); /* Gold shimmer effect */
+  /* Sticky navbar */
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
   }
-  50% {
-    transform: rotate(180deg) scale(1.05); /* Gentle scale effect */
-    box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.7); /* Stronger gold shimmer */
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-    box-shadow: 0px 0px 5px rgba(255, 215, 0, 0.3); /* Soft shimmer */
-  }
-}
-
-/* Luxurious Golden Glow Effect */
-@keyframes glowingGold {
-  0% {
-    border-top: 6px solid #000000; /* Subtle gold accent */
-    box-shadow: 0px 0px 15px rgba(29, 29, 28, 0.5); /* Soft golden glow */
-  }
-  100% {
-    border-top: 6px solid rgba(0, 0, 0, 0.8); /* Brighter gold */
-    box-shadow: 0px 0px 30px rgba(25, 25, 25, 0.8); /* Stronger golden glow */
-  }
-}
-
-
-
-
-
-
-
-#navbar {
   
-  z-index: 99999;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  height: 6vh;
-  width: 100%;
-  transition: background-color 0.3s ease-in-out; /* Smooth effect */
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white; /* Change as needed */
-
-}
-#navlogo{
- 
-
-  
+  /* ====================
+     NAV LOGO SECTION
+     ==================== */
+  #navlogo {
     height: 80%;
     width: 12%;
-   
-}
-#navlogo img{
-
+  }
+  
+  #navlogo img {
     height: 100%;
     width: 100%;
-}
-#navcontent{
-    width: 50%;
-   
+  }
   
+  /* ====================
+     NAV CONTENT (CENTER LINKS)
+     ==================== */
+  #navcontent {
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-#navlogin{
- 
+  }
+  
+  /* ====================
+     LOGIN SECTION
+     ==================== */
+  #navlogin {
     display: flex;
     align-items: end;
     justify-content: end;
     width: 12%;
     height: 100%;
     padding-right: 5vh;
-   
-}
-.navlogin-option{
-   position: relative;
+  }
+  
+  .navlogin-option {
+    position: relative;
+    border: 1px solid blue;
     height: 80%;
     width: 100%;
- 
-}
-.navlogin-option a{
- display: flex;
-    height: 100%;
-    width: 100%;
- 
-}
-.navlogin-option img{
-    height: 100%;
-    width: 100%;
+  }
   
-}
-.navcontentbox{
-
-  
+  .navlogin-option a {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-    width: 14vh;
-   border-radius: 10px;
-
-}
-.navcontentbox1{
- 
+    height: 100%;
+    width: 100%;
+  }
+  
+  .navlogin-option img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* ====================
+     NAV LINK BOXES
+     ==================== */
+  .navcontentbox,
+  .navcontentbox1 {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 5vh;
     width: 14vh;
-   border-radius: 10px;
-
-}
-
-#hamburger{display: none;}
-.asd{
+    border-radius: 10px;
+  }
+  
+  #hamburger {
+    display: none;
+  }
+  
+  .asd {
     text-decoration: none;
     font-family: Playfair;
-    color:black;
+    color: black;
     font-size: 2.5vh;
     font-weight: 50;
-}
-.asd1{
+  }
+  
+  .asd1 {
     text-decoration: none;
-   
-    color:black;
-    font-size: 2.5vh;
-}
-
-.navcontentbox:hover{
-    background-color: aliceblue;
-}
-
-.navcontentbox:hover .asd{
     color: black;
-}
-
-/*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-.dropdown1{
+    font-size: 2.5vh;
+  }
+  
+  .navcontentbox:hover {
+    background-color: aliceblue;
+  }
+  
+  .navcontentbox:hover .asd {
+    color: black;
+  }
+  
+  /* ====================
+     DROPDOWN 1
+     ==================== */
+  .dropdown1 {
     display: none;
-}
-
-#box1:hover .dropdown1{
+  }
+  
+  #box1:hover .dropdown1 {
+   
     border-top: #999d98 2px solid;
     display: flex;
     background-color: white;
- top: 6%;
-  left: 0;
-     position: fixed;
-   
+    position: fixed;
+    top: 6%;
+    left: 0;
     height: 38vh;
     width: 100vw;
     z-index: 100;
-   
-   
-}
-.dd-coloum1{
+  }
+  
+  .dd-coloum1 {
     display: flex;
     align-items: center;
     justify-content: center;
    
     height: 100%;
     width: 10%;
-}
-.dd-coloum1-ad{
+  }
   
+  .dropdown1 .dd-coloum1:nth-of-type(1) {
+    margin-left: 40vh;
+  }
+  
+  .dd-coloum1-ad {
     display: flex;
     align-items: center;
     justify-content: center;
-   
     height: 100%;
     width: 30%;
-}
-#nav-latest-ad{
+  }
+  
+  #nav-latest-ad {
     border: 2px rgb(0, 21, 255) solid;
     height: 80%;
     width: 90%;
-}
-
-/*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-
-.dropdown2{
+  }
+  
+  /* ====================
+     DROPDOWN 2
+     ==================== */
+  .dropdown2 {
     display: none;
-}
-
-#boxer:hover .dropdown2{
+  }
+  
+  #boxer:hover .dropdown2 {
     border-top: #999d98 2px solid;
     display: flex;
     background-color: white;
- top: 6%;
-  left: 0;
-     position: fixed;
-   
+    position: fixed;
+    top: 6%;
+    left: 0;
     height: 52vh;
     width: 100vw;
     z-index: 100;
-   
-   
-}
-
-.dd-coloum2{
+  }
+  
+  .dd-coloum2 {
     display: flex;
     align-items: center;
     justify-content: center;
-   
     height: 100%;
     width: 10%;
-}
-.dd-coloum2-ad{
+  }
+  
+  .dropdown2 .dd-coloum2:nth-of-type(1) {
+    margin-left: 40vh;
+  }
+  
+  .dd-coloum2-ad {
     display: flex;
     align-items: center;
     justify-content: center;
-  
     height: 100%;
     width: 40%;
-}
-#nav-women-ad{
+  }
+  
+  #nav-women-ad {
     border: 2px rgb(0, 21, 255) solid;
     height: 80%;
     width: 90%;
-}
-/*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-.dropdown3{
+  }
+  
+  /* ====================
+     DROPDOWN 3
+     ==================== */
+  .dropdown3 {
     display: none;
-}
-
-#box3:hover .dropdown3{
+  }
+  
+  #box3:hover .dropdown3 {
     border-top: #999d98 2px solid;
     display: flex;
     background-color: white;
-  top: 6%;
-  left: 0;
-      position: fixed;
-   
+    position: fixed;
+    top: 6%;
+    left: 0;
     height: 40vh;
     width: 100vw;
     z-index: 100;
-   
-   
-}
-
-.dd-coloum3{
- 
+  }
+  
+  .dd-coloum3 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 10%;
-}
-.dd-coloum3-ad{
- 
+  }
+  
+  .dropdown3 .dd-coloum3:nth-of-type(1) {
+    margin-left: 40vh;
+  }
+  
+  .dd-coloum3-ad {
     display: flex;
     align-items: center;
     justify-content: center;
-   
     height: 100%;
     width: 40%;
-}
-#nav-men-ad{
+  }
+  
+  #nav-men-ad {
     border: 2px rgb(0, 21, 255) solid;
     height: 80%;
     width: 70%;
-}
-/*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-.dropdown4{
+  }
+  
+  /* ====================
+     DROPDOWN 4
+     ==================== */
+  .dropdown4 {
     display: none;
-}
-
-#box4:hover .dropdown4{
+  }
+  
+  #box4:hover .dropdown4 {
     border-top: #999d98 2px solid;
     display: flex;
     background-color: white;
- top: 6%;
-  left: 0;
     position: fixed;
-   
+    top: 6%;
+    left: 0;
     height: 20vh;
     width: 100vw;
     z-index: 100;
-   
-   
-}
-
-.dd-coloum4{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 10%;
-}
-/*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-.dropdown5{
-    display: none;
-}
-/*
-#box5:hover .dropdown5{
-    display: flex;
-    background-color: white;
-    margin-top: 35vh;
-   margin-left: -39.5vh;
-    position: absolute;
-   
-    height: 30vh;
-    width: 200vh;
-    z-index: 100;
-}
-*/
-.dd-coloum5{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 10%;
-}
-/*sjhfsdgfsdfhhsjdkjksdfhsdj*/
-.dropdown6{
-    display: none;
-}
-/*
-#box6:hover .dropdown6{
-    display: flex;
-    background-color: white;
-    margin-top: 25vh;
-   margin-left: -68vh;
-    position: absolute;
-   
-    height: 20vh;
-    width: 200vh;
-    z-index: 100;
-   
-   
-}
-*/
-.dd-coloum6{
+  }
   
+  .dd-coloum4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     width: 10%;
-}
-
-.category{
+  }
+  
+  /* ====================
+     DROPDOWN CATEGORY CONTENT
+     ==================== */
+  .category {
     width: 80%;
     height: 90%;
-   
-}
-.category h3{
+  }
+  
+  .category h3 {
     color: hsl(211, 84%, 7%);
     margin-top: 1vh;
     margin-bottom: 1vh;
     font-size: 2.5vh;
     font-family: Playfair;
     font-weight: 700;
-}
-.tops-name{
+  }
   
+  .tops-name {
     height: 4vh;
     width: 100%;
+  }
   
-}
-.tops-name a{
-  font-family:Merriweather;
+  .tops-name a {
+    font-family: Merriweather;
     position: relative;
-    overflow: hidden; /* Hide overflow to keep the effect clean */
-text-decoration: none;
-font-size: 1.7vh;
-letter-spacing: 1px;
-color: #2E2E2E
-
-}
-.tops-name a::after {
-    content: ''; /* Required for the pseudo-element */
+    overflow: hidden;
+    text-decoration: none;
+    font-size: 1.7vh;
+    letter-spacing: 1px;
+    color: #2E2E2E;
+  }
+  
+  .tops-name a::after {
+    content: '';
     position: absolute;
-    bottom: 0; /* Position it at the bottom */
-    left: 0; /* Start from the left */
-    width: 100%; /* Full width for the underline */
-    height: 1px; /* Adjust thickness of underline */
-    background: rgb(62, 60, 60); /* Use the link's color */
-    transform: scaleX(0); /* Start with no width */
-    transform-origin: left; /* Animate from the left */
-    transition: transform 0.3s ease; /* Animate the transform property */
-}
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgb(62, 60, 60);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .tops-name a:hover::after {
+    transform: scaleX(1);
+  }
+  
 
-.tops-name a:hover::after {
-    transform: scaleX(1); /* Scale to full width on hover */
-}
+
+
 
 
 /* Scale to full width on hover *//* Scale to full width on hover *//* Scale to full width on hover *//* Scale to full width on hover */
