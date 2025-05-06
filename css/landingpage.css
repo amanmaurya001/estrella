@@ -1001,7 +1001,7 @@ input[type="email"] {
 #about h3{
   word-spacing:0.5vh;
   height:100%;
-  border: #45a049 solid 2px; 
+  border: 1px rgb(108, 108, 112) solid;
   border-radius: 15px;
   font-size: 1.3vh;
   padding:2vh;
